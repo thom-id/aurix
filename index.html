@@ -1,143 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlazeTopia</title>
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>BlazeTopia</title>  <style>  
+    *{  
+        margin:0;  
+        padding:0;  
+        box-sizing:border-box;  
+        font-family:Arial, sans-serif;  
+    }  
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
+    body{  
+        background:  
+        linear-gradient(rgba(0,0,0,.75),rgba(50,0,0,.8)),  
+        url("background.jpg");  
+        background-size:cover;  
+        background-position:center;  
+        min-height:100vh;  
+        display:flex;  
+        justify-content:center;  
+        align-items:center;  
+        color:white;  
+    }  
 
-        body{
-            background:
-            linear-gradient(rgba(0,0,0,.75),rgba(50,0,0,.8)),
-            url("background.jpg");
-            background-size:cover;
-            background-position:center;
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            color:white;
-        }
+    .container{  
+        width:90%;  
+        max-width:500px;  
+        background:rgba(100,0,0,.4);  
+        border:2px solid rgba(255,0,0,.3);  
+        border-radius:25px;  
+        padding:30px;  
+        backdrop-filter:blur(10px);  
+        box-shadow:0 0 25px rgba(255,0,0,.4);  
+    }  
 
-        .container{
-            width:90%;
-            max-width:500px;
-            background:rgba(100,0,0,.4);
-            border:2px solid rgba(255,0,0,.3);
-            border-radius:25px;
-            padding:30px;
-            backdrop-filter:blur(10px);
-            box-shadow:0 0 25px rgba(255,0,0,.4);
-        }
+    h1{  
+        text-align:center;  
+        font-size:40px;  
+        color:#ff2d2d;  
+        text-shadow:0 0 10px red;  
+        margin-bottom:25px;  
+    }  
 
-        h1{
-            text-align:center;
-            font-size:40px;
-            color:#ff2d2d;
-            text-shadow:0 0 10px red;
-            margin-bottom:25px;
-        }
+    .card{  
+        background:#220000;  
+        padding:18px;  
+        border-radius:15px;  
+        margin-bottom:15px;  
+        border:1px solid #700;  
+        cursor:pointer;  
+        transition:0.2s;  
+    }  
 
-        .card{
-            background:#220000;
-            padding:18px;
-            border-radius:15px;
-            margin-bottom:15px;
-            border:1px solid #700;
-            cursor:pointer;
-            transition:0.2s;
-        }
+    .card:hover{  
+        transform:scale(1.02);  
+    }  
 
-        .card:hover{
-            transform:scale(1.02);
-        }
+    .card h2{  
+        margin-bottom:10px;  
+    }  
 
-        .card h2{
-            margin-bottom:10px;
-        }
+    .card p{  
+        color:#ffd700;  
+        line-height:1.5;  
+    }  
 
-        .card p{
-            color:#ffd700;
-            line-height:1.5;
-        }
+    .footer{  
+        text-align:center;  
+        margin-top:20px;  
+        color:#ccc;  
+        font-size:14px;  
+    }  
+</style>
 
-        .footer{
-            text-align:center;
-            margin-top:20px;
-            color:#ccc;
-            font-size:14px;
-        }
-    </style>
-</head>
+</head>  <body>  <div class="container">  <h1>BLAZETOPIA</h1>  
 
-<body>
+<div class="card"  
+onclick="copyText('gtpshosting.web.id/raw/BlazeTopia')">  
+    <h2>Android</h2>  
+    <p>gtpshosting.web.id/raw/BlazeTopia</p>  
+</div>  
 
-<div class="container">
+<div class="card"  
+onclick="copyText('gtpshosting.web.id/ios/BlazeTopia')">  
+    <h2>iOS</h2>  
+    <p>gtpshosting.web.id/ios/BlazeTopia</p>  
+</div>  
 
-    <h1>BLAZETOPIA</h1>
-
-    <div class="card"
-    onclick="copyText('gtpshosting.web.id/raw/BlazeTopia')">
-        <h2>Android</h2>
-        <p>gtpshosting.web.id/raw/BlazeTopia</p>
-    </div>
-
-    <div class="card"
-    onclick="copyText('gtpshosting.web.id/ios/BlazeTopia')">
-        <h2>iOS</h2>
-        <p>gtpshosting.web.id/ios/BlazeTopia</p>
-    </div>
-
-    <div class="card"
-    onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
-        <h2>Windows</h2>
-        <p>149.202.58.185 www.growtopia1.com</p>
-        <p>149.202.58.185 www.growtopia2.com</p>
-    </div>
-
-    <div class="card"
-    onclick="window.open('https://discord.gg/AWRsZfm32', '_blank')">
-        <h2>Discord Community</h2>
-    </div>
-
-    <div class="footer">
-        Enter the Flames. Rule the World.
-    </div>
-
+<div class="card"  
+onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">  
+    <h2>Windows</h2>  
+    <p>  
+        149.202.58.185 www.growtopia1.com<br>  
+        149.202.58.185 www.growtopia2.com  
+    </p>  
 </div>
 
-<script>
-function copyText(text) {
-    navigator.clipboard.writeText(text);
+<div class="card"  
+onclick="window.open('https://discord.gg/AWRsZfm32', '_blank')"  
+style="text-align:center; padding:30px;">  
+    <h2 style="margin:0;">Discord Community</h2>  
+</div>  <div class="footer">  
+    Enter the Flames. Rule the World.  
+</div>
 
-    const notification = document.createElement("div");
-    notification.innerText = "Copied!";
-    notification.style.position = "fixed";
-    notification.style.bottom = "20px";
-    notification.style.left = "50%";
-    notification.style.transform = "translateX(-50%)";
-    notification.style.background = "#ff2d2d";
-    notification.style.color = "white";
-    notification.style.padding = "10px 20px";
-    notification.style.borderRadius = "10px";
-    notification.style.fontWeight = "bold";
-    notification.style.boxShadow = "0 0 15px red";
-    notification.style.zIndex = "9999";
-
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-        notification.remove();
-    }, 2000);
-}
-</script>
-
-</body>
+</div>  <script>  
+function copyText(text) {  
+    navigator.clipboard.writeText(text);  
+  
+    const notification = document.createElement("div");  
+    notification.innerText = "Copied!";  
+    notification.style.position = "fixed";  
+    notification.style.bottom = "20px";  
+    notification.style.left = "50%";  
+    notification.style.transform = "translateX(-50%)";  
+    notification.style.background = "#ff2d2d";  
+    notification.style.color = "white";  
+    notification.style.padding = "10px 20px";  
+    notification.style.borderRadius = "10px";  
+    notification.style.fontWeight = "bold";  
+    notification.style.boxShadow = "0 0 15px red";  
+    notification.style.zIndex = "9999";  
+  
+    document.body.appendChild(notification);  
+  
+    setTimeout(() => {  
+        notification.remove();  
+    }, 2000);  
+}  
+</script>  </body>  
 </html>
