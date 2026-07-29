@@ -1,129 +1,282 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>BlazeTopia</title>  <style>  
-    *{  
-        margin:0;  
-        padding:0;  
-        box-sizing:border-box;  
-        font-family:Arial, sans-serif;  
-    }  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body{  
-        background:  
-        linear-gradient(rgba(0,0,0,.75),rgba(50,0,0,.8)),  
-        url("background.jpg");  
-        background-size:cover;  
-        background-position:center;  
-        min-height:100vh;  
-        display:flex;  
-        justify-content:center;  
-        align-items:center;  
-        color:white;  
-    }  
+<title>BlazeTopia</title>
 
-    .container{  
-        width:100%;  
-        max-width:500px;  
-        background:rgba(200,0,0,.4);  
-        border:2px solid rgba(255,0,0,.3);  
-        border-radius:25px;  
-        padding:30px;  
-        backdrop-filter:blur(10px);  
-        box-shadow:0 0 25px rgba(255,0,0,.10);  
-    }  
+<style>
 
-    h1{  
-        text-align:center;  
-        font-size:5px;  
-        color:#ff2d2d;  
-        text-shadow:0 0 10px red;  
-        margin-bottom:25px;  
-    }  
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-    .card{  
-        background:#330000;  
-        padding:10px;  
-        border-radius:15px;  
-        margin-bottom:15px;  
-        border:1px solid #700;  
-        cursor:pointer;  
-        transition:0.2s;  
-    }  
+body{
+    background:
+    linear-gradient(rgba(5,10,30,.85),rgba(0,30,60,.9)),
+    url("background.jpg");
 
-    .card:hover{  
-        transform:scale(1.02);  
-    }  
+    background-size:cover;
+    background-position:center;
 
-    .card h2{  
-        margin-bottom:10px;  
-    }  
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    .card p{  
-        color:#ffd700;  
-        line-height:1.5;  
-    }  
+    color:white;
+}
 
-    .footer{  
-        text-align:center;  
-        margin-top:10px;  
-        color:#ccc;  
-        font-size:5px;  
-    }  
+.container{
+    width:100%;
+    max-width:500px;
+
+    background:rgba(10,25,60,.65);
+
+    border:2px solid rgba(0,200,255,.35);
+    border-radius:25px;
+
+    padding:30px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 25px rgba(0,200,255,.25);
+}
+
+
+.logo{
+    display:block;
+
+    width:130px;
+
+    margin:0 auto 15px;
+
+    filter:drop-shadow(0 0 15px cyan);
+}
+
+
+.title{
+    text-align:center;
+
+    font-size:30px;
+
+    color:#00d9ff;
+
+    text-shadow:0 0 10px cyan;
+
+    margin-bottom:25px;
+}
+
+
+h0{
+    display:block;
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+    color:white;
+}
+
+
+.card{
+
+    background:rgba(0,50,90,.8);
+
+    padding:15px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    border:1px solid #00bfff;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.card:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 15px cyan;
+
+}
+
+
+.card p{
+
+    color:#00ffff;
+
+    line-height:1.5;
+
+}
+
+
+.discord{
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+.footer{
+
+    text-align:center;
+
+    margin-top:15px;
+
+    color:#ccc;
+
+    font-size:12px;
+
+}
+
 </style>
 
-</head>  <body>  <div class="container">  <h1></h1>  
-  <h0>𝗔𝗻𝗱𝗿𝗼𝗶𝗱</h0>
-<div class="card"  
-onclick="copyText('https://gtpshosting.web.id//raw/blazetopia')">     
-    <p>https://gtpshosting.web.id//raw/blazetopia</p>  
-</div>  
-   <h0>𝗶𝗢𝗦</h0>
-<div class="card"  
-onclick="copyText('https://gtpshosting.web.id//ios/blazetopia')">      
-    <p>https://gtpshosting.web.id//ios/blazetopia</p>  
-</div>  
-   <h0>𝗜𝗣 𝗔𝗱𝗱𝗿𝗲𝘀𝘀 𝗙𝗼𝗿 𝗪𝗶𝗻𝗱𝗼𝘄𝘀</h0>    
-<div class="card"  
-onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">    
-    <p>  
-        149.202.58.185 www.growtopia1.com<br>  
-        149.202.58.185 www.growtopia2.com  
-    </p>  
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<img class="logo" src="https://cdn.phototourl.com/free/2026-07-29-f08f8692-061e-4e31-b507-aa7ab36e8ea3.png">
+
+
+<div class="title">
+BlazeTopia
 </div>
 
-<div class="card"  
-onclick="window.open('https://discord.gg/AWRsZfm32', '_blank')"  
-style="text-align:center; padding:30px;">  
-    <h0 style="margin:0;">Discord Community</h0>  
-</div>  <div class="footer">  
-<h1>Enter the Flames. Rule the World.</h1> 
+
+
+<h0>𝗔𝗻𝗱𝗿𝗼𝗶𝗱</h0>
+
+<div class="card"
+onclick="copyText('https://gtpshosting.web.id//raw/blazetopia')">
+
+<p>
+https://gtpshosting.web.id//raw/blazetopia
+</p>
+
 </div>
 
-</div>  <script>  
-function copyText(text) {  
-    navigator.clipboard.writeText(text);  
-  
-    const notification = document.createElement("div");  
-    notification.innerText = "Copied!";  
-    notification.style.position = "fixed";  
-    notification.style.bottom = "20px";  
-    notification.style.left = "50%";  
-    notification.style.transform = "translateX(-50%)";  
-    notification.style.background = "#ff2d2d";  
-    notification.style.color = "white";  
-    notificaion.style.padding = "10px 20px";  
-    notification.style.borderRadius = "10px";  
-    notification.style.fontWeight = "bold";  
-    notification.style.boxShadow = "0 0 15px red";  
-    notification.style.zIndex = "9999";  
-  
-    document.body.appendChild(notification);  
-  
-    setTimeout(() => {  
-        notification.remove();  
-    }, 2000);  
-}  
-</script>  </body>  
-</html>
+
+
+
+<h0>𝗶𝗢𝗦</h0>
+
+<div class="card"
+onclick="copyText('https://gtpshosting.web.id//ios/blazetopia')">
+
+<p>
+https://gtpshosting.web.id//ios/blazetopia
+</p>
+
+</div>
+
+
+
+
+<h0>𝗜𝗣 𝗔𝗱𝗱𝗿𝗲𝘀𝘀 𝗙𝗼𝗿 𝗪𝗶𝗻𝗱𝗼𝘄𝘀</h0>
+
+<div class="card"
+onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
+
+<p>
+149.202.58.185 www.growtopia1.com<br>
+149.202.58.185 www.growtopia2.com
+</p>
+
+</div>
+
+
+
+
+<div class="card discord"
+
+onclick="window.open('https://discord.gg/AWRsZfm32','_blank')">
+
+<h0>
+Discord Community
+</h0>
+
+</div>
+
+
+
+
+<div class="footer">
+
+Enter the Flames. Rule the World.
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function copyText(text){
+
+navigator.clipboard.writeText(text);
+
+
+const notification=document.createElement("div");
+
+notification.innerText="Copied!";
+
+
+notification.style.position="fixed";
+
+notification.style.bottom="20px";
+
+notification.style.left="50%";
+
+notification.style.transform="translateX(-50%)";
+
+notification.style.background="#00bfff";
+
+notification.style.color="white";
+
+notification.style.padding="10px 20px";
+
+notification.style.borderRadius="10px";
+
+notification.style.fontWeight="bold";
+
+notification.style.boxShadow="0 0 15px cyan";
+
+notification.style.zIndex="9999";
+
+
+document.body.appendChild(notification);
+
+
+setTimeout(()=>{
+
+notification.remove();
+
+},2000);
+
+
+}
+
+</script>
+
+
+</body>
+    </html>
