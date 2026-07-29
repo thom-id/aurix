@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BlazeTopia</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BlazeTopia</title><style>
 
 *{
     margin:0;
@@ -35,6 +30,9 @@ body{
     width:100%;
     max-width:500px;
 
+    position:relative;
+    overflow:hidden;
+
     background:rgba(10,25,60,.65);
 
     border:2px solid rgba(0,200,255,.35);
@@ -45,6 +43,36 @@ body{
     backdrop-filter:blur(10px);
 
     box-shadow:0 0 25px rgba(0,200,255,.25);
+}
+
+
+/* Background logo BlazeTopia */
+.container::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    url("https://cdn.phototourl.com/free/2026-07-29-f08f8692-061e-4e31-b507-aa7ab36e8ea3.png");
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    /* Dibuat lebih jauh */
+    background-size:60%;
+
+    opacity:.12;
+
+    pointer-events:none;
+}
+
+
+/* Semua isi tetap di depan */
+.container > *{
+    position:relative;
+    z-index:1;
 }
 
 
@@ -83,9 +111,10 @@ h0{
 }
 
 
+/* Kotak lebih transparan */
 .card{
 
-    background:rgba(0,50,90,.8);
+    background:rgba(0,50,90,.45);
 
     padding:15px;
 
@@ -141,94 +170,31 @@ h0{
 
 }
 
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="container">
-
-
-<img class="logo" src="https://cdn.phototourl.com/free/2026-07-29-f08f8692-061e-4e31-b507-aa7ab36e8ea3.png">
-
-
-<div class="title">
+</style></head><body><div class="container"><img class="logo" src="https://cdn.phototourl.com/free/2026-07-29-f08f8692-061e-4e31-b507-aa7ab36e8ea3.png"><div class="title">
 BlazeTopia
-</div>
-
-
-
-<h0>𝗔𝗻𝗱𝗿𝗼𝗶𝗱</h0>
+</div><h0>𝗔𝗻𝗱𝗿𝗼𝗶𝗱</h0>
 
 <div class="card"
-onclick="copyText('https://gtpshosting.web.id//raw/blazetopia')">
-
-<p>
+onclick="copyText('https://gtpshosting.web.id//raw/blazetopia')"><p>
 https://gtpshosting.web.id//raw/blazetopia
-</p>
-
-</div>
-
-
-
-
-<h0>𝗶𝗢𝗦</h0>
+</p></div><h0>𝗶𝗢𝗦</h0>
 
 <div class="card"
-onclick="copyText('https://gtpshosting.web.id//ios/blazetopia')">
-
-<p>
+onclick="copyText('https://gtpshosting.web.id//ios/blazetopia')"><p>
 https://gtpshosting.web.id//ios/blazetopia
-</p>
-
-</div>
-
-
-
-
-<h0>𝗜𝗣 𝗔𝗱𝗱𝗿𝗲𝘀𝘀 𝗙𝗼𝗿 𝗪𝗶𝗻𝗱𝗼𝘄𝘀</h0>
+</p></div><h0>𝗜𝗣 𝗔𝗱𝗱𝗿𝗲𝘀𝘀 𝗙𝗼𝗿 𝗪𝗶𝗻𝗱𝗼𝘄𝘀</h0>
 
 <div class="card"
-onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
-
-<p>
+onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')"><p>
 149.202.58.185 www.growtopia1.com<br>
 149.202.58.185 www.growtopia2.com
-</p>
-
-</div>
-
-
-
-
-<div class="card discord"
-
-onclick="window.open('https://discord.gg/AWRsZfm32','_blank')">
+</p></div><div class="card discord"onclick="window.open('https://discord.gg/AWRsZfm32','_blank')">
 
 <h0>
 Discord Community
-</h0>
+</h0></div><div class="footer">Enter the Flames. Rule the World.
 
-</div>
-
-
-
-
-<div class="footer">
-
-Enter the Flames. Rule the World.
-
-</div>
-
-
-</div>
-
-
-
-<script>
+</div></div><script>
 
 function copyText(text){
 
@@ -275,8 +241,5 @@ notification.remove();
 
 }
 
-</script>
-
-
-</body>
-    </html>
+</script></body>
+</html>
