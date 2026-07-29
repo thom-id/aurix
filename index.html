@@ -1,147 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlazeTopia</title>
 
-<title>🔥 BlazeTopia</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
+        body{
+            background:
+            linear-gradient(rgba(0,0,0,.75),rgba(50,0,0,.8)),
+            url("background.jpg");
+            background-size:cover;
+            background-position:center;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:white;
+        }
 
-body{
-    background:linear-gradient(135deg,#111,#1d1d1d,#ff6b00);
-    color:white;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
+        .container{
+            width:90%;
+            max-width:500px;
+            background:rgba(100,0,0,.4);
+            border:2px solid rgba(255,0,0,.3);
+            border-radius:25px;
+            padding:30px;
+            backdrop-filter:blur(10px);
+            box-shadow:0 0 25px rgba(255,0,0,.4);
+        }
 
-.container{
-    width:100%;
-    max-width:700px;
-    background:#222;
-    border-radius:20px;
-    padding:35px;
-    box-shadow:0 0 20px rgba(255,120,0,.35);
-    text-align:center;
-}
+        .logo{
+            width:220px;
+            display:block;
+            margin:0 auto 15px;
+        }
 
-h1{
-    color:#ff6b00;
-    font-size:50px;
-    margin-bottom:15px;
-}
+        h1{
+            text-align:center;
+            font-size:40px;
+            color:#ff2d2d;
+            text-shadow:0 0 10px red;
+            margin-bottom:25px;
+        }
 
-p{
-    color:#ddd;
-    line-height:1.7;
-    margin-bottom:20px;
-}
+        .card{
+            background:#220000;
+            padding:18px;
+            border-radius:15px;
+            margin-bottom:15px;
+            border:1px solid #700;
+        }
 
-.line{
-    margin:25px 0;
-    color:#ff6b00;
-    font-weight:bold;
-    letter-spacing:2px;
-}
+        .card h2{
+            margin-bottom:10px;
+        }
 
-.discord{
-    display:block;
-    background:#5865F2;
-    color:white;
-    text-decoration:none;
-    padding:15px;
-    border-radius:12px;
-    font-weight:bold;
-    margin-bottom:30px;
-    transition:.3s;
-}
+        .card p{
+            color:#ffd700;
+            word-break:break-word;
+        }
 
-.discord:hover{
-    background:#6d78ff;
-}
-
-.section{
-    text-align:left;
-    background:#2d2d2d;
-    padding:18px;
-    border-radius:12px;
-    margin-bottom:18px;
-}
-
-.section h3{
-    color:#ff8c2b;
-    margin-bottom:8px;
-}
-
-.section p{
-    margin:0;
-    color:#fff;
-    word-break:break-all;
-}
-
-footer{
-    margin-top:30px;
-    color:#999;
-    font-size:14px;
-}
-
-@media(max-width:600px){
-
-h1{
-font-size:38px;
-}
-
-.container{
-padding:22px;
-}
-
-}
-</style>
-
+        .footer{
+            text-align:center;
+            margin-top:20px;
+            color:#ccc;
+            font-size:14px;
+        }
+    </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<h1>🔥 BlazeTopia</h1>
+    <img src="logo.png" class="logo">
 
-<p>
-Welcome to BlazeTopia!<br>
-The best Growtopia Private Server with exciting features and a friendly community.
-</p>
+    <h1>BLAZETOPIA</h1>
 
+    <div class="card">
+        <h2>Android</h2>
+        <p>blazetopia.xyz/android</p>
+    </div>
 
-<a class="discord"
-href="https://discord.gg/AWRsZfm32"
-target="_blank">
-💬 Discord Community
-</a>
+    <div class="card">
+        <h2>iOS</h2>
+        <p>blazetopia.xyz/ios</p>
+    </div>
 
-<div class="section">
-<h3>Android</h3>
-<p>https://gtpshosting.web.id/raw/BlazeTopia</div>
+    <div class="card">
+        <h2>Windows</h2>
+        <p>103.103.20.75</p>
+        <p>growtopia1.com</p>
+        <p>growtopia2.com</p>
+    </div>
 
-<div class="section">
-<h3>iOS</h3>
-<p>https://gtpshosting.web.id/ios/BlazeTopia</div>
+    <div class="card">
+        <h2>Join Discord</h2>
+        <p>discord.gg/blazetopia</p>
+    </div>
 
-<div class="section">
-<h3>IP Address For Windows</h3>
-<p>149.202.58.185 www.growtopia1.com</div>
-<p>149.202.58.185 www.growtopia2.com</div>
-
-<footer>
-© 2026 BlazeTopia. All Rights Reserved.
-</footer>
+    <div class="footer">
+        Welcome to BlazeTopia.<br>
+        Please use the host links or IP address above to join the server.
+    </div>
 
 </div>
 
