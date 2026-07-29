@@ -37,12 +37,6 @@
             box-shadow:0 0 25px rgba(255,0,0,.4);
         }
 
-        .logo{
-            width:220px;
-            display:block;
-            margin:0 auto 15px;
-        }
-
         h1{
             text-align:center;
             font-size:40px;
@@ -57,6 +51,12 @@
             border-radius:15px;
             margin-bottom:15px;
             border:1px solid #700;
+            cursor:pointer;
+            transition:0.2s;
+        }
+
+        .card:hover{
+            transform:scale(1.02);
         }
 
         .card h2{
@@ -65,7 +65,7 @@
 
         .card p{
             color:#ffd700;
-            word-break:break-word;
+            line-height:1.5;
         }
 
         .footer{
@@ -81,21 +81,22 @@
 
 <div class="container">
 
-    <img src="https://cdn.phototourl.com/free/2026-07-29-cafae610-d288-4aaa-a70e-3d1544e9163c.png" class="logo">
-
     <h1>BLAZETOPIA</h1>
 
-    <div class="card">
+    <div class="card"
+    onclick="copyText('gtpshosting.web.id/raw/BlazeTopia')">
         <h2>Android</h2>
-        <p>https://gtpshosting.web.id/raw/BlazeTopia</p>
+        <p>gtpshosting.web.id/raw/BlazeTopia</p>
     </div>
 
-    <div class="card">
+    <div class="card"
+    onclick="copyText('gtpshosting.web.id/ios/BlazeTopia')">
         <h2>iOS</h2>
-        <p>https://gtpshosting.web.id/ios/BlazeTopia</p>
+        <p>gtpshosting.web.id/ios/BlazeTopia</p>
     </div>
 
-    <div class="card">
+    <div class="card"
+    onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
         <h2>Windows</h2>
         <p>149.202.58.185 www.growtopia1.com</p>
         <p>149.202.58.185 www.growtopia2.com</p>
@@ -104,14 +105,20 @@
     <div class="card"
     onclick="window.open('https://discord.gg/AWRsZfm32', '_blank')">
         <h2>Discord Community</h2>
-        <p>Tap to Discord Invite</p>
     </div>
 
     <div class="footer">
-        Welcome to BlazeTopia.<br>
-        Please use the host links or IP address above to join the server.
+        Enter the Flames. Rule the World.
     </div>
 
 </div>
+
+<script>
+function copyText(text) {
+    navigator.clipboard.writeText(text);
+    alert("Copied!");
+}
+</script>
+
 </body>
 </html>
