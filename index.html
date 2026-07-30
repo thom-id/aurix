@@ -1,275 +1,1053 @@
 <!DOCTYPE html>
+
+
+
 <html lang="en">
+
+
+
 <head>
 
+
+
+
+
+
+
 <meta charset="UTF-8">
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
 
 <title>BlazeTopia - Growtopia Private Server 2026</title>
 
+
+
+
+
+
+
 <meta property="og:title" content="BlazeTopia - Growtopia Private Server 2026">
+
+
+
 <meta property="og:description" content="Join BlazeTopia and play on Android, iOS & Windows.">
+
+
+
 <meta property="og:image" content="https://cdn.phototourl.com/free/2026-07-29-f08f8692-061e-4e31-b507-aa7ab36e8ea3.png">
+
+
+
 <meta property="og:type" content="website">
+
+
+
 <meta name="theme-color" content="#d60000">
+
+
+
+
+
+
 
 <style>
 
+
+
+
+
+
+
 *{
+
+
+
     margin:0;
+
+
+
     padding:0;
+
+
+
     box-sizing:border-box;
+
+
+
     font-family:Arial,sans-serif;
+
+
+
 }
+
+
+
+
+
+
 
 body{
 
+
+
     min-height:100vh;
+
+
 
     padding:20px;
 
+
+
     color:white;
 
-    background:
-    linear-gradient(
-    180deg,
-    rgba(45,0,0,.45) 0%,
-    rgba(90,0,0,.70) 35%,
-    rgba(130,0,0,.92) 70%,
-    rgba(150,0,0,1) 100%
-    ),
-    url("https://cdn.phototourl.com/free/2026-07-29-f08f8692-061e-4e31-b507-aa7ab36e8ea3.png");
 
-    background-size:100% auto;
+
+    background:
+
+    linear-gradient(
+
+        to bottom,
+
+        rgba(40,0,0,.15) 0%,
+
+        rgba(70,0,0,.30) 20%,
+
+        rgba(100,0,0,.55) 45%,
+
+        rgba(130,0,0,.80) 70%,
+
+        rgba(150,0,0,.96) 90%,
+
+        #960000 100%
+
+    ),
+
+    url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
+
+
+
+    background-size:cover;
+
+
 
     background-position:center top;
 
+
+
     background-repeat:no-repeat;
+
+
 
     background-attachment:fixed;
 
-}
+
+
+    background-color:#960000;
+
+
+
+} 
+
+
+
+
+
+
 
 /* MAIN */
 
+
+
+
+
+
+
 .container{
 
+
+
+
+
+
+
     width:100%;
+
+
+
+
+
+
 
     max-width:500px;
 
+
+
+
+
+
+
     margin:260px auto 30px;
+
+
+
+
+
+
 
     padding:30px 25px;
 
+
+
+
+
+
+
     border-radius:28px;
 
+
+
+
+
+
+
     background:
+
+
+
     rgba(85,0,5,.60);
 
+
+
+
+
+
+
     border:
+
+
+
     2px solid rgba(255,70,70,.30);
 
+
+
+
+
+
+
     backdrop-filter:
+
+
+
     blur(6px);
 
+
+
+
+
+
+
     box-shadow:
+
+
+
     0 0 28px rgba(255,0,0,.25);
 
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 /* DISCORD */
 
+
+
+
+
+
+
 .discord{
 
+
+
+
+
+
+
     width:100%;
+
+
+
+
+
+
 
     padding:18px;
 
+
+
+
+
+
+
     margin-bottom:25px;
+
+
+
+
+
+
 
     border:none;
 
+
+
+
+
+
+
     border-radius:18px;
 
+
+
+
+
+
+
     background:
+
+
+
     linear-gradient(
+
+
+
     90deg,
+
+
+
     #b80000,
+
+
+
     #ff1010
+
+
+
     );
+
+
+
+
+
+
 
     color:white;
 
+
+
+
+
+
+
     font-size:18px;
+
+
+
+
+
+
 
     font-weight:bold;
 
+
+
+
+
+
+
     cursor:pointer;
 
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 /* LABEL */
 
+
+
+
+
+
+
 .label{
 
-    font-size:15px;
+
+
+
+
+
+
+    font-size:16px;
+
+
+
+
+
+
 
     font-weight:bold;
 
+
+
+
+
+
+
     margin-top:12px;
+
+
+
+
+
+
 
     margin-bottom:6px;
 
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 /* HOST CARD */
 
+
+
+
+
+
+
 .card{
+
+
+
+
+
+
 
     width:100%;
 
+
+
+
+
+
+
     padding:12px 20px;
+
+
+
+
+
+
 
     margin-bottom:12px;
 
+
+
+
+
+
+
     border-radius:15px;
 
+
+
+
+
+
+
     background:
+
+
+
     rgba(25,0,7,.80);
 
+
+
+
+
+
+
     border:
+
+
+
     1px solid rgba(255,75,75,.25);
+
+
+
+
+
+
 
     cursor:pointer;
 
+
+
+
+
+
+
     overflow:hidden;
 
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 .card p{
 
+
+
+
+
+
+
     color:#d8c88d;
+
+
+
+
+
+
 
     font-size:14px;
 
+
+
+
+
+
+
     line-height:1.7;
+
+
+
+
+
+
 
     white-space:nowrap;
 
+
+
+
+
+
+
     overflow:hidden;
+
+
+
+
+
+
 
     text-overflow:ellipsis;
 
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 .footer{
 
+
+
+
+
+
+
     text-align:center;
+
+
+
+
+
+
 
     margin-top:15px;
 
+
+
+
+
+
+
     color:rgba(255,255,255,.65);
+
+
+
+
+
+
 
     font-size:13px;
 
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 </style>
 
+
+
+
+
+
+
 </head>
+
+
+
+
+
+
 
 <body>
 
+
+
+
+
+
+
 <div class="container">
 
+
+
+
+
+
+
 <button class="discord"
+
+
+
 onclick="window.open('https://discord.gg/AWRsZfm32','_blank')">
+
+
+
+
+
+
 
 🔥 Discord Community
 
+
+
+
+
+
+
 </button>
 
+
+
+
+
+
+
 <div class="label">
+
+
+
 Android
+
+
+
 </div>
 
+
+
+
+
+
+
 <div class="card"
+
+
+
 onclick="copyText('https://gtpshosting.web.id//raw/blazetopia')">
 
+
+
+
+
+
+
 <p>
+
+
+
 https://gtpshosting.web.id//raw/blazetopia
+
+
+
 </p>
 
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
 
 <div class="label">
+
+
+
 iOS
+
+
+
 </div>
 
+
+
+
+
+
+
 <div class="card"
+
+
+
 onclick="copyText('https://gtpshosting.web.id//ios/blazetopia')">
 
+
+
+
+
+
+
 <p>
+
+
+
 https://gtpshosting.web.id//ios/blazetopia
+
+
+
 </p>
 
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
 
 <div class="label">
+
+
+
 IP Address For Windows
+
+
+
 </div>
+
+
+
+
+
+
 
 <div class="card"
+
+
+
 onclick="copyText('149.202.58.185 www.growtopia1.com
+
+
+
 149.202.58.185 www.growtopia2.com')">
 
+
+
+
+
+
+
 <p>
+
+
+
 149.202.58.185 www.growtopia1.com
+
+
+
 <br>
+
+
+
 149.202.58.185 www.growtopia2.com
+
+
+
 </p>
 
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
 
 <div class="footer">
+
+
+
 Enter the Flames. Rule the World.
-</div>
+
+
 
 </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
 
 <script>
 
+
+
+
+
+
+
 function copyText(text){
+
+
+
+
+
+
 
 navigator.clipboard.writeText(text);
 
+
+
+
+
+
+
 const notification=document.createElement("div");
+
+
+
+
+
+
 
 notification.innerText="Copied!";
 
+
+
+
+
+
+
 notification.style.position="fixed";
+
+
+
 notification.style.bottom="20px";
+
+
+
 notification.style.left="50%";
+
+
+
 notification.style.transform="translateX(-50%)";
+
+
+
 notification.style.background="#ff1010";
+
+
+
 notification.style.color="white";
+
+
+
 notification.style.padding="10px 20px";
+
+
+
 notification.style.borderRadius="10px";
+
+
+
 notification.style.fontWeight="bold";
+
+
+
 notification.style.zIndex="9999";
+
+
+
+
+
+
 
 document.body.appendChild(notification);
 
+
+
+
+
+
+
 setTimeout(()=>{
+
+
+
+
+
+
 
 notification.remove();
 
+
+
+
+
+
+
 },2000);
+
+
+
+
+
+
 
 }
 
+
+
+
+
+
+
 </script>
 
+
+
+
+
+
+
 </body>
+
+
+
 </html>
