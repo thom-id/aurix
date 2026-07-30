@@ -37,8 +37,12 @@ content:"";
 position:fixed;
 inset:0;
 background:
-linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.70)),
+linear-gradient(
+rgba(0,0,0,.10),
+rgba(0,0,0,.75)
+),
 url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
+
 background-size:100% auto;
 background-position:top center;
 background-repeat:no-repeat;
@@ -54,9 +58,10 @@ inset:0;
 background:
 radial-gradient(
 circle at top,
-rgba(255,0,0,.12),
-rgba(0,0,0,.85)
+rgba(255,0,0,.18),
+rgba(0,0,0,.9)
 );
+
 z-index:-1;
 }
 
@@ -76,14 +81,16 @@ padding:26px;
 
 border-radius:24px;
 
-background:rgba(35,0,0,.72);
+background:
+rgba(35,0,0,.75);
 
-backdrop-filter:blur(14px);
+backdrop-filter:blur(15px);
 
-border:1px solid rgba(255,70,70,.20);
+border:
+1px solid rgba(255,70,70,.25);
 
 box-shadow:
-0 0 35px rgba(255,0,0,.15);
+0 0 40px rgba(255,0,0,.2);
 
 text-align:center;
 
@@ -94,7 +101,7 @@ text-align:center;
 
 font-size:18px;
 
-line-height:1.4;
+line-height:1.5;
 
 margin-bottom:15px;
 
@@ -108,9 +115,9 @@ white-space:nowrap;
 background:
 linear-gradient(
 90deg,
-#ff2d2d,
-#450000,
-#ff2d2d
+#ff3333,
+#ff0000,
+#700000
 );
 
 -webkit-background-clip:text;
@@ -149,13 +156,6 @@ gap:12px;
 }
 
 
-.discord{
-
-width:100%;
-
-}
-
-
 .bottom-buttons{
 
 display:flex;
@@ -184,11 +184,30 @@ color:white;
 
 font-size:15px;
 
-font-weight:700;
+font-weight:800;
 
 cursor:pointer;
 
 transition:.25s;
+
+}
+
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+
+.discord{
+
+background:
+linear-gradient(
+90deg,
+#5865F2,
+#404EED
+);
 
 }
 
@@ -199,37 +218,15 @@ background:
 linear-gradient(
 90deg,
 #ff3030,
-#b30000
+#900000
 );
 
 }
-
-
-.discord{
-
-background:
-linear-gradient(
-90deg,
-#ff3030,
-#450000
-);
-
-}
-
-
-.btn:hover{
-
-transform:translateY(-3px);
-
-}
-
 
 
 /* SCROLL */
 
 .scroll{
-
-width:100%;
 
 display:flex;
 
@@ -245,16 +242,12 @@ margin:35px 0;
 
 color:#ddd;
 
-font-size:15px;
-
 }
 
 
 .arrow{
 
-font-size:28px;
-
-display:block;
+font-size:30px;
 
 animation:down 1.2s infinite;
 
@@ -270,7 +263,9 @@ transform:translateY(8px);
 }
 
 }
- 
+
+
+
 /* CONTENT */
 
 .content{
@@ -279,14 +274,16 @@ padding:26px;
 
 border-radius:24px;
 
-background:rgba(35,0,0,.72);
+background:
+rgba(35,0,0,.75);
 
-backdrop-filter:blur(14px);
+backdrop-filter:blur(15px);
 
-border:1px solid rgba(255,70,70,.20);
+border:
+1px solid rgba(255,70,70,.25);
 
 box-shadow:
-0 0 35px rgba(255,0,0,.15);
+0 0 40px rgba(255,0,0,.18);
 
 margin-bottom:25px;
 
@@ -299,7 +296,7 @@ text-align:center;
 
 font-size:25px;
 
-font-weight:800;
+font-weight:900;
 
 margin-bottom:10px;
 
@@ -338,9 +335,11 @@ margin-bottom:14px;
 
 border-radius:18px;
 
-background:rgba(25,8,8,.82);
+background:
+rgba(25,8,8,.85);
 
-border:1px solid rgba(255,255,255,.08);
+border:
+1px solid rgba(255,255,255,.08);
 
 cursor:pointer;
 
@@ -351,9 +350,9 @@ transition:.25s;
 
 .card:hover{
 
-transform:translateY(-2px);
+transform:translateY(-3px);
 
-border-color:#ff4444;
+border-color:#ff3333;
 
 }
 
@@ -366,17 +365,15 @@ line-height:1.7;
 
 color:#e6d59a;
 
-}
-
-
-
-/* PRICE ROLES */
+}/* PRICE ROLES */
 
 #priceRoles{
 
-background:rgba(35,0,0,.82);
+background:
+rgba(35,0,0,.85);
 
 }
+
 
 
 .role-card{
@@ -385,32 +382,42 @@ padding:22px;
 
 margin-bottom:20px;
 
+
 border-radius:25px;
+
 
 background:
 linear-gradient(
 145deg,
-rgba(65,0,0,.85),
-rgba(20,0,0,.9)
+rgba(70,0,0,.9),
+rgba(15,0,0,.95)
 );
 
-border:1px solid rgba(255,70,70,.30);
+
+border:
+1px solid rgba(255,70,70,.35);
+
 
 box-shadow:
-0 0 25px rgba(255,0,0,.15);
+0 0 30px rgba(255,0,0,.18);
+
 
 transition:.3s;
 
 }
 
 
+
 .role-card:hover{
 
 transform:translateY(-5px);
 
-border-color:#ff3333;
+
+box-shadow:
+0 0 40px rgba(255,0,0,.35);
 
 }
+
 
 
 .role-card h3{
@@ -419,11 +426,12 @@ font-size:22px;
 
 text-align:center;
 
-color:#ff3b3b;
+color:#ff3333;
 
 margin-bottom:15px;
 
 }
+
 
 
 .role-card p{
@@ -434,13 +442,18 @@ line-height:1.8;
 
 color:#ddd;
 
-background:rgba(0,0,0,.25);
+
+background:
+rgba(0,0,0,.25);
+
 
 padding:15px;
+
 
 border-radius:16px;
 
 }
+
 
 
 .price{
@@ -449,23 +462,84 @@ margin-top:18px;
 
 padding:12px;
 
+
 text-align:center;
+
 
 font-size:22px;
 
+
 font-weight:900;
+
 
 color:white;
 
+
 border-radius:16px;
+
 
 
 background:
 linear-gradient(
 90deg,
 #ff3030,
-#a00000
+#900000
 );
+
+}
+
+
+
+/* BUY BUTTON */
+
+.buy-btn{
+
+width:100%;
+
+
+padding:15px;
+
+
+margin-top:15px;
+
+
+border:none;
+
+
+border-radius:18px;
+
+
+
+background:
+linear-gradient(
+90deg,
+#ff3030,
+#900000
+);
+
+
+
+color:white;
+
+
+font-size:15px;
+
+
+font-weight:900;
+
+
+cursor:pointer;
+
+
+transition:.25s;
+
+}
+
+
+
+.buy-btn:hover{
+
+transform:scale(1.03);
 
 }
 
@@ -477,64 +551,101 @@ linear-gradient(
 
 display:none;
 
+
 position:fixed;
+
 
 inset:0;
 
-background:rgba(0,0,0,.85);
 
-backdrop-filter:blur(8px);
+
+background:
+rgba(0,0,0,.85);
+
+
+
+backdrop-filter:blur(10px);
+
+
 
 z-index:9999;
 
+
+
 align-items:center;
+
 
 justify-content:center;
 
 }
 
 
+
+
 .popup-box{
+
 
 width:90%;
 
+
 max-width:420px;
+
+
 
 padding:25px;
 
+
+
 border-radius:28px;
+
+
 
 
 background:
 linear-gradient(
 145deg,
-rgba(70,0,0,.95),
-rgba(15,0,0,.95)
+#400000,
+#120000
 );
 
 
-border:1px solid rgba(255,50,50,.6);
+
+
+border:
+1px solid rgba(255,50,50,.7);
+
+
 
 
 box-shadow:
 
-0 0 30px rgba(255,0,0,.6),
+0 0 35px rgba(255,0,0,.7),
 
-0 0 80px rgba(255,0,0,.25);
+0 0 100px rgba(255,0,0,.25);
 
 
-animation:popupShow .35s ease;
+
+
+animation:
+popupShow .35s ease;
+
+
 
 }
 
 
+
+
 @keyframes popupShow{
+
 
 from{
 
 opacity:0;
 
-transform:scale(.8) translateY(40px);
+transform:
+scale(.75)
+translateY(50px);
 
 }
 
@@ -543,43 +654,75 @@ to{
 
 opacity:1;
 
-transform:scale(1) translateY(0);
+transform:
+scale(1)
+translateY(0);
 
 }
 
+
 }
+
+
 
 
 .popup-box h2{
 
+
 text-align:center;
 
-color:#ff3333;
 
 font-size:24px;
 
+
+color:#ff3333;
+
+
 margin-bottom:20px;
 
+
 }
+
+
+
+
 .popup-box input{
+
 
 width:100%;
 
+
 padding:14px;
+
 
 margin-bottom:12px;
 
+
+
 border-radius:16px;
 
-border:1px solid rgba(255,50,50,.3);
 
-outline:none;
+
+border:
+1px solid rgba(255,50,50,.4);
+
+
+
 
 background:#250000;
 
+
+
 color:white;
 
+
+
+outline:none;
+
+
 }
+
+
 
 
 .popup-box input::placeholder{
@@ -589,38 +732,77 @@ color:#aaa;
 }
 
 
+
+
 .qris{
+
 
 width:100%;
 
+
 margin-top:15px;
+
+
 
 border-radius:18px;
 
-border:2px solid #ff3333;
+
+
+
+border:
+2px solid #ff3333;
+
+
 
 box-shadow:
 
-0 0 20px rgba(255,0,0,.5);
+0 0 25px rgba(255,0,0,.6);
+
+
+
+cursor:pointer;
+
+
+
+transition:.3s;
+
 
 }
 
 
+
+.qris:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+
 .order-discord{
+
 
 width:100%;
 
+
 padding:14px;
+
+
 
 margin-top:15px;
 
+
+
 border:none;
+
+
 
 border-radius:18px;
 
 
-background:
 
+background:
 linear-gradient(
 90deg,
 #5865F2,
@@ -628,93 +810,88 @@ linear-gradient(
 );
 
 
-color:white;
-
-font-size:15px;
-
-font-weight:900;
-
-cursor:pointer;
-
-}
-
-
-.buy-btn{
-
-width:100%;
-
-padding:15px;
-
-margin-top:15px;
-
-border:none;
-
-border-radius:18px;
-
-background:
-
-linear-gradient(
-90deg,
-#ff3030,
-#900000
-);
 
 color:white;
 
+
+
 font-size:15px;
+
+
 
 font-weight:900;
 
+
+
 cursor:pointer;
 
+
 }
+
 
 
 .close-btn{
 
+
 width:100%;
+
 
 padding:12px;
 
+
 margin-top:12px;
+
+
 
 border:none;
 
+
 border-radius:15px;
+
+
 
 background:#444;
 
+
+
 color:white;
 
+
+
 cursor:pointer;
+
 
 }
 
 
+
 .footer{
+
 
 text-align:center;
 
+
 font-size:14px;
+
 
 color:#aaa;
 
+
 margin-top:20px;
+
 
 }
 
 
 </style>
 
-</head>
-
-
-<body>
+</head><body>
 
 <div class="container">
 
 
 <div class="hero">
+
 
 <h1>
 Welcome to 
@@ -724,9 +901,11 @@ BlazeTopia Private Server
 </h1>
 
 
+
 <p>
 This is a GTPS that you can play for free, with systems and mechanisms that have been designed as best as possible to produce the best gaming experience.
 </p>
+
 
 
 <div class="buttons">
@@ -744,12 +923,14 @@ onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">
 <div class="bottom-buttons">
 
 
+
 <button class="btn play"
 onclick="document.getElementById('howtoplay').scrollIntoView()">
 
 ◉ Play Now
 
 </button>
+
 
 
 
@@ -761,26 +942,34 @@ onclick="document.getElementById('priceRoles').scrollIntoView()">
 </button>
 
 
-</div>
-
 
 </div>
 
 
 </div>
+
+
+</div>
+
 
 
 
 
 <div class="scroll">
 
+
 <span class="arrow">
+
 ↓
+
 </span>
+
 
 Scroll Down
 
+
 </div>
+
 
 
 
@@ -788,83 +977,127 @@ Scroll Down
 <div class="content" id="howtoplay">
 
 
+
 <div class="title">
+
 How to Play
+
 </div>
+
+
 
 
 <div class="desc">
+
 Please select the application you want to use!
+
 </div>
+
 
 
 
 <div class="label">
+
 Android
+
 </div>
+
+
 
 
 <div class="card"
 onclick="copyText('https://gtpshosting.web.id/raw/blazetopia')">
 
+
 <p>
+
 https://gtpshosting.web.id/raw/blazetopia
+
 </p>
 
+
 </div>
+
 
 
 
 
 <div class="label">
+
 iOS
+
 </div>
+
+
 
 
 <div class="card"
 onclick="copyText('https://gtpshosting.web.id/ios/blazetopia')">
 
+
 <p>
+
 https://gtpshosting.web.id/ios/blazetopia
+
 </p>
 
+
 </div>
+
 
 
 
 
 <div class="label">
+
 Windows
+
 </div>
+
+
 
 
 <div class="card"
 onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
 
+
 <p>
+
 149.202.58.185 www.growtopia1.com<br>
+
 149.202.58.185 www.growtopia2.com
+
 </p>
 
+
 </div>
 
 
+
 </div>
+
+
+
+
+
 <div class="content" id="priceRoles">
 
 
+
 <div class="title">
+
 Price Roles
+
 </div>
+
+
 
 
 <div class="desc">
+
 Choose your BlazeTopia Role
-</div>
 
-
-
-<div class="role-card">
+</div><div class="role-card">
 
 <h3>🔥 Reseller Role</h3>
 
@@ -876,17 +1109,16 @@ Choose your BlazeTopia Role
 • Verified in game.
 </p>
 
-
 <div class="price">
 Rp 400.000
 </div>
-
 
 <button class="buy-btn" onclick="openBuy('Reseller Role')">
 Buy Now
 </button>
 
 </div>
+
 
 
 <div class="role-card">
@@ -901,11 +1133,9 @@ Buy Now
 • Special promotion channel.
 </p>
 
-
 <div class="price">
 Rp 200.000
 </div>
-
 
 <button class="buy-btn" onclick="openBuy('Middleman Role')">
 Buy Now
@@ -914,16 +1144,130 @@ Buy Now
 </div>
 
 
-<!-- ROLE LAINNYA TETAP PAKAI PUNYA KAMU -->
-<!-- Lanjutkan semua role sampai Cheater VIP -->
 
+<div class="role-card">
+
+<h3>🔥 Unlimited Block Role</h3>
+
+<p>
+• Role Moderator, Cheater, VIP.<br>
+• Get title [ UNLI BLOCK ] in game.<br>
+• In-game name color: Yellow.<br>
+• Can sell blocks on vend.
+</p>
+
+<div class="price">
+Rp 250.000
+</div>
+
+<button class="buy-btn" onclick="openBuy('Unlimited Block Role')">
+Buy Now
+</button>
 
 </div>
 
 
 
-<!-- BUY POPUP -->
+<div class="role-card">
 
+<h3>🔥 Super Developer Role</h3>
+
+<p>
+• Role Developer, Moderator, Cheater, VIP.<br>
+• In-game name color: Dark Orange.<br><br>
+
+Commands:<br>
+/color /e /entereffect /freezeall /killall /p<br>
+/sdsb /trollnick /vernick /warn
+</p>
+
+<div class="price">
+Rp 150.000
+</div>
+
+<button class="buy-btn" onclick="openBuy('Super Developer Role')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="role-card">
+
+<h3>🔥 Developer Role</h3>
+
+<p>
+• Role Moderator, Cheater, VIP.<br>
+• In-game name color: Yellow.<br><br>
+
+Commands:<br>
+/1hit /banall /block /curse /door /dsb<br>
+/hide /longmode /mute /nick /pullall<br>
+/ssb /uncurse /unmute /weather
+</p>
+
+<div class="price">
+Rp 75.000
+</div>
+
+<button class="buy-btn" onclick="openBuy('Developer Role')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="role-card">
+
+<h3>🔥 Moderator Role</h3>
+
+<p>
+• Role Cheater, VIP.<br>
+• In-game name color: Purple.<br><br>
+
+Commands:<br>
+/find /g /info /invis /magic<br>
+/nuke /snuke /summon /togglemods
+</p>
+
+<div class="price">
+Rp 50.000
+</div>
+
+<button class="buy-btn" onclick="openBuy('Moderator Role')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="role-card">
+
+<h3>🔥 Cheater + VIP Role</h3>
+
+<p>
+• Role Cheater, VIP.<br>
+• In-game name color: White.<br><br>
+
+Commands:<br>
+/rainbow /tpclick /v /valentine /vsb
+</p>
+
+<div class="price">
+Rp 25.000
+</div>
+
+<button class="buy-btn" onclick="openBuy('Cheater VIP Role')">
+Buy Now
+</button>
+
+</div>
+
+
+</div><!-- BUY POPUP -->
 
 <div class="popup" id="popup">
 
@@ -936,6 +1280,7 @@ Complete Purchase
 </h2>
 
 
+
 <input id="selectedRole" placeholder="Selected Role" readonly>
 
 
@@ -945,45 +1290,56 @@ Complete Purchase
 <input id="discordUser" placeholder="Discord Username">
 
 
-
 <p>
 QRIS Payment
 </p>
 
 
 
-<img class="qris" 
+<img class="qris"
 src="https://i.ibb.co.com/WWdkk6VL/file-00000000aa7c720b8b517903a435cae0.png">
 
 
 
 <button class="buy-btn" onclick="sendOrder()">
-Complete Purchase
+
+Send Order
+
 </button>
+
 
 
 
 <button class="order-discord" onclick="orderDiscord()">
+
 Order via Discord
+
 </button>
+
 
 
 
 <button class="close-btn" onclick="closeBuy()">
+
 Close
+
 </button>
 
 
+
 </div>
 
 
 </div>
+
 
 
 
 
 <div class="footer">
+
 Enter the Flames. Rule the World.
+
 </div>
 
 
@@ -998,9 +1354,12 @@ Enter the Flames. Rule the World.
 
 function showToast(){
 
+
 const t=document.createElement("div");
 
+
 t.innerHTML="Copied!";
+
 
 
 Object.assign(t.style,{
@@ -1028,22 +1387,29 @@ zIndex:"9999"
 });
 
 
+
 document.body.appendChild(t);
 
 
+
 setTimeout(()=>t.remove(),1800);
+
 
 }
 
 
 
+
+
 function copyText(text){
+
 
 navigator.clipboard.writeText(text)
 
 .then(showToast)
 
 .catch(()=>alert("Failed to copy"));
+
 
 }
 
@@ -1053,9 +1419,12 @@ navigator.clipboard.writeText(text)
 
 function openBuy(role){
 
+
 document.getElementById("popup").style.display="flex";
 
+
 document.getElementById("selectedRole").value=role;
+
 
 }
 
@@ -1065,7 +1434,9 @@ document.getElementById("selectedRole").value=role;
 
 function closeBuy(){
 
+
 document.getElementById("popup").style.display="none";
+
 
 }
 
@@ -1075,6 +1446,7 @@ document.getElementById("popup").style.display="none";
 
 function orderDiscord(){
 
+
 let role=document.getElementById("selectedRole").value;
 
 let growid=document.getElementById("growid").value;
@@ -1083,12 +1455,16 @@ let discord=document.getElementById("discordUser").value;
 
 
 
-let text=
+let orderText =
 
-"Order BlazeTopia\n\n"+
+"🔥 BlazeTopia Order\n\n"+
 "Role : "+role+
 "\nGrowID : "+growid+
 "\nDiscord : "+discord;
+
+
+
+navigator.clipboard.writeText(orderText);
 
 
 
@@ -1120,20 +1496,29 @@ let discord=document.getElementById("discordUser").value;
 
 if(growid==="" || discord===""){
 
+
 alert("Please fill all information!");
 
 return;
+
 
 }
 
 
 
-alert(
 
-"Order Submitted!\n\n"+
+let order =
+
+"🔥 BlazeTopia Order\n\n"+
 "Role : "+role+
 "\nGrowID : "+growid+
-"\nDiscord : "+discord
+"\nDiscord : "+discord;
+
+
+
+alert(
+
+"Order Created!\n\n"+order
 
 );
 
