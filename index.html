@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,584 +13,349 @@
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
-body {
-    background: #120000;
-    color: #fff;
-    overflow-x: hidden;
-    min-height: 100vh;
+body{
+background:#120000;
+color:#fff;
+overflow-x:hidden;
+min-height:100vh;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background:
-        linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.70)),
-        url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: -2;
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.70)),
+url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
+background-size:100% auto;
+background-position:top center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+z-index:-2;
 }
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(circle at top, rgba(255,0,0,.12), rgba(0,0,0,.85));
-    z-index: -1;
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:radial-gradient(circle at top,rgba(255,0,0,.12),rgba(0,0,0,.85));
+z-index:-1;
 }
 
-.container {
-    width: 92%;
-    max-width: 470px;
-    margin: 280px auto 40px;
+.container{
+width:92%;
+max-width:470px;
+margin:280px auto 40px;
 }
 
 /* HERO */
-.hero {
-    padding: 26px;
-    border-radius: 24px;
-    background: rgba(35,0,0,.72);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255,70,70,.20);
-    box-shadow: 0 0 35px rgba(255,0,0,.15);
-    text-align: center;
+
+.hero{
+padding:26px;
+border-radius:24px;
+background:rgba(35,0,0,.72);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,70,70,.20);
+box-shadow:0 0 35px rgba(255,0,0,.15);
+text-align:center;
 }
 
-.hero h1 {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    white-space: nowrap;
+.hero h1{
+font-size:18px;
+line-height:1.4;
+margin-bottom:15px;
+white-space:nowrap;
 }
 
-.gradient-text {
-    background: linear-gradient(90deg, #ff2d2d, #450000, #ff2d2d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
+.gradient-text{
+background:linear-gradient(90deg,#ff2d2d,#450000,#ff2d2d);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+font-weight:900;
 }
 
-.hero p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #ddd;
-    margin-bottom: 25px;
+.hero p{
+font-size:14px;
+line-height:1.7;
+color:#ddd;
+margin-bottom:25px;
 }
 
-.buttons {
-    display: flex;
-    gap: 12px;
+.buttons{
+display:flex;
+gap:12px;
 }
 
-.btn {
-    width: 50%;
-    padding: 16px 10px;
-    border: none;
-    border-radius: 18px;
-    color: white;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .25s;
+.btn{
+width:50%;
+padding:16px 10px;
+border:none;
+border-radius:18px;
+color:white;
+font-size:15px;
+font-weight:700;
+cursor:pointer;
+transition:.25s;
 }
 
-.play {
-    background: linear-gradient(90deg, #ff3030, #b30000);
+.play{
+background:linear-gradient(90deg,#ff3030,#b30000);
 }
 
-.discord {
-    background: linear-gradient(90deg, #ff3030, #450000);
+.discord{
+background:linear-gradient(90deg,#ff3030,#450000);
 }
 
-.btn:hover {
-    transform: translateY(-3px);
+.btn:hover{
+transform:translateY(-3px);
 }
+
 
 /* SCROLL */
-.scroll {
-    text-align: center;
-    margin: 35px 0;
-    color: #ddd;
-    font-size: 15px;
+
+.scroll{
+text-align:center;
+margin:35px 0;
+color:#ddd;
+font-size:15px;
 }
 
-.arrow {
-    font-size: 28px;
-    display: block;
-    animation: down 1.2s infinite;
+.arrow{
+font-size:28px;
+display:block;
+animation:down 1.2s infinite;
 }
 
-@keyframes down {
-    50% { transform: translateY(8px); }
+@keyframes down{
+50%{
+transform:translateY(8px);
+}
 }
 
-.content {
-    padding: 26px;
-    border-radius: 24px;
-    background: rgba(35,0,0,.72);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255,70,70,.20);
-    box-shadow: 0 0 35px rgba(255,0,0,.15);
-    margin-bottom: 20px;
+
+.content{
+padding:26px;
+border-radius:24px;
+background:rgba(35,0,0,.72);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,70,70,.20);
+box-shadow:0 0 35px rgba(255,0,0,.15);
 }
 
-.title {
-    text-align: center;
-    font-size: 25px;
-    font-weight: 800;
-    margin-bottom: 10px;
+
+.title{
+text-align:center;
+font-size:25px;
+font-weight:800;
+margin-bottom:10px;
 }
 
-.desc {
-    text-align: center;
-    font-size: 14px;
-    color: #ddd;
-    margin-bottom: 30px;
+
+.desc{
+text-align:center;
+font-size:14px;
+color:#ddd;
+margin-bottom:30px;
 }
 
-.label {
-    font-size: 15px;
-    font-weight: 700;
-    margin: 15px 0 7px;
-    color: #ff6666;
+
+.label{
+font-size:15px;
+font-weight:700;
+margin:15px 0 7px;
 }
 
-.card {
-    padding: 15px 18px;
-    margin-bottom: 14px;
-    border-radius: 18px;
-    background: rgba(25,8,8,.82);
-    border: 1px solid rgba(255,255,255,.08);
-    cursor: pointer;
-    transition: .25s;
+
+.card{
+padding:15px 18px;
+margin-bottom:14px;
+border-radius:18px;
+background:rgba(25,8,8,.82);
+border:1px solid rgba(255,255,255,.08);
+cursor:pointer;
+transition:.25s;
 }
 
-.card:hover {
-    transform: translateY(-2px);
-    border-color: #ff4444;
+
+.card:hover{
+transform:translateY(-2px);
+border-color:#ff4444;
 }
 
-.card p {
-    font-size: 13px;
-    line-height: 1.7;
-    color: #e6d59a;
+
+.card p{
+font-size:13px;
+line-height:1.7;
+color:#e6d59a;
 }
 
-/* ===== SHOP STYLES ===== */
-.shop-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin: 15px 0;
-}
 
-.shop-item {
-    padding: 16px 12px;
-    border-radius: 16px;
-    background: rgba(25,8,8,.82);
-    border: 1px solid rgba(255,255,255,.08);
-    text-align: center;
-    transition: .3s;
-    cursor: pointer;
-}
-
-.shop-item:hover {
-    border-color: #ff4444;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 25px rgba(255,0,0,.2);
-}
-
-.shop-item .icon {
-    font-size: 32px;
-    display: block;
-    margin-bottom: 6px;
-}
-
-.shop-item .name {
-    font-size: 13px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.shop-item .price {
-    font-size: 12px;
-    color: #ffd700;
-    margin-top: 4px;
-}
-
-.shop-item .price span {
-    background: rgba(255,215,0,.15);
-    padding: 2px 10px;
-    border-radius: 10px;
-    font-size: 11px;
-}
-
-.shop-item .badge {
-    display: inline-block;
-    font-size: 9px;
-    padding: 2px 10px;
-    border-radius: 20px;
-    margin-top: 6px;
-    font-weight: 700;
-}
-
-.badge-limited {
-    background: #ff3030;
-    color: #fff;
-}
-
-.badge-event {
-    background: #ff8800;
-    color: #fff;
-}
-
-.badge-popular {
-    background: #00cc88;
-    color: #fff;
-}
-
-.buy-btn {
-    margin-top: 8px;
-    padding: 6px 20px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #ff3030, #b30000);
-    color: #fff;
-    font-weight: 700;
-    font-size: 12px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.buy-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255,0,0,.4);
-}
-
-.buy-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-/* Category tabs */
-.shop-tabs {
-    display: flex;
-    gap: 8px;
-    margin: 15px 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.shop-tab {
-    padding: 8px 18px;
-    border: 1px solid rgba(255,255,255,.15);
-    border-radius: 20px;
-    background: transparent;
-    color: #aaa;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.shop-tab.active {
-    background: #ff3030;
-    border-color: #ff3030;
-    color: #fff;
-}
-
-.shop-tab:hover {
-    border-color: #ff4444;
-    color: #fff;
-}
-
-.shop-notice {
-    font-size: 12px;
-    color: #aaa;
-    text-align: center;
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 12px;
-    background: rgba(255,0,0,.08);
-    border: 1px dashed rgba(255,0,0,.2);
-}
-
-/* Toast notification */
-.toast {
-    position: fixed;
-    left: 50%;
-    bottom: 25px;
-    transform: translateX(-50%);
-    background: #c00000;
-    color: #fff;
-    padding: 12px 28px;
-    border-radius: 14px;
-    font-weight: 700;
-    z-index: 9999;
-    animation: toastIn .3s ease;
-}
-
-@keyframes toastIn {
-    from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0); }
-}
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #aaa;
+.footer{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+color:#aaa;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 <div class="container">
 
-    <!-- HERO -->
-    <div class="hero">
-        <h1>Welcome to <span class="gradient-text">BlazeTopia Private Server</span></h1>
-        <p>
-            This is a GTPS that you can play for free, with systems and mechanisms that have been designed as best as possible to produce the best gaming experience.
-        </p>
-        <div class="buttons">
-            <button class="btn play" onclick="document.getElementById('howtoplay').scrollIntoView()">◉ Play Now</button>
-            <button class="btn discord" onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">◉ Join Discord</button>
-        </div>
-    </div>
 
-    <!-- SCROLL -->
-    <div class="scroll">
-        <span class="arrow">↓</span>
-        Scroll Down
-    </div>
+<div class="hero">
 
-    <!-- HOW TO PLAY -->
-    <div class="content" id="howtoplay">
-        <div class="title">How to Play</div>
-        <div class="desc">Please select the application you want to use!</div>
+<h1>
+Welcome to <span class="gradient-text">BlazeTopia Private Server</span>
+</h1>
 
-        <div class="label">Android</div>
-        <div class="card" onclick="copyText('https://gtpshosting.web.id/raw/blazetopia')">
-            <p>https://gtpshosting.web.id/raw/blazetopia</p>
-        </div>
 
-        <div class="label">iOS</div>
-        <div class="card" onclick="copyText('https://gtpshosting.web.id/ios/blazetopia')">
-            <p>https://gtpshosting.web.id/ios/blazetopia</p>
-        </div>
+<p>
+This is a GTPS that you can play for free, with systems and mechanisms that have been designed as best as possible to produce the best gaming experience.
+</p>
 
-        <div class="label">Windows</div>
-        <div class="card" onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
-            <p>149.202.58.185 www.growtopia1.com<br>149.202.58.185 www.growtopia2.com</p>
-        </div>
 
-        <div class="footer">Enter the Flames. Rule the World.</div>
-    </div>
+<div class="buttons">
 
-    <!-- ===== SHOP SECTION ===== -->
-    <div class="content" id="shop">
-        <div class="title">🔥 Item Shop</div>
-        <div class="desc">Upgrade your gameplay with exclusive items!</div>
+<button class="btn play" onclick="document.getElementById('howtoplay').scrollIntoView()">
+◉ Play Now
+</button>
 
-        <!-- Category Tabs -->
-        <div class="shop-tabs">
-            <button class="shop-tab active" data-category="all" onclick="filterShop('all', this)">All</button>
-            <button class="shop-tab" data-category="limited" onclick="filterShop('limited', this)">⭐ Limited</button>
-            <button class="shop-tab" data-category="event" onclick="filterShop('event', this)">🎉 Event</button>
-            <button class="shop-tab" data-category="popular" onclick="filterShop('popular', this)">🔥 Popular</button>
-        </div>
 
-        <!-- Shop Grid -->
-        <div class="shop-grid" id="shopGrid">
-            <!-- Items will be rendered by JavaScript -->
-        </div>
-
-        <!-- Notice -->
-        <div class="shop-notice">
-            ⚡ Items will be sent to your in-game account within 5 minutes after purchase.
-            <br>For support, contact us on <strong>Discord</strong>.
-        </div>
-    </div>
+<button class="btn discord" onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">
+◉ Join Discord
+</button>
 
 </div>
 
+</div>
+
+
+<div class="scroll">
+
+<span class="arrow">↓</span>
+Scroll Down
+
+</div>
+
+
+
+<div class="content" id="howtoplay">
+
+<div class="title">
+How to Play
+</div>
+
+
+<div class="desc">
+Please select the application you want to use!
+</div>
+
+
+<div class="label">
+Android
+</div>
+
+<div class="card" onclick="copyText('https://gtpshosting.web.id/raw/blazetopia')">
+
+<p>
+https://gtpshosting.web.id/raw/blazetopia
+</p>
+
+</div>
+
+
+
+<div class="label">
+iOS
+</div>
+
+<div class="card" onclick="copyText('https://gtpshosting.web.id/ios/blazetopia')">
+
+<p>
+https://gtpshosting.web.id/ios/blazetopia
+</p>
+
+</div>
+
+
+
+<div class="label">
+Windows
+</div>
+
+<div class="card" onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
+
+<p>
+149.202.58.185 www.growtopia1.com<br>
+149.202.58.185 www.growtopia2.com
+</p>
+
+</div>
+
+
+
+<div class="footer">
+Enter the Flames. Rule the World.
+</div>
+
+
+</div>
+
+</div>
+
+
+
 <script>
-// ===== SHOP DATA =====
-const shopItems = [
-    // Limited Items
-    {
-        id: 1,
-        name: 'Dragon Wings',
-        icon: '🐉',
-        price: '250 Gems',
-        category: 'limited',
-        badge: '⭐ Limited',
-        badgeClass: 'badge-limited'
-    },
-    {
-        id: 2,
-        name: 'Phoenix Helm',
-        icon: '🔥',
-        price: '180 Gems',
-        category: 'limited',
-        badge: '⭐ Limited',
-        badgeClass: 'badge-limited'
-    },
-    // Event Items
-    {
-        id: 3,
-        name: 'Golden Fishing Rod',
-        icon: '🎣',
-        price: '3 WL',
-        category: 'event',
-        badge: '🎉 Event',
-        badgeClass: 'badge-event'
-    },
-    {
-        id: 4,
-        name: 'Candy Cane Sword',
-        icon: '🍭',
-        price: '2 WL',
-        category: 'event',
-        badge: '🎉 Event',
-        badgeClass: 'badge-event'
-    },
-    // Popular Items
-    {
-        id: 5,
-        name: 'World Lock',
-        icon: '🔒',
-        price: '500 Gems',
-        category: 'popular',
-        badge: '🔥 Popular',
-        badgeClass: 'badge-popular'
-    },
-    {
-        id: 6,
-        name: 'Diamond Lock',
-        icon: '💎',
-        price: '2,500 Gems',
-        category: 'popular',
-        badge: '🔥 Popular',
-        badgeClass: 'badge-popular'
-    },
-    // Additional Items
-    {
-        id: 7,
-        name: 'Shadow Cloak',
-        icon: '🌙',
-        price: '4 WL',
-        category: 'limited',
-        badge: '⭐ Limited',
-        badgeClass: 'badge-limited'
-    },
-    {
-        id: 8,
-        name: 'Blaze Sword',
-        icon: '⚔️',
-        price: '150 Gems',
-        category: 'popular',
-        badge: '🔥 Popular',
-        badgeClass: 'badge-popular'
-    }
-];
 
-// ===== RENDER SHOP =====
-function renderShop(category = 'all') {
-    const grid = document.getElementById('shopGrid');
-    if (!grid) return;
+function showToast(){
 
-    const filtered = category === 'all' 
-        ? shopItems 
-        : shopItems.filter(item => item.category === category);
+const t=document.createElement("div");
 
-    if (filtered.length === 0) {
-        grid.innerHTML = `
-            <div style="grid-column: 1/-1; text-align:center; padding:30px; color:#888;">
-                No items in this category yet.
-            </div>
-        `;
-        return;
-    }
+t.innerHTML="Copied!";
 
-    grid.innerHTML = filtered.map(item => `
-        <div class="shop-item" data-category="${item.category}">
-            <span class="icon">${item.icon}</span>
-            <div class="name">${item.name}</div>
-            <div class="price"><span>${item.price}</span></div>
-            <span class="badge ${item.badgeClass}">${item.badge}</span>
-            <br>
-            <button class="buy-btn" onclick="buyItem('${item.name}', '${item.price}')">
-                🛒 Buy Now
-            </button>
-        </div>
-    `).join('');
-}
-
-// ===== FILTER SHOP =====
-function filterShop(category, button) {
-    // Update active tab
-    document.querySelectorAll('.shop-tab').forEach(tab => tab.classList.remove('active'));
-    if (button) button.classList.add('active');
-    
-    renderShop(category);
-}
-
-// ===== BUY ITEM =====
-function buyItem(name, price) {
-    const toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.innerHTML = `✅ You purchased <strong>${name}</strong> for ${price}!`;
-    document.body.appendChild(toast);
-    
-    // Simulate purchase processing
-    setTimeout(() => {
-        toast.innerHTML = `📦 Processing <strong>${name}</strong>...`;
-    }, 1000);
-    
-    setTimeout(() => {
-        toast.innerHTML = `🎉 <strong>${name}</strong> sent to your account!`;
-    }, 2500);
-    
-    setTimeout(() => {
-        toast.remove();
-    }, 5000);
-}
-
-// ===== COPY TEXT =====
-function copyText(text) {
-    navigator.clipboard.writeText(text)
-        .then(() => {
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-            toast.innerHTML = '✅ Copied!';
-            document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 1800);
-        })
-        .catch(() => alert('Failed to copy'));
-}
-
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-    renderShop('all');
+Object.assign(t.style,{
+position:"fixed",
+left:"50%",
+bottom:"25px",
+transform:"translateX(-50%)",
+background:"#c00000",
+color:"#fff",
+padding:"12px 28px",
+borderRadius:"14px",
+fontWeight:"700",
+zIndex:"9999"
 });
+
+document.body.appendChild(t);
+
+setTimeout(()=>t.remove(),1800);
+
+}
+
+
+function copyText(text){
+
+navigator.clipboard.writeText(text)
+.then(showToast)
+.catch(()=>alert("Failed to copy"));
+
+}
+
 </script>
+
 
 </body>
 </html>
