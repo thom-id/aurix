@@ -101,7 +101,6 @@ margin-bottom:25px;
 }
 
 
-
 /* BUTTON */
 
 .buttons{
@@ -154,33 +153,6 @@ transform:translateY(-3px);
 }
 
 
-
-/* SCROLL */
-
-.scroll{
-text-align:center;
-margin:35px 0;
-color:#ddd;
-font-size:15px;
-}
-
-
-.arrow{
-font-size:28px;
-display:block;
-animation:down 1.2s infinite;
-}
-
-
-@keyframes down{
-
-50%{
-transform:translateY(8px);
-}
-
-}
-
-
 /* CONTENT */
 
 .content{
@@ -207,10 +179,7 @@ text-align:center;
 font-size:14px;
 color:#ddd;
 margin-bottom:30px;
-}
-
-
-.label{
+}.label{
 font-size:15px;
 font-weight:700;
 margin:15px 0 7px;
@@ -238,13 +207,266 @@ border-color:#ff4444;
 font-size:13px;
 line-height:1.7;
 color:#e6d59a;
-}</style>
-
-</head>
+}
 
 
-<body>
 
+/* ===== PREMIUM PRICE ROLES ===== */
+
+
+#priceRoles{
+background:rgba(35,0,0,.82);
+}
+
+
+
+.role-card{
+
+padding:22px;
+
+margin-bottom:20px;
+
+border-radius:25px;
+
+background:
+linear-gradient(
+145deg,
+rgba(65,0,0,.85),
+rgba(20,0,0,.9)
+);
+
+border:1px solid rgba(255,70,70,.30);
+
+box-shadow:
+0 0 25px rgba(255,0,0,.15);
+
+transition:.3s;
+
+}
+
+
+
+.role-card:hover{
+
+transform:translateY(-5px);
+
+border-color:#ff3333;
+
+}
+
+
+
+.role-card h3{
+
+font-size:22px;
+
+text-align:center;
+
+color:#ff3b3b;
+
+margin-bottom:15px;
+
+}
+
+
+
+.role-card p{
+
+font-size:14px;
+
+line-height:1.8;
+
+color:#ddd;
+
+background:rgba(0,0,0,.25);
+
+padding:15px;
+
+border-radius:16px;
+
+}
+
+
+
+.price{
+
+margin-top:18px;
+
+padding:12px;
+
+text-align:center;
+
+font-size:22px;
+
+font-weight:900;
+
+color:white;
+
+border-radius:16px;
+
+
+background:
+linear-gradient(
+90deg,
+#ff3030,
+#a00000
+);
+
+
+box-shadow:
+0 0 15px rgba(255,0,0,.3);
+
+}
+
+
+
+.buy-btn{
+
+width:100%;
+
+padding:15px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:18px;
+
+background:
+linear-gradient(
+90deg,
+#ff3030,
+#900000
+);
+
+
+color:white;
+
+font-size:15px;
+
+font-weight:900;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+
+
+.buy-btn:hover{
+
+transform:scale(1.03);
+
+}
+
+
+
+/* POPUP */
+
+.popup{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.75);
+
+z-index:9999;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.popup-box{
+
+width:90%;
+
+max-width:420px;
+
+background:#200000;
+
+padding:25px;
+
+border-radius:25px;
+
+border:1px solid #ff3333;
+
+}
+
+
+
+.popup-box input{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:12px;
+
+border:none;
+
+border-radius:15px;
+
+background:#350000;
+
+color:white;
+
+}
+
+
+
+.qris{
+
+width:100%;
+
+border-radius:15px;
+
+margin-top:15px;
+
+}
+
+
+
+.close-btn{
+
+width:100%;
+
+padding:12px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:15px;
+
+background:#444;
+
+color:white;
+
+}
+
+
+.footer{
+
+text-align:center;
+
+font-size:14px;
+
+color:#aaa;
+
+margin-top:20px;
+
+}
+
+
+</style><body>
 
 <div class="container">
 
@@ -269,6 +491,7 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 <button class="btn discord" onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">
 ◉ Join Discord
 </button>
+
 
 
 <div class="bottom-buttons">
@@ -375,7 +598,6 @@ Windows
 
 
 
-
 <!-- PRICE ROLES -->
 
 
@@ -393,12 +615,9 @@ Choose your BlazeTopia Role
 
 
 
-
 <div class="role-card">
 
-<h3>
-Reseller Role
-</h3>
+<h3>🔥 Reseller Role</h3>
 
 <p>
 • Role Super Developer, Developer, Moderator, Cheater, VIP.<br>
@@ -422,14 +641,9 @@ Buy Now
 
 
 
-
-
 <div class="role-card">
 
-<h3>
-Middleman Role
-</h3>
-
+<h3>🔥 Middleman Role</h3>
 
 <p>
 • Role Developer, Moderator, VIP.<br>
@@ -449,12 +663,13 @@ Rp 200.000
 Buy Now
 </button>
 
+</div>
 
-</div><div class="role-card">
 
-<h3>
-Unlimited Block Role
-</h3>
+
+<div class="role-card">
+
+<h3>🔥 Unlimited Block Role</h3>
 
 <p>
 • Role Moderator, Cheater, VIP.<br>
@@ -473,16 +688,9 @@ Rp 250.000
 Buy Now
 </button>
 
-</div>
+</div><div class="role-card">
 
-
-
-
-<div class="role-card">
-
-<h3>
-Super Developer Role
-</h3>
+<h3>🔥 Super Developer Role</h3>
 
 <p>
 • Role Developer, Moderator, Cheater, VIP.<br>
@@ -511,9 +719,7 @@ Buy Now
 
 <div class="role-card">
 
-<h3>
-Developer Role
-</h3>
+<h3>🔥 Developer Role</h3>
 
 <p>
 • Role Moderator, Cheater, VIP.<br>
@@ -543,9 +749,7 @@ Buy Now
 
 <div class="role-card">
 
-<h3>
-Moderator Role
-</h3>
+<h3>🔥 Moderator Role</h3>
 
 <p>
 • Role Cheater, VIP.<br>
@@ -574,9 +778,7 @@ Buy Now
 
 <div class="role-card">
 
-<h3>
-Cheater + VIP Role
-</h3>
+<h3>🔥 Cheater + VIP Role</h3>
 
 <p>
 • Role Cheater, VIP.<br>
@@ -599,12 +801,7 @@ Buy Now
 </div>
 
 
-</div>
-
-
-
-
-<!-- BUY POPUP -->
+</div><!-- BUY POPUP -->
 
 
 <div class="popup" id="popup">
@@ -710,6 +907,7 @@ navigator.clipboard.writeText(text)
 
 
 
+
 function openBuy(role){
 
 document.getElementById("popup").style.display="flex";
@@ -717,6 +915,7 @@ document.getElementById("popup").style.display="flex";
 document.getElementById("selectedRole").value=role;
 
 }
+
 
 
 
@@ -734,8 +933,11 @@ document.getElementById("popup").style.display="none";
 function sendOrder(){
 
 let role=document.getElementById("selectedRole").value;
+
 let growid=document.getElementById("growid").value;
+
 let discord=document.getElementById("discordUser").value;
+
 
 
 if(growid==="" || discord===""){
@@ -745,6 +947,7 @@ alert("Please fill all information!");
 return;
 
 }
+
 
 
 alert(
