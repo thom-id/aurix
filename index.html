@@ -32,29 +32,22 @@ body{
 
     background:
     linear-gradient(
-        to bottom,
-        rgba(0,0,0,0) 65%,
-        rgba(150,0,0,.35) 80%,
-        #960000 100%
+        rgba(150,0,0,.15),
+        rgba(150,0,0,.85)
     ),
-    url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
-
-    background-size:100% auto;
-
-    background-position:center top;
-
-    background-repeat:no-repeat;
-
-    background-attachment:fixed;
+    url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png") center top / 100% auto no-repeat,
+    url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png") center bottom / 100% auto no-repeat;
 
     background-color:#960000;
 
-}
+    background-attachment:fixed,fixed,fixed;
 
 .container{
 
     width:100%;
+
     max-width:500px;
+
     margin:260px auto 30px;
 
     padding:30px 25px;
@@ -65,10 +58,52 @@ body{
 
     border:2px solid rgba(255,70,70,.30);
 
-    backdrop-filter:blur(6px);
+    backdrop-filter:blur(10px);
 
-    box-shadow:0 0 28px rgba(255,0,0,.25);
+    box-shadow:
+    0 0 28px rgba(255,0,0,.25);
 
+    max-height:520px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    scroll-behavior:smooth;
+
+}
+
+.container::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.container::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.container::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #ff5050,
+        #b80000
+    );
+
+    border-radius:999px;
+
+}
+
+.container::-webkit-scrollbar-thumb:hover{
+
+    background:linear-gradient(
+        #ff7070,
+        #d60000
+    );
+
+}
 }
 
 .discord{
