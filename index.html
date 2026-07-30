@@ -20,18 +20,22 @@ min-height:100vh;
 position:relative;  
 }  
   
-body::before{  
-content:"";  
-position:fixed;  
-inset:0;  
-background:  
-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.55)),  
-url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");  
-background-size:cover;  
-background-position:center top;  
-background-repeat:no-repeat;  
-z-index:-2;  
-}  
+body::before{
+content:"";
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.45)),
+url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
+
+background-size:100% auto;
+background-position:center top;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+z-index:-2;
+}
   
 body::after{  
 content:"";  
@@ -98,8 +102,8 @@ transform:scale(1.01);
 }  
   
 .card p{
-font-size:12px;
-line-height:1.6;
+font-size:13px;
+line-height:1.7;
 color:#d9c890;
 white-space:nowrap;
 overflow:hidden;
