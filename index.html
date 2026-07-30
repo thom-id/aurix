@@ -12,6 +12,7 @@
 <meta property="og:image" content="https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png">
 <meta name="theme-color" content="#d60000">
 
+
 <style>
 
 *{
@@ -22,12 +23,14 @@ font-family:Arial,sans-serif;
 scroll-behavior:smooth;
 }
 
+
 body{
 background:#120000;
 color:#fff;
 overflow-x:hidden;
 min-height:100vh;
 }
+
 
 body::before{
 content:"";
@@ -43,6 +46,7 @@ background-attachment:fixed;
 z-index:-2;
 }
 
+
 body::after{
 content:"";
 position:fixed;
@@ -51,11 +55,13 @@ background:radial-gradient(circle at top,rgba(255,0,0,.12),rgba(0,0,0,.85));
 z-index:-1;
 }
 
+
 .container{
 width:92%;
 max-width:470px;
 margin:280px auto 40px;
 }
+
 
 
 /* HERO */
@@ -70,6 +76,7 @@ box-shadow:0 0 35px rgba(255,0,0,.15);
 text-align:center;
 }
 
+
 .hero h1{
 font-size:18px;
 line-height:1.4;
@@ -77,17 +84,25 @@ margin-bottom:15px;
 white-space:nowrap;
 }
 
+
 .gradient-text{
 background:linear-gradient(90deg,#ff2d2d,#450000,#ff2d2d);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 font-weight:900;
-}.hero p{
+}
+
+
+.hero p{
 font-size:14px;
 line-height:1.7;
 color:#ddd;
 margin-bottom:25px;
 }
+
+
+
+/* BUTTON */
 
 .buttons{
 display:flex;
@@ -96,22 +111,23 @@ gap:12px;
 }
 
 
-.buttons .discord{
+.discord{
 width:100%;
 }
 
 
-.buttons .play{
+.bottom-buttons{
+display:flex;
+gap:12px;
+}
+
+
+.bottom-buttons .btn{
 width:50%;
 }
 
-
-.buttons .play:last-child{
-margin-left:50%;
-}
 
 .btn{
-width:50%;
 padding:16px 10px;
 border:none;
 border-radius:18px;
@@ -122,18 +138,24 @@ cursor:pointer;
 transition:.25s;
 }
 
+
 .play{
 background:linear-gradient(90deg,#ff3030,#b30000);
 }
+
 
 .discord{
 background:linear-gradient(90deg,#ff3030,#450000);
 }
 
+
 .btn:hover{
 transform:translateY(-3px);
 }
 
+
+
+/* SCROLL */
 
 .scroll{
 text-align:center;
@@ -142,18 +164,24 @@ color:#ddd;
 font-size:15px;
 }
 
+
 .arrow{
 font-size:28px;
 display:block;
 animation:down 1.2s infinite;
 }
 
+
 @keyframes down{
+
 50%{
 transform:translateY(8px);
 }
+
 }
 
+
+/* CONTENT */
 
 .content{
 padding:26px;
@@ -162,6 +190,7 @@ background:rgba(35,0,0,.72);
 backdrop-filter:blur(14px);
 border:1px solid rgba(255,70,70,.20);
 box-shadow:0 0 35px rgba(255,0,0,.15);
+margin-bottom:25px;
 }
 
 
@@ -209,156 +238,7 @@ border-color:#ff4444;
 font-size:13px;
 line-height:1.7;
 color:#e6d59a;
-}
-
-
-.footer{
-text-align:center;
-margin-top:20px;
-font-size:14px;
-color:#aaa;
-}
-
-
-/* ===== SHOP ROLE ===== */
-
-.shop-title{
-text-align:center;
-font-size:25px;
-font-weight:800;
-margin-top:35px;
-margin-bottom:15px;
-}
-
-
-.role-card{
-padding:22px;
-margin-bottom:18px;
-border-radius:22px;
-background:rgba(25,8,8,.82);
-border:1px solid rgba(255,70,70,.25);
-box-shadow:0 0 20px rgba(255,0,0,.08);
-transition:.25s;
-}
-
-
-.role-card:hover{
-transform:translateY(-4px);
-border-color:#ff4444;
-}
-
-
-.role-card h3{
-color:#ff3333;
-font-size:20px;
-}
-
-
-.role-card p{
-font-size:14px;
-color:#ddd;
-line-height:1.6;
-}
-
-
-.price{
-font-size:22px;
-font-weight:900;
-margin-top:15px;
-color:#ff4444;
-}
-
-
-.buy-btn{
-width:100%;
-padding:14px;
-margin-top:15px;
-border:none;
-border-radius:16px;
-background:linear-gradient(90deg,#ff3030,#a00000);
-color:white;
-font-weight:800;
-cursor:pointer;
-}/* ACCORDION BENEFIT */
-
-.accordion{
-padding:15px;
-margin-top:12px;
-border-radius:15px;
-background:#190808;
-cursor:pointer;
-font-weight:700;
-}
-
-
-.accordion-content{
-display:none;
-padding-top:10px;
-font-size:13px;
-color:#ddd;
-line-height:1.7;
-}
-
-
-
-/* BUY POPUP */
-
-.popup{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.75);
-z-index:9999;
-align-items:center;
-justify-content:center;
-}
-
-
-.popup-box{
-width:90%;
-max-width:420px;
-background:#200000;
-padding:25px;
-border-radius:25px;
-border:1px solid #ff3333;
-}
-
-
-.popup-box h2{
-text-align:center;
-margin-bottom:15px;
-}
-
-
-.popup-box input{
-width:100%;
-padding:14px;
-margin-bottom:12px;
-border:none;
-border-radius:15px;
-background:#350000;
-color:white;
-}
-
-
-.qris{
-width:100%;
-border-radius:15px;
-margin-top:15px;
-}
-
-
-.close-btn{
-width:100%;
-padding:12px;
-margin-top:15px;
-border:none;
-border-radius:15px;
-background:#444;
-color:white;
-}
-
-</style>
+}</style>
 
 </head>
 
@@ -371,6 +251,7 @@ color:white;
 
 <div class="hero">
 
+
 <h1>
 Welcome to <span class="gradient-text">BlazeTopia Private Server</span>
 </h1>
@@ -381,12 +262,16 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 </p>
 
 
+
 <div class="buttons">
-<div class="buttons">
+
 
 <button class="btn discord" onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">
 ◉ Join Discord
 </button>
+
+
+<div class="bottom-buttons">
 
 
 <button class="btn play" onclick="document.getElementById('howtoplay').scrollIntoView()">
@@ -394,21 +279,38 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 </button>
 
 
-<button class="btn play" onclick="document.getElementById('shop').scrollIntoView()">
+<button class="btn play" onclick="document.getElementById('priceRoles').scrollIntoView()">
 ◉ Price Roles
 </button>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+</div>
+
+
 
 
 <div class="scroll">
 
 <span class="arrow">↓</span>
+
 Scroll Down
 
-</div><div class="content" id="howtoplay">
+</div>
+
+
+
+
+<!-- HOW TO PLAY -->
+
+
+<div class="content" id="howtoplay">
+
 
 <div class="title">
 How to Play
@@ -418,6 +320,7 @@ How to Play
 <div class="desc">
 Please select the application you want to use!
 </div>
+
 
 
 <div class="label">
@@ -432,6 +335,7 @@ https://gtpshosting.web.id/raw/blazetopia
 </p>
 
 </div>
+
 
 
 
@@ -450,6 +354,7 @@ https://gtpshosting.web.id/ios/blazetopia
 
 
 
+
 <div class="label">
 Windows
 </div>
@@ -465,36 +370,49 @@ Windows
 </div>
 
 
+</div>
 
-<!-- PRICE ROLE -->
-<!-- PRICE ROLE -->
 
-<div class="price-title" id="price">
+
+
+
+<!-- PRICE ROLES -->
+
+
+<div class="content" id="priceRoles">
+
+
+<div class="title">
 Price Roles
 </div>
 
-<div class="role-card">
 
-<h3>Reseller Role</h3>
-
-<div class="accordion" onclick="openAccordion('reseller')">
-▼ View Features
+<div class="desc">
+Choose your BlazeTopia Role
 </div>
 
-<div class="accordion-content" id="reseller">
 
+
+
+<div class="role-card">
+
+<h3>
+Reseller Role
+</h3>
+
+<p>
 • Role Super Developer, Developer, Moderator, Cheater, VIP.<br>
 • Trusted SELLER BGL/GGL.<br>
 • Get title [ RESELLER ] in game.<br>
-• Special lock price below regular players.<br>
 • Special promotion channel.<br>
 • Verified in game.
+</p>
 
-</div>
 
 <div class="price">
-Rp 500.000
+Rp 400.000
 </div>
+
 
 <button class="buy-btn" onclick="openBuy('Reseller Role')">
 Buy Now
@@ -504,9 +422,14 @@ Buy Now
 
 
 
+
+
 <div class="role-card">
 
-<h3>Middleman Role</h3>
+<h3>
+Middleman Role
+</h3>
+
 
 <p>
 • Role Developer, Moderator, VIP.<br>
@@ -516,21 +439,22 @@ Buy Now
 • Special promotion channel.
 </p>
 
+
 <div class="price">
 Rp 200.000
 </div>
+
 
 <button class="buy-btn" onclick="openBuy('Middleman Role')">
 Buy Now
 </button>
 
-</div>
 
+</div><div class="role-card">
 
-
-<div class="role-card">
-
-<h3>Unlimited Block Role</h3>
+<h3>
+Unlimited Block Role
+</h3>
 
 <p>
 • Role Moderator, Cheater, VIP.<br>
@@ -539,9 +463,11 @@ Buy Now
 • Can sell blocks on vend.
 </p>
 
+
 <div class="price">
 Rp 250.000
 </div>
+
 
 <button class="buy-btn" onclick="openBuy('Unlimited Block Role')">
 Buy Now
@@ -551,9 +477,12 @@ Buy Now
 
 
 
+
 <div class="role-card">
 
-<h3>Super Developer Role</h3>
+<h3>
+Super Developer Role
+</h3>
 
 <p>
 • Role Developer, Moderator, Cheater, VIP.<br>
@@ -561,26 +490,30 @@ Buy Now
 
 Commands:<br>
 /color /e /entereffect /freezeall /killall /p<br>
-/sdsb /trollnick /vernick /warn<br><br>
-
-• Access to private Moderator channels.
+/sdsb /trollnick /vernick /warn
 </p>
+
 
 <div class="price">
 Rp 150.000
 </div>
 
+
 <button class="buy-btn" onclick="openBuy('Super Developer Role')">
 Buy Now
 </button>
-  
+
 </div>
+
+
 
 
 
 <div class="role-card">
 
-<h3>Developer Role</h3>
+<h3>
+Developer Role
+</h3>
 
 <p>
 • Role Moderator, Cheater, VIP.<br>
@@ -589,14 +522,14 @@ Buy Now
 Commands:<br>
 /1hit /banall /block /curse /door /dsb<br>
 /hide /longmode /mute /nick /pullall<br>
-/ssb /uncurse /unmute /weather<br><br>
-
-• Access to private Moderator channels.
+/ssb /uncurse /unmute /weather
 </p>
+
 
 <div class="price">
 Rp 75.000
 </div>
+
 
 <button class="buy-btn" onclick="openBuy('Developer Role')">
 Buy Now
@@ -606,9 +539,13 @@ Buy Now
 
 
 
+
+
 <div class="role-card">
 
-<h3>Moderator</h3>
+<h3>
+Moderator Role
+</h3>
 
 <p>
 • Role Cheater, VIP.<br>
@@ -616,14 +553,14 @@ Buy Now
 
 Commands:<br>
 /find /g /info /invis /magic<br>
-/nuke /snuke /summon /togglemods<br><br>
-
-• Access to private Moderator channels.
+/nuke /snuke /summon /togglemods
 </p>
+
 
 <div class="price">
 Rp 50.000
 </div>
+
 
 <button class="buy-btn" onclick="openBuy('Moderator Role')">
 Buy Now
@@ -633,9 +570,13 @@ Buy Now
 
 
 
+
+
 <div class="role-card">
 
-<h3>Cheater + VIP Role</h3>
+<h3>
+Cheater + VIP Role
+</h3>
 
 <p>
 • Role Cheater, VIP.<br>
@@ -645,11 +586,13 @@ Commands:<br>
 /rainbow /tpclick /v /valentine /vsb
 </p>
 
+
 <div class="price">
 Rp 25.000
 </div>
 
-<button class="buy-btn" onclick="openBuy('Cheater, VIP Role')">
+
+<button class="buy-btn" onclick="openBuy('Cheater VIP Role')">
 Buy Now
 </button>
 
@@ -660,9 +603,12 @@ Buy Now
 
 
 
+
 <!-- BUY POPUP -->
 
+
 <div class="popup" id="popup">
+
 
 <div class="popup-box">
 
@@ -679,6 +625,7 @@ Complete Purchase
 
 
 <input id="discordUser" placeholder="Discord Username">
+
 
 <p>
 QRIS Payment
@@ -700,14 +647,21 @@ Close
 
 </div>
 
+
+</div>
+
+
+
+
 <div class="footer">
 Enter the Flames. Rule the World.
 </div>
 
+
 </div>
 
 
-</div>
+
 
 
 <script>
@@ -743,6 +697,8 @@ setTimeout(()=>t.remove(),1800);
 
 
 
+
+
 function copyText(text){
 
 navigator.clipboard.writeText(text)
@@ -758,9 +714,10 @@ function openBuy(role){
 
 document.getElementById("popup").style.display="flex";
 
-document.getElementById("selectedRole").value = role;
+document.getElementById("selectedRole").value=role;
 
 }
+
 
 
 
@@ -772,30 +729,16 @@ document.getElementById("popup").style.display="none";
 
 
 
-function openAccordion(id){
 
-let content=document.getElementById(id);
-
-if(content.style.display==="block"){
-
-content.style.display="none";
-
-}else{
-
-content.style.display="block";
-
-}
-
-}
 
 function sendOrder(){
 
-let role = document.getElementById("selectedRole").value;
-let growid = document.getElementById("growid").value;
-let discord = document.getElementById("discordUser").value;
+let role=document.getElementById("selectedRole").value;
+let growid=document.getElementById("growid").value;
+let discord=document.getElementById("discordUser").value;
 
 
-if(role === "" || growid === "" || discord === ""){
+if(growid==="" || discord===""){
 
 alert("Please fill all information!");
 
@@ -814,15 +757,6 @@ alert(
 
 }
 
-
-alert(
-"Purchase Complete!\n\n"+
-"Role: "+role+
-"\nGrowID: "+growid+
-"\nDiscord: "+discord
-);
-
-}
 
 
 </script>
