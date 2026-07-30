@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BlazeTopia - Shop Role</title>
+
+<link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">Shop Role</h1>
+<p class="subtitle">
+Support BlazeTopia and unlock exclusive perks!
+</p>
+
+<!-- VIP -->
+
+<div class="role-card">
+
+<div class="role-header" onclick="toggleRole(this)">
+
+<div>
+
+<h2>VIP</h2>
+<span>Rp.25.000</span>
+
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+<div class="role-content">
+
+<ul>
+
+<li>VIP Tag</li>
+<li>Exclusive Commands</li>
+<li>Priority Queue</li>
+<li>Special Chat</li>
+
+</ul>
+
+<button
+class="buy-btn"
+onclick="openPurchase('VIP','25000')">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<!-- Moderator -->
+
+<div class="role-card">
+
+<div class="role-header" onclick="toggleRole(this)">
+
+<div>
+
+<h2>Moderator</h2>
+<span>Rp.50.000</span>
+
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+<div class="role-content">
+
+<ul>
+
+<li>Moderator Role</li>
+<li>Kick Commands</li>
+<li>Priority Support</li>
+
+</ul>
+
+<button
+class="buy-btn"
+onclick="openPurchase('Moderator','50000')">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<!-- Developer -->
+
+<div class="role-card">
+
+<div class="role-header" onclick="toggleRole(this)">
+
+<div>
+
+<h2>Developer</h2>
+<span>Rp.75.000</span>
+
+</div>
+
+<div class="arrow">
+▼
+</div>
+
+</div>
+
+<div class="role-content">
+
+<ul>
+
+<li>Developer Role</li>
+<li>Special Commands</li>
+<li>Exclusive Access</li>
+
+</ul>
+
+<button
+class="buy-btn"
+onclick="openPurchase('Developer','75000')">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PURCHASE POPUP -->
+
+<div class="popup" id="purchasePopup">
+
+<div class="popup-box">
+
+<h2>Purchase Role</h2>
+
+<label>Role</label>
+
+<input
+type="text"
+id="roleName"
+readonly>
+
+<label>Price</label>
+
+<input
+type="text"
+id="rolePrice"
+readonly>
+
+<label>GrowID Ingame</label>
+
+<input
+type="text"
+id="growid"
+placeholder="Enter GrowID">
+
+<label>Discord Username</label>
+
+<input
+type="text"
+id="discord"
+placeholder="example: blaze#0001">
+
+<h3>Payment QRIS</h3>
+
+<img
+src="assets/qris.png"
+class="qris">
+
+<label class="check">
+
+<input type="checkbox">
+
+I have completed the payment.
+
+</label>
+
+<div class="popup-buttons">
+
+<button
+class="close-btn"
+onclick="closePopup()">
+Close
+</button>
+
+<button
+class="complete-btn"
+onclick="completePurchase()">
+Complete Purchase
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/shop.js"></script>
+
+</body>
+  </html>
