@@ -1,0 +1,763 @@
+/* ============================================
+   BLAZETOPIA - Complete Stylesheet
+   Theme: Dark Red / Fire
+   ============================================ */
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #120000;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ===== BACKGROUND LAYERS ===== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.70)),
+        url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 0, 0, 0.12), rgba(0, 0, 0, 0.85));
+    z-index: -1;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a0000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff3030;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 92%;
+    max-width: 470px;
+    margin: 280px auto 40px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    padding: 26px;
+    border-radius: 24px;
+    background: rgba(35, 0, 0, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 70, 70, 0.20);
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeUp 0.8s ease;
+}
+
+.hero h1 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff2d2d, #450000, #ff2d2d);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+.hero p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    width: 50%;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 18px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: 0.4s;
+}
+
+.btn:hover::after {
+    transform: translateX(0);
+}
+
+.btn-play {
+    background: linear-gradient(90deg, #ff3030, #b30000);
+}
+
+.btn-discord {
+    background: linear-gradient(90deg, #ff3030, #450000);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* ============================================
+   SCROLL INDICATOR
+   ============================================ */
+.scroll {
+    text-align: center;
+    margin: 35px 0;
+    color: #ddd;
+    font-size: 15px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.arrow {
+    font-size: 28px;
+    display: block;
+    animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+/* ============================================
+   CONTENT CARDS
+   ============================================ */
+.content {
+    padding: 26px;
+    border-radius: 24px;
+    background: rgba(35, 0, 0, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 70, 70, 0.20);
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.15);
+    margin-bottom: 20px;
+    animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ff6666, #ff3030);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desc {
+    text-align: center;
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 15px 0 7px;
+    color: #ff6666;
+}
+
+/* ===== CARD ===== */
+.card {
+    padding: 15px 18px;
+    margin-bottom: 14px;
+    border-radius: 18px;
+    background: rgba(25, 8, 8, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: #ff4444;
+    box-shadow: 0 4px 25px rgba(255, 0, 0, 0.15);
+}
+
+.card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #e6d59a;
+    word-break: break-all;
+}
+
+/* ============================================
+   SHOP SECTION
+   ============================================ */
+
+/* --- Shop Tabs --- */
+.shop-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shop-tab {
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    background: transparent;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-tab:hover {
+    border-color: #ff4444;
+    color: #fff;
+}
+
+.shop-tab.active {
+    background: #ff3030;
+    border-color: #ff3030;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* --- Shop Grid --- */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+/* --- Shop Item --- */
+.shop-item {
+    padding: 16px 12px;
+    border-radius: 16px;
+    background: rgba(25, 8, 8, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    transition: 0.3s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.05), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.shop-item:hover::before {
+    opacity: 1;
+}
+
+.shop-item:hover {
+    border-color: #ff4444;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 0, 0, 0.2);
+}
+
+.shop-item .icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.shop-item .name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.shop-item .price {
+    font-size: 12px;
+    color: #ffd700;
+    margin-top: 4px;
+}
+
+.shop-item .price span {
+    background: rgba(255, 215, 0, 0.15);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+/* --- Badges --- */
+.shop-item .badge {
+    display: inline-block;
+    font-size: 9px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-top: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-limited {
+    background: #ff3030;
+    color: #fff;
+    animation: badgePulse 2s infinite;
+}
+
+.badge-event {
+    background: #ff8800;
+    color: #fff;
+}
+
+.badge-popular {
+    background: #00cc88;
+    color: #fff;
+}
+
+@keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 48, 48, 0.4); }
+    50% { box-shadow: 0 0 20px 5px rgba(255, 48, 48, 0.15); }
+}
+
+/* --- Buy Button --- */
+.buy-btn {
+    margin-top: 10px;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ff3030, #b30000);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-100%);
+    transition: 0.4s;
+}
+
+.buy-btn:hover::after {
+    transform: translateX(0);
+}
+
+.buy-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 25px rgba(255, 0, 0, 0.4);
+}
+
+.buy-btn:active {
+    transform: scale(0.95);
+}
+
+.buy-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.buy-btn:disabled::after {
+    display: none;
+}
+
+/* --- Shop Notice --- */
+.shop-notice {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 15px;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255, 0, 0, 0.06);
+    border: 1px dashed rgba(255, 0, 0, 0.15);
+    line-height: 1.7;
+}
+
+.shop-notice strong {
+    color: #ff6666;
+}
+
+/* ============================================
+   TOAST NOTIFICATION
+   ============================================ */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #c00000, #8a0000);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 14px;
+    z-index: 9999;
+    animation: toastIn 0.4s ease;
+    box-shadow: 0 8px 40px rgba(255, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 90%;
+    text-align: center;
+}
+
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        scale: 1;
+    }
+}
+
+@keyframes toastOut {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        scale: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+        scale: 0.9;
+    }
+}
+
+.toast-out {
+    animation: toastOut 0.4s ease forwards;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet & Small Laptop */
+@media (max-width: 768px) {
+    .container {
+        width: 94%;
+        margin: 200px auto 30px;
+    }
+
+    .hero h1 {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .shop-grid {
+        gap: 10px;
+    }
+
+    .shop-item {
+        padding: 14px 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        width: 96%;
+        margin: 150px auto 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 15px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .desc {
+        font-size: 13px;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .shop-item {
+        padding: 12px 8px;
+    }
+
+    .shop-item .icon {
+        font-size: 26px;
+    }
+
+    .shop-item .name {
+        font-size: 11px;
+    }
+
+    .shop-item .price {
+        font-size: 10px;
+    }
+
+    .shop-tab {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .buy-btn {
+        font-size: 10px;
+        padding: 5px 14px;
+    }
+
+    .toast {
+        font-size: 12px;
+        padding: 12px 20px;
+        bottom: 15px;
+    }
+
+    .card p {
+        font-size: 11px;
+    }
+
+    .label {
+        font-size: 13px;
+    }
+
+    .shop-notice {
+        font-size: 11px;
+        padding: 12px;
+    }
+}
+
+/* Very Small Phones */
+@media (max-width: 360px) {
+    .shop-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #888;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+/* ============================================
+   LOADING SPINNER (for buy button)
+   ============================================ */
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   SOLD OUT / OUT OF STOCK
+   ============================================ */
+.shop-item.sold-out {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.shop-item.sold-out::after {
+    content: "SOLD OUT";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ff3030;
+    font-weight: 900;
+    font-size: 14px;
+    border-radius: 16px;
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   DISCOUNT / SALE TAG
+   ============================================ */
+.sale-tag {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: #ff3030;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    animation: badgePulse 1.5s infinite;
+}
