@@ -91,7 +91,23 @@ margin-bottom:25px;
 
 .buttons{
 display:flex;
+flex-direction:column;
 gap:12px;
+}
+
+
+.buttons .discord{
+width:100%;
+}
+
+
+.buttons .play{
+width:50%;
+}
+
+
+.buttons .play:last-child{
+margin-left:50%;
 }
 
 .btn{
@@ -216,11 +232,19 @@ margin-bottom:15px;
 
 
 .role-card{
-padding:20px;
-margin-bottom:15px;
-border-radius:20px;
+padding:22px;
+margin-bottom:18px;
+border-radius:22px;
 background:rgba(25,8,8,.82);
-border:1px solid rgba(255,70,70,.20);
+border:1px solid rgba(255,70,70,.25);
+box-shadow:0 0 20px rgba(255,0,0,.08);
+transition:.25s;
+}
+
+
+.role-card:hover{
+transform:translateY(-4px);
+border-color:#ff4444;
 }
 
 
@@ -238,9 +262,10 @@ line-height:1.6;
 
 
 .price{
-font-size:18px;
-font-weight:800;
-margin-top:10px;
+font-size:22px;
+font-weight:900;
+margin-top:15px;
+color:#ff4444;
 }
 
 
@@ -357,6 +382,7 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 
 
 <div class="buttons">
+<div class="buttons">
 
 <button class="btn discord" onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">
 ◉ Join Discord
@@ -369,7 +395,7 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 
 
 <button class="btn play" onclick="document.getElementById('shop').scrollIntoView()">
-◉ Shop
+◉ Price Roles
 </button>
 
 </div>
@@ -440,32 +466,37 @@ Windows
 
 
 
-<!-- SHOP ROLE -->
-<!-- SHOP ROLE -->
+<!-- PRICE ROLE -->
+<!-- PRICE ROLE -->
 
-<div class="shop-title">
-Shop Role
+<div class="price-title" id="price">
+Price Roles
 </div>
-
 
 <div class="role-card">
 
 <h3>Reseller Role</h3>
 
-<p>
+<div class="accordion" onclick="openAccordion('reseller')">
+▼ View Features
+</div>
+
+<div class="accordion-content" id="reseller">
+
 • Role Super Developer, Developer, Moderator, Cheater, VIP.<br>
 • Trusted SELLER BGL/GGL.<br>
 • Get title [ RESELLER ] in game.<br>
 • Special lock price below regular players.<br>
 • Special promotion channel.<br>
 • Verified in game.
-</p>
 
-<div class="price">
-Rp 400.000
 </div>
 
-<button class="buy-btn" onclick="openBuy()">
+<div class="price">
+Rp 500.000
+</div>
+
+<button class="buy-btn" onclick="openBuy('Reseller Role')">
 Buy Now
 </button>
 
@@ -489,7 +520,7 @@ Buy Now
 Rp 200.000
 </div>
 
-<button class="buy-btn" onclick="openBuy()">
+<button class="buy-btn" onclick="openBuy('Middleman Role')">
 Buy Now
 </button>
 
@@ -499,7 +530,7 @@ Buy Now
 
 <div class="role-card">
 
-<h3>Unli Block Role</h3>
+<h3>Unlimited Block Role</h3>
 
 <p>
 • Role Moderator, Cheater, VIP.<br>
@@ -512,7 +543,7 @@ Buy Now
 Rp 250.000
 </div>
 
-<button class="buy-btn" onclick="openBuy()">
+<button class="buy-btn" onclick="openBuy('Unlimited Block Role')">
 Buy Now
 </button>
 
@@ -522,7 +553,7 @@ Buy Now
 
 <div class="role-card">
 
-<h3>Super Moderator Role</h3>
+<h3>Super Developer Role</h3>
 
 <p>
 • Role Developer, Moderator, Cheater, VIP.<br>
@@ -539,17 +570,17 @@ Commands:<br>
 Rp 150.000
 </div>
 
-<button class="buy-btn" onclick="openBuy()">
+<button class="buy-btn" onclick="openBuy('Super Developer Role')">
 Buy Now
 </button>
-
+  
 </div>
 
 
 
 <div class="role-card">
 
-<h3>Moderator Role</h3>
+<h3>Developer Role</h3>
 
 <p>
 • Role Moderator, Cheater, VIP.<br>
@@ -567,7 +598,7 @@ Commands:<br>
 Rp 75.000
 </div>
 
-<button class="buy-btn" onclick="openBuy()">
+<button class="buy-btn" onclick="openBuy('Developer Role')">
 Buy Now
 </button>
 
@@ -577,7 +608,7 @@ Buy Now
 
 <div class="role-card">
 
-<h3>Cheater Role</h3>
+<h3>Moderator</h3>
 
 <p>
 • Role Cheater, VIP.<br>
@@ -594,7 +625,7 @@ Commands:<br>
 Rp 50.000
 </div>
 
-<button class="buy-btn" onclick="openBuy()">
+<button class="buy-btn" onclick="openBuy('Moderator Role')">
 Buy Now
 </button>
 
@@ -618,7 +649,7 @@ Commands:<br>
 Rp 25.000
 </div>
 
-<button class="buy-btn" onclick="openBuy()">
+<button class="buy-btn" onclick="openBuy('Cheater, VIP Role')">
 Buy Now
 </button>
 
@@ -641,11 +672,13 @@ Complete Purchase
 </h2>
 
 
-<input placeholder="GrowID Ingame">
+<input id="selectedRole" placeholder="Selected Role" readonly>
 
 
-<input placeholder="Discord Username">
+<input id="growid" placeholder="GrowID Ingame">
 
+
+<input id="discordUser" placeholder="Discord Username">
 
 <p>
 QRIS Payment
@@ -655,7 +688,7 @@ QRIS Payment
 <img class="qris" src="LINK_QRIS_KAMU">
 
 
-<button class="buy-btn">
+<button class="buy-btn" onclick="sendOrder()">
 Complete Purchase
 </button>
 
@@ -721,9 +754,11 @@ navigator.clipboard.writeText(text)
 
 
 
-function openBuy(){
+function openBuy(role){
 
 document.getElementById("popup").style.display="flex";
+
+document.getElementById("selectedRole").value = role;
 
 }
 
@@ -750,6 +785,42 @@ content.style.display="none";
 content.style.display="block";
 
 }
+
+}
+
+function sendOrder(){
+
+let role = document.getElementById("selectedRole").value;
+let growid = document.getElementById("growid").value;
+let discord = document.getElementById("discordUser").value;
+
+
+if(role === "" || growid === "" || discord === ""){
+
+alert("Please fill all information!");
+
+return;
+
+}
+
+
+alert(
+"Order Submitted!\n\n"+
+"Role: "+role+
+"\nGrowID: "+growid+
+"\nDiscord: "+discord
+);
+
+
+}
+
+
+alert(
+"Purchase Complete!\n\n"+
+"Role: "+role+
+"\nGrowID: "+growid+
+"\nDiscord: "+discord
+);
 
 }
 
