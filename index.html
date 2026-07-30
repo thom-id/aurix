@@ -13,7 +13,6 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#d60000">
 
-
 <style>
 
 *{
@@ -22,7 +21,6 @@
     box-sizing:border-box;
     font-family:Arial,sans-serif;
 }
-
 
 body{
 
@@ -34,26 +32,23 @@ body{
 
     background:
     linear-gradient(
-    rgba(55,0,0,.72),
-    rgba(120,0,0,.92)
+    180deg,
+    rgba(45,0,0,.45) 0%,
+    rgba(90,0,0,.70) 35%,
+    rgba(130,0,0,.92) 70%,
+    rgba(150,0,0,1) 100%
     ),
     url("https://cdn.phototourl.com/free/2026-07-29-f08f8692-061e-4e31-b507-aa7ab36e8ea3.png");
 
-    background-size:
-    100% auto;
+    background-size:100% auto;
 
-    background-position:
-    center top;
+    background-position:center top;
 
-    background-repeat:
-    no-repeat;
+    background-repeat:no-repeat;
 
-    background-attachment:
-    fixed;
+    background-attachment:fixed;
 
 }
-
-
 
 /* MAIN */
 
@@ -82,8 +77,6 @@ body{
     0 0 28px rgba(255,0,0,.25);
 
 }
-
-
 
 /* DISCORD */
 
@@ -116,13 +109,11 @@ body{
 
 }
 
-
-
 /* LABEL */
 
 .label{
 
-    font-size:18px;
+    font-size:15px;
 
     font-weight:bold;
 
@@ -131,8 +122,6 @@ body{
     margin-bottom:6px;
 
 }
-
-
 
 /* HOST CARD */
 
@@ -158,8 +147,6 @@ body{
 
 }
 
-
-
 .card p{
 
     color:#d8c88d;
@@ -176,16 +163,13 @@ body{
 
 }
 
-
-
 .footer{
 
     text-align:center;
 
     margin-top:15px;
 
-    color:
-    rgba(255,255,255,.65);
+    color:rgba(255,255,255,.65);
 
     font-size:13px;
 
@@ -195,12 +179,9 @@ body{
 
 </head>
 
-
 <body>
 
-
 <div class="container">
-
 
 <button class="discord"
 onclick="window.open('https://discord.gg/AWRsZfm32','_blank')">
@@ -209,12 +190,9 @@ onclick="window.open('https://discord.gg/AWRsZfm32','_blank')">
 
 </button>
 
-
-
 <div class="label">
 Android
 </div>
-
 
 <div class="card"
 onclick="copyText('https://gtpshosting.web.id//raw/blazetopia')">
@@ -225,12 +203,9 @@ https://gtpshosting.web.id//raw/blazetopia
 
 </div>
 
-
-
 <div class="label">
 iOS
 </div>
-
 
 <div class="card"
 onclick="copyText('https://gtpshosting.web.id//ios/blazetopia')">
@@ -241,15 +216,13 @@ https://gtpshosting.web.id//ios/blazetopia
 
 </div>
 
-
-
 <div class="label">
 IP Address For Windows
 </div>
 
-
 <div class="card"
-onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
+onclick="copyText('149.202.58.185 www.growtopia1.com
+149.202.58.185 www.growtopia2.com')">
 
 <p>
 149.202.58.185 www.growtopia1.com
@@ -259,23 +232,17 @@ onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtop
 
 </div>
 
-
-
 <div class="footer">
 Enter the Flames. Rule the World.
 </div>
 
-
 </div>
-
-
 
 <script>
 
 function copyText(text){
 
 navigator.clipboard.writeText(text);
-
 
 const notification=document.createElement("div");
 
@@ -294,7 +261,6 @@ notification.style.zIndex="9999";
 
 document.body.appendChild(notification);
 
-
 setTimeout(()=>{
 
 notification.remove();
@@ -304,7 +270,6 @@ notification.remove();
 }
 
 </script>
-
 
 </body>
 </html>
