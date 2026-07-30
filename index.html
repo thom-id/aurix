@@ -1,6 +1,7 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -56,6 +57,7 @@ max-width:470px;
 margin:280px auto 40px;
 }
 
+
 /* HERO */
 
 .hero{
@@ -80,9 +82,7 @@ background:linear-gradient(90deg,#ff2d2d,#450000,#ff2d2d);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 font-weight:900;
-}
-
-.hero p{
+}.hero p{
 font-size:14px;
 line-height:1.7;
 color:#ddd;
@@ -118,8 +118,6 @@ background:linear-gradient(90deg,#ff3030,#450000);
 transform:translateY(-3px);
 }
 
-
-/* SCROLL */
 
 .scroll{
 text-align:center;
@@ -205,12 +203,143 @@ font-size:14px;
 color:#aaa;
 }
 
+
+/* ===== SHOP ROLE ===== */
+
+.shop-title{
+text-align:center;
+font-size:25px;
+font-weight:800;
+margin-top:35px;
+margin-bottom:15px;
+}
+
+
+.role-card{
+padding:20px;
+margin-bottom:15px;
+border-radius:20px;
+background:rgba(25,8,8,.82);
+border:1px solid rgba(255,70,70,.20);
+}
+
+
+.role-card h3{
+color:#ff3333;
+font-size:20px;
+}
+
+
+.role-card p{
+font-size:14px;
+color:#ddd;
+line-height:1.6;
+}
+
+
+.price{
+font-size:18px;
+font-weight:800;
+margin-top:10px;
+}
+
+
+.buy-btn{
+width:100%;
+padding:14px;
+margin-top:15px;
+border:none;
+border-radius:16px;
+background:linear-gradient(90deg,#ff3030,#a00000);
+color:white;
+font-weight:800;
+cursor:pointer;
+}/* ACCORDION BENEFIT */
+
+.accordion{
+padding:15px;
+margin-top:12px;
+border-radius:15px;
+background:#190808;
+cursor:pointer;
+font-weight:700;
+}
+
+
+.accordion-content{
+display:none;
+padding-top:10px;
+font-size:13px;
+color:#ddd;
+line-height:1.7;
+}
+
+
+
+/* BUY POPUP */
+
+.popup{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+z-index:9999;
+align-items:center;
+justify-content:center;
+}
+
+
+.popup-box{
+width:90%;
+max-width:420px;
+background:#200000;
+padding:25px;
+border-radius:25px;
+border:1px solid #ff3333;
+}
+
+
+.popup-box h2{
+text-align:center;
+margin-bottom:15px;
+}
+
+
+.popup-box input{
+width:100%;
+padding:14px;
+margin-bottom:12px;
+border:none;
+border-radius:15px;
+background:#350000;
+color:white;
+}
+
+
+.qris{
+width:100%;
+border-radius:15px;
+margin-top:15px;
+}
+
+
+.close-btn{
+width:100%;
+padding:12px;
+margin-top:15px;
+border:none;
+border-radius:15px;
+background:#444;
+color:white;
+}
+
 </style>
 
 </head>
 
 
 <body>
+
 
 <div class="container">
 
@@ -229,6 +358,7 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 
 <div class="buttons">
 
+
 <button class="btn play" onclick="document.getElementById('howtoplay').scrollIntoView()">
 ◉ Play Now
 </button>
@@ -237,6 +367,7 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 <button class="btn discord" onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">
 ◉ Join Discord
 </button>
+
 
 </div>
 
@@ -248,11 +379,7 @@ This is a GTPS that you can play for free, with systems and mechanisms that have
 <span class="arrow">↓</span>
 Scroll Down
 
-</div>
-
-
-
-<div class="content" id="howtoplay">
+</div><div class="content" id="howtoplay">
 
 <div class="title">
 How to Play
@@ -268,6 +395,7 @@ Please select the application you want to use!
 Android
 </div>
 
+
 <div class="card" onclick="copyText('https://gtpshosting.web.id/raw/blazetopia')">
 
 <p>
@@ -281,6 +409,7 @@ https://gtpshosting.web.id/raw/blazetopia
 <div class="label">
 iOS
 </div>
+
 
 <div class="card" onclick="copyText('https://gtpshosting.web.id/ios/blazetopia')">
 
@@ -296,6 +425,7 @@ https://gtpshosting.web.id/ios/blazetopia
 Windows
 </div>
 
+
 <div class="card" onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
 
 <p>
@@ -307,24 +437,124 @@ Windows
 
 
 
+<!-- SHOP ROLE -->
+
+<div class="shop-title">
+Shop Role
+</div>
+
+
+<div class="role-card">
+
+<h3>
+Blaze Premium
+</h3>
+
+<p>
+• Premium Badge<br>
+• Exclusive Channel<br>
+• Special Benefits
+</p>
+
+<div class="price">
+Rp 50.000
+</div>
+
+
+<button class="buy-btn" onclick="openBuy()">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="role-card">
+
+<h3>
+Blaze VIP
+</h3>
+
+<p>
+• VIP Badge<br>
+• Extra Rewards<br>
+• Special Access
+</p>
+
+
+<div class="price">
+Rp 25.000
+</div>
+
+
+<button class="buy-btn" onclick="openBuy()">
+Buy Now
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<!-- BUY POPUP -->
+
+<div class="popup" id="popup">
+
+<div class="popup-box">
+
+
+<h2>
+Complete Purchase
+</h2>
+
+
+<input placeholder="GrowID Ingame">
+
+
+<input placeholder="Discord Username">
+
+
+<p>
+QRIS Payment
+</p>
+
+
+<img class="qris" src="LINK_QRIS_KAMU">
+
+
+<button class="buy-btn">
+Complete Purchase
+</button>
+
+
+<button class="close-btn" onclick="closeBuy()">
+Close
+</button>
+
+
+</div>
+
 <div class="footer">
 Enter the Flames. Rule the World.
 </div>
 
-
 </div>
 
-</div>
 
+</div>
 
 
 <script>
+
 
 function showToast(){
 
 const t=document.createElement("div");
 
 t.innerHTML="Copied!";
+
 
 Object.assign(t.style,{
 position:"fixed",
@@ -339,11 +569,14 @@ fontWeight:"700",
 zIndex:"9999"
 });
 
+
 document.body.appendChild(t);
+
 
 setTimeout(()=>t.remove(),1800);
 
 }
+
 
 
 function copyText(text){
@@ -353,6 +586,42 @@ navigator.clipboard.writeText(text)
 .catch(()=>alert("Failed to copy"));
 
 }
+
+
+
+
+function openBuy(){
+
+document.getElementById("popup").style.display="flex";
+
+}
+
+
+
+function closeBuy(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+
+
+function openAccordion(id){
+
+let content=document.getElementById(id);
+
+if(content.style.display==="block"){
+
+content.style.display="none";
+
+}else{
+
+content.style.display="block";
+
+}
+
+}
+
 
 </script>
 
