@@ -1,205 +1,195 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BlazeTopia - Growtopia Private Server</title>
-
-<meta property="og:title" content="BlazeTopia - Growtopia Private Server">
-<meta property="og:description" content="Join BlazeTopia and play on Android, iOS & Windows.">
-<meta property="og:image" content="https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png">
-<meta name="theme-color" content="#d60000">
-
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
-}
-
-
-body{
-background:#120000;
-color:#fff;
-overflow-x:hidden;
-min-height:100vh;
-}
-
-
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:
-linear-gradient(
-rgba(0,0,0,.10),
-rgba(0,0,0,.75)
-),
-url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");
-
-background-size:100% auto;
-background-position:top center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-z-index:-2;
-}
-
-
-body::after{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(
-circle at top,
-rgba(255,0,0,.18),
-rgba(0,0,0,.9)
-);
-
-z-index:-1;
-}
-
-
-.container{
-width:92%;
-max-width:470px;
-margin:280px auto 40px;
-}
-
-
-/* HERO */
-
-.hero{
-
-padding:26px;
-
-border-radius:24px;
-
-background:
-rgba(35,0,0,.75);
-
-backdrop-filter:blur(15px);
-
-border:
-1px solid rgba(255,70,70,.25);
-
-box-shadow:
-0 0 40px rgba(255,0,0,.2);
-
-text-align:center;
-
-}
-
-
-.hero h1{
-
-font-size:18px;
-
-line-height:1.5;
-
-margin-bottom:15px;
-
-white-space:nowrap;
-
-}
-
-
-.gradient-text{
-
-background:
-linear-gradient(
-90deg,
-#ff3333,
-#ff0000,
-#700000
-);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-font-weight:900;
-
-}
-
-
-.hero p{
-
-font-size:14px;
-
-line-height:1.7;
-
-color:#ddd;
-
-margin-bottom:25px;
-
-}
-
-
-
-/* BUTTON */
-
-.buttons{
-
-display:flex;
-
-flex-direction:column;
-
-gap:12px;
-
-}
-
-
-.bottom-buttons{
-
-display:flex;
-
-gap:12px;
-
-}
-
-
-.bottom-buttons .btn{
-
-width:50%;
-
-}
-
-
-.btn{
-
-padding:16px 10px;
-
-border:none;
-
-border-radius:18px;
-
-color:white;
-
-font-size:15px;
-
-font-weight:800;
-
-cursor:pointer;
-
-transition:.25s;
-
-}
-
-
-.btn:hover{
-
-transform:translateY(-4px);
-
-}
-
-
+<!DOCTYPE html>  <html lang="en">  
+<head>  <meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>BlazeTopia - Growtopia Private Server</title>  <meta property="og:title" content="BlazeTopia - Growtopia Private Server">  
+<meta property="og:description" content="Join BlazeTopia and play on Android, iOS & Windows.">  
+<meta property="og:image" content="https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png">  
+<meta name="theme-color" content="#d60000">  <style>  
+  
+*{  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+font-family:Arial,sans-serif;  
+scroll-behavior:smooth;  
+}  
+  
+  
+body{  
+background:#120000;  
+color:#fff;  
+overflow-x:hidden;  
+min-height:100vh;  
+}  
+  
+  
+body::before{  
+content:"";  
+position:fixed;  
+inset:0;  
+background:  
+linear-gradient(  
+rgba(0,0,0,.10),  
+rgba(0,0,0,.75)  
+),  
+url("https://cdn.phototourl.com/free/2026-07-30-11942640-781d-4228-8db8-387799b1bd66.png");  
+  
+background-size:100% auto;  
+background-position:top center;  
+background-repeat:no-repeat;  
+background-attachment:fixed;  
+z-index:-2;  
+}  
+  
+  
+body::after{  
+content:"";  
+position:fixed;  
+inset:0;  
+background:  
+radial-gradient(  
+circle at top,  
+rgba(255,0,0,.18),  
+rgba(0,0,0,.9)  
+);  
+  
+z-index:-1;  
+}  
+  
+  
+.container{  
+width:92%;  
+max-width:470px;  
+margin:280px auto 40px;  
+}  
+  
+  
+/* HERO */  
+  
+.hero{  
+  
+padding:26px;  
+  
+border-radius:24px;  
+  
+background:  
+rgba(35,0,0,.75);  
+  
+backdrop-filter:blur(15px);  
+  
+border:  
+1px solid rgba(255,70,70,.25);  
+  
+box-shadow:  
+0 0 40px rgba(255,0,0,.2);  
+  
+text-align:center;  
+  
+}  
+  
+  
+.hero h1{  
+  
+font-size:18px;  
+  
+line-height:1.5;  
+  
+margin-bottom:15px;  
+  
+white-space:nowrap;  
+  
+}  
+  
+  
+.gradient-text{  
+  
+background:  
+linear-gradient(  
+90deg,  
+#ff3333,  
+#ff0000,  
+#700000  
+);  
+  
+-webkit-background-clip:text;  
+  
+-webkit-text-fill-color:transparent;  
+  
+font-weight:900;  
+  
+}  
+  
+  
+.hero p{  
+  
+font-size:14px;  
+  
+line-height:1.7;  
+  
+color:#ddd;  
+  
+margin-bottom:25px;  
+  
+}  
+  
+  
+  
+/* BUTTON */  
+  
+.buttons{  
+  
+display:flex;  
+  
+flex-direction:column;  
+  
+gap:12px;  
+  
+}  
+  
+  
+.bottom-buttons{  
+  
+display:flex;  
+  
+gap:12px;  
+  
+}  
+  
+  
+.bottom-buttons .btn{  
+  
+width:50%;  
+  
+}  
+  
+  
+.btn{  
+  
+padding:16px 10px;  
+  
+border:none;  
+  
+border-radius:18px;  
+  
+color:white;  
+  
+font-size:15px;  
+  
+font-weight:800;  
+  
+cursor:pointer;  
+  
+transition:.25s;  
+  
+}  
+  
+  
+.btn:hover{  
+  
+transform:translateY(-4px);  
+  
+}  
+  
+  
 .discord{
 
 background:
@@ -211,1355 +201,991 @@ linear-gradient(
 );
 
 }
-
-.play{
-
-background:
-linear-gradient(
-90deg,
-#ff3030,
-#900000
-);
-
-}
-
-
-/* SCROLL */
-
-.scroll{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-margin:35px 0;
-
-color:#ddd;
-
-}
-
-
-.arrow{
-
-font-size:30px;
-
-animation:down 1.2s infinite;
-
-}
-
-
-@keyframes down{
-
-50%{
-
-transform:translateY(8px);
-
-}
-
-}
-
-
-
-/* CONTENT */
-
-.content{
-
-padding:26px;
-
-border-radius:24px;
-
-background:
-rgba(35,0,0,.75);
-
-backdrop-filter:blur(15px);
-
-border:
-1px solid rgba(255,70,70,.25);
-
-box-shadow:
-0 0 40px rgba(255,0,0,.18);
-
-margin-bottom:25px;
-
-}
-
-
-.title{
-
-text-align:center;
-
-font-size:25px;
-
-font-weight:900;
-
-margin-bottom:10px;
-
-}
-
-
-.desc{
-
-text-align:center;
-
-font-size:14px;
-
-color:#ddd;
-
-margin-bottom:30px;
-
-}
-
-
-.label{
-
-font-size:15px;
-
-font-weight:700;
-
-margin:15px 0 7px;
-
-}
-
-
-.card{
-
-padding:15px 18px;
-
-margin-bottom:14px;
-
-border-radius:18px;
-
-background:
-rgba(25,8,8,.85);
-
-border:
-1px solid rgba(255,255,255,.08);
-
-cursor:pointer;
-
-transition:.25s;
-
-}
-
-
-.card:hover{
-
-transform:translateY(-3px);
-
-border-color:#ff3333;
-
-}
-
-
-.card p{
-
-font-size:13px;
-
-line-height:1.7;
-
-color:#e6d59a;
-
-}/* PRICE ROLES */
-
-#priceRoles{
-
-background:
-rgba(35,0,0,.85);
-
-}
-
-.roles-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:18px;
-
-}
-
-.roles-grid .role-card{
-
-margin-bottom:0;
-
-}
-
-.roles-grid .role-card:last-child{
-
-grid-column:1 / 3;
-
-max-width:220px;
-
-margin:auto;
-
+  
+  
+.play{  
+  
+background:  
+linear-gradient(  
+90deg,  
+#ff3030,  
+#900000  
+);  
+  
 }  
-
-
-
-.role-card{
-
-padding:22px;
-
-margin-bottom:20px;
-
-
-border-radius:25px;
-
-
-background:
-linear-gradient(
-145deg,
-rgba(70,0,0,.9),
-rgba(15,0,0,.95)
-);
-
-
-border:
-1px solid rgba(255,70,70,.35);
-
-
-box-shadow:
-0 0 30px rgba(255,0,0,.18);
-
-
-transition:.3s;
-
-}
-
-
-
-.role-card:hover{
-
-transform:translateY(-5px);
-
-
-box-shadow:
-0 0 40px rgba(255,0,0,.35);
-
-}
-
-
-
-.role-card h3{
-
-font-size:22px;
-
-text-align:center;
-
-color:#ff3333;
-
-margin-bottom:15px;
-
-}
-
-
-
-.role-card p{
-
-font-size:14px;
-
-line-height:1.8;
-
-color:#ddd;
-
-
-background:
-rgba(0,0,0,.25);
-
-
-padding:15px;
-
-
-border-radius:16px;
-
-}
-
-
-
-.price{
-
-margin-top:18px;
-
-padding:12px;
-
-
-text-align:center;
-
-
-font-size:22px;
-
-
-font-weight:900;
-
-
-color:white;
-
-
-border-radius:16px;
-
-
-
-background:
-linear-gradient(
-90deg,
-#ff3030,
-#900000
-);
-
-}
-
-
-
-/* BUY BUTTON */
-
-.buy-btn{
-
-width:100%;
-
-
-padding:15px;
-
-
-margin-top:15px;
-
-
-border:none;
-
-
-border-radius:18px;
-
-
-
-background:
-linear-gradient(
-90deg,
-#ff3030,
-#900000
-);
-
-
-
-color:white;
-
-
-font-size:15px;
-
-
-font-weight:900;
-
-
-cursor:pointer;
-
-
-transition:.25s;
-
-}
-
-
-
-.buy-btn:hover{
-
-transform:scale(1.03);
-
-}
-
-
-
-/* PREMIUM POPUP */
-
-.popup{
-
-display:none;
-
-
-position:fixed;
-
-
-inset:0;
-
-
-
-background:
-rgba(0,0,0,.85);
-
-
-
-backdrop-filter:blur(10px);
-
-
-
-z-index:9999;
-
-
-
-align-items:center;
-
-
-justify-content:center;
-
-}
-
-
-
-
-.popup-box{
-
-
-width:90%;
-
-
-max-width:420px;
-
-
-
-padding:25px;
-
-
-
-border-radius:28px;
-
-
-
-
-background:
-linear-gradient(
-145deg,
-#400000,
-#120000
-);
-
-
-
-
-border:
-1px solid rgba(255,50,50,.7);
-
-
-
-
-box-shadow:
-
-0 0 35px rgba(255,0,0,.7),
-
-0 0 100px rgba(255,0,0,.25);
-
-
-
-
-animation:
-popupShow .35s ease;
-
-
-
-}
-
-
-
-
-@keyframes popupShow{
-
-
-from{
-
-opacity:0;
-
-transform:
-scale(.75)
-translateY(50px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:
-scale(1)
-translateY(0);
-
-}
-
-
-}
-
-
-
-
-.popup-box h2{
-
-
-text-align:center;
-
-
-font-size:24px;
-
-
-color:#ff3333;
-
-
-margin-bottom:20px;
-
-
-}
-
-
-
-
-.popup-box input{
-
-
-width:100%;
-
-
-padding:14px;
-
-
-margin-bottom:12px;
-
-
-
-border-radius:16px;
-
-
-
-border:
-1px solid rgba(255,50,50,.4);
-
-
-
-
-background:#250000;
-
-
-
-color:white;
-
-
-
-outline:none;
-
-
-}
-
-
-
-
-.popup-box input::placeholder{
-
-color:#aaa;
-
-}
-
-
-
-
-.qris{
-
-
-width:100%;
-
-
-margin-top:15px;
-
-
-
-border-radius:18px;
-
-
-
-
-border:
-2px solid #ff3333;
-
-
-
-box-shadow:
-
-0 0 25px rgba(255,0,0,.6);
-
-
-
-cursor:pointer;
-
-
-
-transition:.3s;
-
-
-}
-
-
-
-.qris:hover{
-
-transform:scale(1.05);
-
-}
-
-
-
-
-.order-discord{
-
-
-width:100%;
-
-
-padding:14px;
-
-
-
-margin-top:15px;
-
-
-
-border:none;
-
-
-
-border-radius:18px;
-
-
-
-background:
-linear-gradient(
-90deg,
-#5865F2,
-#404EED
-);
-
-
-
-color:white;
-
-
-
-font-size:15px;
-
-
-
-font-weight:900;
-
-
-
-cursor:pointer;
-
-
-}
-
-
-
-.close-btn{
-
-
-width:100%;
-
-
-padding:12px;
-
-
-margin-top:12px;
-
-
-
-border:none;
-
-
-border-radius:15px;
-
-
-
-background:#444;
-
-
-
-color:white;
-
-
-
-cursor:pointer;
-
-
-}
-
-
-
-.footer{
-
-
-text-align:center;
-
-
-font-size:14px;
-
-
-color:#aaa;
-
-
-margin-top:20px;
-
-
-}
-
-
-</style>
-
-</head><body>
-
-<div class="container">
-
-
-<div class="hero">
-
-
-<h1>
-Welcome to 
-<span class="gradient-text">
-BlazeTopia Private Server
-</span>
-</h1>
-
-
-
-<p>
-This is a GTPS that you can play for free, with systems and mechanisms that have been designed as best as possible to produce the best gaming experience.
-</p>
-
-
-
-<div class="buttons">
-
-
-<button class="btn discord"
+  
+  
+/* SCROLL */  
+  
+.scroll{  
+  
+display:flex;  
+  
+flex-direction:column;  
+  
+align-items:center;  
+  
+justify-content:center;  
+  
+text-align:center;  
+  
+margin:35px 0;  
+  
+color:#ddd;  
+  
+}  
+  
+  
+.arrow{  
+  
+font-size:30px;  
+  
+animation:down 1.2s infinite;  
+  
+}  
+  
+  
+@keyframes down{  
+  
+50%{  
+  
+transform:translateY(8px);  
+  
+}  
+  
+}  
+  
+  
+  
+/* CONTENT */  
+  
+.content{  
+  
+padding:26px;  
+  
+border-radius:24px;  
+  
+background:  
+rgba(35,0,0,.75);  
+  
+backdrop-filter:blur(15px);  
+  
+border:  
+1px solid rgba(255,70,70,.25);  
+  
+box-shadow:  
+0 0 40px rgba(255,0,0,.18);  
+  
+margin-bottom:25px;  
+  
+}  
+  
+  
+.title{  
+  
+text-align:center;  
+  
+font-size:25px;  
+  
+font-weight:900;  
+  
+margin-bottom:10px;  
+  
+}  
+  
+  
+.desc{  
+  
+text-align:center;  
+  
+font-size:14px;  
+  
+color:#ddd;  
+  
+margin-bottom:30px;  
+  
+}  
+  
+  
+.label{  
+  
+font-size:15px;  
+  
+font-weight:700;  
+  
+margin:15px 0 7px;  
+  
+}  
+  
+  
+.card{  
+  
+padding:15px 18px;  
+  
+margin-bottom:14px;  
+  
+border-radius:18px;  
+  
+background:  
+rgba(25,8,8,.85);  
+  
+border:  
+1px solid rgba(255,255,255,.08);  
+  
+cursor:pointer;  
+  
+transition:.25s;  
+  
+}  
+  
+  
+.card:hover{  
+  
+transform:translateY(-3px);  
+  
+border-color:#ff3333;  
+  
+}  
+  
+  
+.card p{  
+  
+font-size:13px;  
+  
+line-height:1.7;  
+  
+color:#e6d59a;  
+  
+}/* PRICE ROLES */  
+  
+#priceRoles{  
+  
+background:  
+rgba(35,0,0,.85);  
+  
+}  
+  
+  
+  
+.role-card{  
+  
+padding:22px;  
+  
+margin-bottom:20px;  
+  
+  
+border-radius:25px;  
+  
+  
+background:  
+linear-gradient(  
+145deg,  
+rgba(70,0,0,.9),  
+rgba(15,0,0,.95)  
+);  
+  
+  
+border:  
+1px solid rgba(255,70,70,.35);  
+  
+  
+box-shadow:  
+0 0 30px rgba(255,0,0,.18);  
+  
+  
+transition:.3s;  
+  
+}  
+  
+  
+  
+.role-card:hover{  
+  
+transform:translateY(-5px);  
+  
+  
+box-shadow:  
+0 0 40px rgba(255,0,0,.35);  
+  
+}  
+  
+  
+  
+.role-card h3{  
+  
+font-size:22px;  
+  
+text-align:center;  
+  
+color:#ff3333;  
+  
+margin-bottom:15px;  
+  
+}  
+  
+  
+  
+.role-card p{  
+  
+font-size:14px;  
+  
+line-height:1.8;  
+  
+color:#ddd;  
+  
+  
+background:  
+rgba(0,0,0,.25);  
+  
+  
+padding:15px;  
+  
+  
+border-radius:16px;  
+  
+}  
+  
+  
+  
+.price{  
+  
+margin-top:18px;  
+  
+padding:12px;  
+  
+  
+text-align:center;  
+  
+  
+font-size:22px;  
+  
+  
+font-weight:900;  
+  
+  
+color:white;  
+  
+  
+border-radius:16px;  
+  
+  
+  
+background:  
+linear-gradient(  
+90deg,  
+#ff3030,  
+#900000  
+);  
+  
+}  
+  
+  
+  
+/* BUY BUTTON */  
+  
+.buy-btn{  
+  
+width:100%;  
+  
+  
+padding:15px;  
+  
+  
+margin-top:15px;  
+  
+  
+border:none;  
+  
+  
+border-radius:18px;  
+  
+  
+  
+background:  
+linear-gradient(  
+90deg,  
+#ff3030,  
+#900000  
+);  
+  
+  
+  
+color:white;  
+  
+  
+font-size:15px;  
+  
+  
+font-weight:900;  
+  
+  
+cursor:pointer;  
+  
+  
+transition:.25s;  
+  
+}  
+  
+  
+  
+.buy-btn:hover{  
+  
+transform:scale(1.03);  
+  
+}  
+  
+  
+  
+/* PREMIUM POPUP */  
+  
+.popup{  
+  
+display:none;  
+  
+  
+position:fixed;  
+  
+  
+inset:0;  
+  
+  
+  
+background:  
+rgba(0,0,0,.85);  
+  
+  
+  
+backdrop-filter:blur(10px);  
+  
+  
+  
+z-index:9999;  
+  
+  
+  
+align-items:center;  
+  
+  
+justify-content:center;  
+  
+}  
+  
+  
+  
+  
+.popup-box{  
+  
+  
+width:90%;  
+  
+  
+max-width:420px;  
+  
+  
+  
+padding:25px;  
+  
+  
+  
+border-radius:28px;  
+  
+  
+  
+  
+background:  
+linear-gradient(  
+145deg,  
+#400000,  
+#120000  
+);  
+  
+  
+  
+  
+border:  
+1px solid rgba(255,50,50,.7);  
+  
+  
+  
+  
+box-shadow:  
+  
+0 0 35px rgba(255,0,0,.7),  
+  
+0 0 100px rgba(255,0,0,.25);  
+  
+  
+  
+  
+animation:  
+popupShow .35s ease;  
+  
+  
+  
+}  
+  
+  
+  
+  
+@keyframes popupShow{  
+  
+  
+from{  
+  
+opacity:0;  
+  
+transform:  
+scale(.75)  
+translateY(50px);  
+  
+}  
+  
+  
+to{  
+  
+opacity:1;  
+  
+transform:  
+scale(1)  
+translateY(0);  
+  
+}  
+  
+  
+}  
+  
+  
+  
+  
+.popup-box h2{  
+  
+  
+text-align:center;  
+  
+  
+font-size:24px;  
+  
+  
+color:#ff3333;  
+  
+  
+margin-bottom:20px;  
+  
+  
+}  
+  
+  
+  
+  
+.popup-box input{  
+  
+  
+width:100%;  
+  
+  
+padding:14px;  
+  
+  
+margin-bottom:12px;  
+  
+  
+  
+border-radius:16px;  
+  
+  
+  
+border:  
+1px solid rgba(255,50,50,.4);  
+  
+  
+  
+  
+background:#250000;  
+  
+  
+  
+color:white;  
+  
+  
+  
+outline:none;  
+  
+  
+}  
+  
+  
+  
+  
+.popup-box input::placeholder{  
+  
+color:#aaa;  
+  
+}  
+  
+  
+  
+  
+.qris{  
+  
+  
+width:100%;  
+  
+  
+margin-top:15px;  
+  
+  
+  
+border-radius:18px;  
+  
+  
+  
+  
+border:  
+2px solid #ff3333;  
+  
+  
+  
+box-shadow:  
+  
+0 0 25px rgba(255,0,0,.6);  
+  
+  
+  
+cursor:pointer;  
+  
+  
+  
+transition:.3s;  
+  
+  
+}  
+  
+  
+  
+.qris:hover{  
+  
+transform:scale(1.05);  
+  
+}  
+  
+  
+  
+  
+.order-discord{  
+  
+  
+width:100%;  
+  
+  
+padding:14px;  
+  
+  
+  
+margin-top:15px;  
+  
+  
+  
+border:none;  
+  
+  
+  
+border-radius:18px;  
+  
+  
+  
+background:  
+linear-gradient(  
+90deg,  
+#5865F2,  
+#404EED  
+);  
+  
+  
+  
+color:white;  
+  
+  
+  
+font-size:15px;  
+  
+  
+  
+font-weight:900;  
+  
+  
+  
+cursor:pointer;  
+  
+  
+}  
+  
+  
+  
+.close-btn{  
+  
+  
+width:100%;  
+  
+  
+padding:12px;  
+  
+  
+margin-top:12px;  
+  
+  
+  
+border:none;  
+  
+  
+border-radius:15px;  
+  
+  
+  
+background:#444;  
+  
+  
+  
+color:white;  
+  
+  
+  
+cursor:pointer;  
+  
+  
+}  
+  
+  
+  
+.footer{  
+  
+  
+text-align:center;  
+  
+  
+font-size:14px;  
+  
+  
+color:#aaa;  
+  
+  
+margin-top:20px;  
+  
+  
+}  
+  
+  
+</style>  </head><body>  <div class="container">  <div class="hero">  <h1>  
+Welcome to   
+<span class="gradient-text">  
+BlazeTopia Private Server  
+</span>  
+</h1>  <p>  
+This is a GTPS that you can play for free, with systems and mechanisms that have been designed as best as possible to produce the best gaming experience.  
+</p>  <div class="buttons">  <button class="btn discord"  
 onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">
 
 ◉ Join Discord
 
-</button>
-
-
-
-<div class="bottom-buttons">
-
-
-
-<button class="btn play"
+</button>  <div class="bottom-buttons">  <button class="btn play"  
 onclick="document.getElementById('howtoplay').scrollIntoView()">
 
 ◉ Play Now
 
-</button>
-
-
-
-
-<button class="btn play"
+</button>  <button class="btn play"  
 onclick="document.getElementById('priceRoles').scrollIntoView()">
 
 ◉ Price Roles
 
-</button>
+</button>  </div>  </div>  </div>  <div class="scroll">  <span class="arrow">  ↓
 
+</span>  Scroll Down
 
+</div>  <div class="content" id="howtoplay">  <div class="title">  How to Play
 
-</div>
+</div>  <div class="desc">  Please select the application you want to use!
 
+</div>  <div class="label">  Android
 
-</div>
+</div>  <div class="card"  
+onclick="copyText('https://gtpshosting.web.id/raw/blazetopia')">  <p>  https://gtpshosting.web.id/raw/blazetopia
 
+</p>  </div>  <div class="label">  iOS
 
-</div>
+</div>  <div class="card"  
+onclick="copyText('https://gtpshosting.web.id/ios/blazetopia')">  <p>  https://gtpshosting.web.id/ios/blazetopia
 
+</p>  </div>  <div class="label">  Windows
 
-
-
-
-<div class="scroll">
-
-
-<span class="arrow">
-
-↓
-
-</span>
-
-
-Scroll Down
-
-
-</div>
-
-
-
-
-
-<div class="content" id="howtoplay">
-
-
-
-<div class="title">
-
-How to Play
-
-</div>
-
-
-
-
-<div class="desc">
-
-Please select the application you want to use!
-
-</div>
-
-
-
-
-<div class="label">
-
-Android
-
-</div>
-
-
-
-
-<div class="card"
-onclick="copyText('https://gtpshosting.web.id/raw/blazetopia')">
-
-
-<p>
-
-https://gtpshosting.web.id/raw/blazetopia
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="label">
-
-iOS
-
-</div>
-
-
-
-
-<div class="card"
-onclick="copyText('https://gtpshosting.web.id/ios/blazetopia')">
-
-
-<p>
-
-https://gtpshosting.web.id/ios/blazetopia
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="label">
-
-Windows
-
-</div>
-
-
-
-
-<div class="card"
-onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">
-
-
-<p>
-
-149.202.58.185 www.growtopia1.com<br>
+</div>  <div class="card"  
+onclick="copyText('149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com')">  <p>  149.202.58.185 www.growtopia1.com<br>
 
 149.202.58.185 www.growtopia2.com
 
-</p>
+</p>  </div>  </div>  <div class="content" id="priceRoles">  <div class="title">  Price Roles
 
+</div>  <div class="desc">  Choose your BlazeTopia Role
 
-</div>
-
-
-
-</div>
-
-
-
-
-
-<div class="content" id="priceRoles">
-
-
-
-<div class="title">
-
-Price Roles
-
-</div>
-
-
-
-
-<div class="desc">
-
-Choose your BlazeTopia Role
-
-</div>
-
-<div class="roles-grid">
-
-<div class="role-card">
-
-<h3>🔥 Reseller Role</h3>
-
-<p>
-• Role Super Developer, Developer, Moderator, Cheater, VIP.<br>
-• Trusted SELLER BGL/GGL.<br>
-• Get title [ RESELLER ] in game.<br>
-• Special promotion channel.<br>
-• Verified in game.
-</p>
-
-<div class="price">
-Rp 400.000
-</div>
-
-<button class="buy-btn" onclick="openBuy('Reseller Role')">
-Buy Now
-</button>
-
-</div>
-
-
-
-<div class="role-card">
-
-<h3>🔥 Middleman Role</h3>
-
-<p>
-• Role Developer, Moderator, VIP.<br>
-• Get title [ MIDMAN ] in game.<br>
-• Get untradable box.<br>
-• Access world verification midman.<br>
-• Special promotion channel.
-</p>
-
-<div class="price">
-Rp 200.000
-</div>
-
-<button class="buy-btn" onclick="openBuy('Middleman Role')">
-Buy Now
-</button>
-
-</div>
-
-
-
-<div class="role-card">
-
-<h3>🔥 Unlimited Block Role</h3>
-
-<p>
-• Role Moderator, Cheater, VIP.<br>
-• Get title [ UNLI BLOCK ] in game.<br>
-• In-game name color: Yellow.<br>
-• Can sell blocks on vend.
-</p>
-
-<div class="price">
-Rp 250.000
-</div>
-
-<button class="buy-btn" onclick="openBuy('Unlimited Block Role')">
-Buy Now
-</button>
-
-</div>
-
-
-
-<div class="role-card">
-
-<h3>🔥 Super Developer Role</h3>
-
-<p>
-• Role Developer, Moderator, Cheater, VIP.<br>
-• In-game name color: Dark Orange.<br><br>
-
-Commands:<br>
+</div><div class="role-card">  <h3>🔥 Reseller Role</h3>  <p>  
+• Role Super Developer, Developer, Moderator, Cheater, VIP.<br>  
+• Trusted SELLER BGL/GGL.<br>  
+• Get title [ RESELLER ] in game.<br>  
+• Special promotion channel.<br>  
+• Verified in game.  
+</p>  <div class="price">  
+Rp 400.000  
+</div>  <button class="buy-btn" onclick="openBuy('Reseller Role')">  
+Buy Now  
+</button>  </div>  <div class="role-card">  <h3>🔥 Middleman Role</h3>  <p>  
+• Role Developer, Moderator, VIP.<br>  
+• Get title [ MIDMAN ] in game.<br>  
+• Get untradable box.<br>  
+• Access world verification midman.<br>  
+• Special promotion channel.  
+</p>  <div class="price">  
+Rp 200.000  
+</div>  <button class="buy-btn" onclick="openBuy('Middleman Role')">  
+Buy Now  
+</button>  </div>  <div class="role-card">  <h3>🔥 Unlimited Block Role</h3>  <p>  
+• Role Moderator, Cheater, VIP.<br>  
+• Get title [ UNLI BLOCK ] in game.<br>  
+• In-game name color: Yellow.<br>  
+• Can sell blocks on vend.  
+</p>  <div class="price">  
+Rp 250.000  
+</div>  <button class="buy-btn" onclick="openBuy('Unlimited Block Role')">  
+Buy Now  
+</button>  </div>  <div class="role-card">  <h3>🔥 Super Developer Role</h3>  <p>  
+• Role Developer, Moderator, Cheater, VIP.<br>  
+• In-game name color: Dark Orange.<br><br>  Commands:<br>
 /color /e /entereffect /freezeall /killall /p<br>
 /sdsb /trollnick /vernick /warn
-</p>
 
-<div class="price">
-Rp 150.000
-</div>
-
-<button class="buy-btn" onclick="openBuy('Super Developer Role')">
-Buy Now
-</button>
-
-</div>
-
-
-
-<div class="role-card">
-
-<h3>🔥 Developer Role</h3>
-
-<p>
-• Role Moderator, Cheater, VIP.<br>
-• In-game name color: Yellow.<br><br>
-
-Commands:<br>
+</p>  <div class="price">  
+Rp 150.000  
+</div>  <button class="buy-btn" onclick="openBuy('Super Developer Role')">  
+Buy Now  
+</button>  </div>  <div class="role-card">  <h3>🔥 Developer Role</h3>  <p>  
+• Role Moderator, Cheater, VIP.<br>  
+• In-game name color: Yellow.<br><br>  Commands:<br>
 /1hit /banall /block /curse /door /dsb<br>
 /hide /longmode /mute /nick /pullall<br>
 /ssb /uncurse /unmute /weather
-</p>
 
-<div class="price">
-Rp 75.000
-</div>
-
-<button class="buy-btn" onclick="openBuy('Developer Role')">
-Buy Now
-</button>
-
-</div>
-
-
-
-<div class="role-card">
-
-<h3>🔥 Moderator Role</h3>
-
-<p>
-• Role Cheater, VIP.<br>
-• In-game name color: Purple.<br><br>
-
-Commands:<br>
+</p>  <div class="price">  
+Rp 75.000  
+</div>  <button class="buy-btn" onclick="openBuy('Developer Role')">  
+Buy Now  
+</button>  </div>  <div class="role-card">  <h3>🔥 Moderator Role</h3>  <p>  
+• Role Cheater, VIP.<br>  
+• In-game name color: Purple.<br><br>  Commands:<br>
 /find /g /info /invis /magic<br>
 /nuke /snuke /summon /togglemods
-</p>
 
-<div class="price">
-Rp 50.000
-</div>
-
-<button class="buy-btn" onclick="openBuy('Moderator Role')">
-Buy Now
-</button>
-
-</div>
-
-
-
-<div class="role-card">
-
-<h3>🔥 Cheater + VIP Role</h3>
-
-<p>
-• Role Cheater, VIP.<br>
-• In-game name color: White.<br><br>
-
-Commands:<br>
+</p>  <div class="price">  
+Rp 50.000  
+</div>  <button class="buy-btn" onclick="openBuy('Moderator Role')">  
+Buy Now  
+</button>  </div>  <div class="role-card">  <h3>🔥 Cheater + VIP Role</h3>  <p>  
+• Role Cheater, VIP.<br>  
+• In-game name color: White.<br><br>  Commands:<br>
 /rainbow /tpclick /v /valentine /vsb
-</p>
 
-<div class="price">
-Rp 25.000
-</div>
-
-<button class="buy-btn" onclick="openBuy('Cheater VIP Role')">
-Buy Now
-</button>
-
-</div>
-
-</div>
-
-</div><!-- BUY POPUP -->
-
-<div class="popup" id="popup">
-
-
-<div class="popup-box">
-
-
-<h2>
-Complete Purchase
-</h2>
-
-
-
-<input id="selectedRole" placeholder="Selected Role" readonly>
-
-
-<input id="growid" placeholder="GrowID Ingame">
-
-
-<input id="discordUser" placeholder="Discord Username">
-
-
-<p>
-QRIS Payment
-</p>
-
-
-
-<img class="qris"
+</p>  <div class="price">  
+Rp 25.000  
+</div>  <button class="buy-btn" onclick="openBuy('Cheater VIP Role')">  
+Buy Now  
+</button>  </div>  </div><!-- BUY POPUP -->  <div class="popup" id="popup">  <div class="popup-box">  <h2>  
+Complete Purchase  
+</h2>  <input id="selectedRole" placeholder="Selected Role" readonly>  <input id="growid" placeholder="GrowID Ingame">  <input id="discordUser" placeholder="Discord Username">  <p>  
+QRIS Payment  
+</p>  <img class="qris"  
 src="https://i.ibb.co.com/WWdkk6VL/file-00000000aa7c720b8b517903a435cae0.png">
 
-
-
-<button class="buy-btn" onclick="sendOrder()">
-
-Send Order
-
-</button>
-
-
-
-
-<button class="order-discord" onclick="orderDiscord()">
-
-Order via Discord
-
-</button>
-
-
-
-
-<button class="close-btn" onclick="closeBuy()">
-
-Close
-
-</button>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="footer">
-
-Enter the Flames. Rule the World.
-
-</div>
-
-
-</div>
-
-
-
-
-
-<script>
-
-
-function showToast(){
-
-
-const t=document.createElement("div");
-
-
-t.innerHTML="Copied!";
-
-
-
-Object.assign(t.style,{
-
-position:"fixed",
-
-left:"50%",
-
-bottom:"25px",
-
-transform:"translateX(-50%)",
-
-background:"#c00000",
-
-color:"#fff",
-
-padding:"12px 28px",
-
-borderRadius:"14px",
-
-fontWeight:"700",
-
-zIndex:"9999"
-
-});
-
-
-
-document.body.appendChild(t);
-
-
-
-setTimeout(()=>t.remove(),1800);
-
-
-}
-
-
-
-
-
-function copyText(text){
-
-
-navigator.clipboard.writeText(text)
-
-.then(showToast)
-
-.catch(()=>alert("Failed to copy"));
-
-
-}
-
-
-
-
-
-function openBuy(role){
-
-
-document.getElementById("popup").style.display="flex";
-
-
-document.getElementById("selectedRole").value=role;
-
-
-}
-
-
-
-
-
-function closeBuy(){
-
-
-document.getElementById("popup").style.display="none";
-
-
-}
-
-
-
-
-
-function orderDiscord(){
-
-
-let role=document.getElementById("selectedRole").value;
-
-let growid=document.getElementById("growid").value;
-
-let discord=document.getElementById("discordUser").value;
-
-
-
-let orderText =
-
-"🔥 BlazeTopia Order\n\n"+
-"Role : "+role+
-"\nGrowID : "+growid+
-"\nDiscord : "+discord;
-
-
-
-navigator.clipboard.writeText(orderText);
-
-
-
-window.open(
-
-"https://discord.gg/Y9dbApGRv",
-
-"_blank"
-
-);
-
-
-}
-
-
-
-
-
-function sendOrder(){
-
-
-let role=document.getElementById("selectedRole").value;
-
-let growid=document.getElementById("growid").value;
-
-let discord=document.getElementById("discordUser").value;
-
-
-
-if(growid==="" || discord===""){
-
-
-alert("Please fill all information!");
-
-return;
-
-
-}
-
-
-
-
-let order =
-
-"🔥 BlazeTopia Order\n\n"+
-"Role : "+role+
-"\nGrowID : "+growid+
-"\nDiscord : "+discord;
-
-
-
-alert(
-
-"Order Created!\n\n"+order
-
-);
-
-
-}
-
-
-
-</script>
-
-
-</body>
-  </html>
+<button class="buy-btn" onclick="sendOrder()">  Send Order
+
+</button>  <button class="order-discord" onclick="orderDiscord()">  Order via Discord
+
+</button>  <button class="close-btn" onclick="closeBuy()">  Close
+
+</button>  </div>  </div>  <div class="footer">  Enter the Flames. Rule the World.
+
+</div>  </div>  <script>  
+  
+  
+function showToast(){  
+  
+  
+const t=document.createElement("div");  
+  
+  
+t.innerHTML="Copied!";  
+  
+  
+  
+Object.assign(t.style,{  
+  
+position:"fixed",  
+  
+left:"50%",  
+  
+bottom:"25px",  
+  
+transform:"translateX(-50%)",  
+  
+background:"#c00000",  
+  
+color:"#fff",  
+  
+padding:"12px 28px",  
+  
+borderRadius:"14px",  
+  
+fontWeight:"700",  
+  
+zIndex:"9999"  
+  
+});  
+  
+  
+  
+document.body.appendChild(t);  
+  
+  
+  
+setTimeout(()=>t.remove(),1800);  
+  
+  
+}  
+  
+  
+  
+  
+  
+function copyText(text){  
+  
+  
+navigator.clipboard.writeText(text)  
+  
+.then(showToast)  
+  
+.catch(()=>alert("Failed to copy"));  
+  
+  
+}  
+  
+  
+  
+  
+  
+function openBuy(role){  
+  
+  
+document.getElementById("popup").style.display="flex";  
+  
+  
+document.getElementById("selectedRole").value=role;  
+  
+  
+}  
+  
+  
+  
+  
+  
+function closeBuy(){  
+  
+  
+document.getElementById("popup").style.display="none";  
+  
+  
+}  
+  
+  
+  
+  
+  
+function orderDiscord(){  
+  
+  
+let role=document.getElementById("selectedRole").value;  
+  
+let growid=document.getElementById("growid").value;  
+  
+let discord=document.getElementById("discordUser").value;  
+  
+  
+  
+let orderText =  
+  
+"🔥 BlazeTopia Order\n\n"+  
+"Role : "+role+  
+"\nGrowID : "+growid+  
+"\nDiscord : "+discord;  
+  
+  
+  
+navigator.clipboard.writeText(orderText);  
+  
+  
+  
+window.open(  
+  
+"https://discord.gg/Y9dbApGRv",  
+  
+"_blank"  
+  
+);  
+  
+  
+}  
+  
+  
+  
+  
+  
+function sendOrder(){  
+  
+  
+let role=document.getElementById("selectedRole").value;  
+  
+let growid=document.getElementById("growid").value;  
+  
+let discord=document.getElementById("discordUser").value;  
+  
+  
+  
+if(growid==="" || discord===""){  
+  
+  
+alert("Please fill all information!");  
+  
+return;  
+  
+  
+}  
+  
+  
+  
+  
+let order =  
+  
+"🔥 BlazeTopia Order\n\n"+  
+"Role : "+role+  
+"\nGrowID : "+growid+  
+"\nDiscord : "+discord;  
+  
+  
+  
+alert(  
+  
+"Order Created!\n\n"+order  
+  
+);  
+  
+  
+}  
+  
+  
+  
+</script>  </body>  
+                   </html>
