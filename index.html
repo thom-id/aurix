@@ -7,18 +7,18 @@
   <meta property="og:title" content="BlazeTopia - Growtopia Private Server">  
   <meta property="og:description" content="Join AURIX and play on Android, iOS & Windows.">  
   <meta property="og:image" content="https://cdn.phototourl.com/free/2026-08-16-9d9ada9b-8322-4f89-9a0c-84b4fd7af0bc.png">  
-  <meta name="theme-color" content="#d60000">  
+  <meta name="theme-color" content="#F5D76E">  
   <style>  
     * {  
       margin: 0;  
       padding: 0;  
       box-sizing: border-box;  
-      font-family: Arial, sans-serif;  
+      font-family: 'Segoe UI', Arial, sans-serif;  
       scroll-behavior: smooth;  
     }  
 
     body {  
-      background: #120000;  
+      background: #1a1200;  
       color: #fff;  
       overflow-x: hidden;  
       min-height: 100vh;  
@@ -29,7 +29,7 @@
       position: fixed;  
       inset: 0;  
       background:  
-        linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.75)),  
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.85)),  
         url("https://cdn.phototourl.com/free/2026-08-16-9d9ada9b-8322-4f89-9a0c-84b4fd7af0bc.png");  
       background-size: 100% auto;  
       background-position: top center;  
@@ -42,7 +42,7 @@
       content: "";  
       position: fixed;  
       inset: 0;  
-      background: radial-gradient(circle at top, rgba(255,0,0,.18), rgba(0,0,0,.9));  
+      background: radial-gradient(circle at top, rgba(255, 215, 0, 0.15), rgba(10, 8, 0, 0.95));  
       z-index: -1;  
     }  
 
@@ -56,10 +56,10 @@
     .hero {  
       padding: 26px;  
       border-radius: 24px;  
-      background: rgba(35,0,0,.75);  
+      background: rgba(20, 15, 0, 0.8);  
       backdrop-filter: blur(15px);  
-      border: 1px solid rgba(255,70,70,.25);  
-      box-shadow: 0 0 40px rgba(255,0,0,.2);  
+      border: 1px solid rgba(255, 215, 0, 0.4);  
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);  
       text-align: center;  
     }  
 
@@ -71,48 +71,53 @@
     }  
 
     .gradient-text {  
-      background: linear-gradient(90deg, #ff3333, #ff0000, #700000);  
+      background: linear-gradient(90deg, #FFE17B, #FFD700, #B8860B);  
       -webkit-background-clip: text;  
       -webkit-text-fill-color: transparent;  
       font-weight: 900;  
+      text-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);  
     }  
 
     .hero p {  
       font-size: 14px;  
       line-height: 1.7;  
-      color: #ddd;  
+      color: #f5f0da;  
       margin-bottom: 25px;  
     }  
 
-    /* BUTTON */  
+    /* BUTTON - DIUBAH JADI SEJAJAR */  
     .buttons {  
       display: flex;  
-      flex-direction: column;  
+      flex-direction: row; /* Membuat tombol sejajar ke samping */  
       gap: 12px;  
+      width: 100%;  
     }  
 
     .btn {  
+      flex: 1; /* Membagi lebar tombol jadi sama rata (50% : 50%) */  
       padding: 16px 10px;  
       border: none;  
       border-radius: 18px;  
-      color: white;  
-      font-size: 15px;  
+      color: #1a1200;  
+      font-size: 14px;  
       font-weight: 800;  
       cursor: pointer;  
       transition: .25s;  
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);  
+      white-space: nowrap;  
     }  
 
     .btn:hover {  
       transform: translateY(-4px);  
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);  
     }  
 
     .discord {  
-      background: linear-gradient(90deg, #ff3030, #000000, #900000);  
+      background: linear-gradient(90deg, #FFD700, #FFF3CD);  
     }  
 
     .play {  
-      background: linear-gradient(90deg, #ff3030, #900000);  
-      width: 100%;  
+      background: linear-gradient(90deg, #FFF8DC, #D4AF37);  
     }  
 
     /* SCROLL */  
@@ -123,12 +128,13 @@
       justify-content: center;  
       text-align: center;  
       margin: 35px 0;  
-      color: #ddd;  
+      color: #FFE17B;  
     }  
 
     .arrow {  
       font-size: 30px;  
       animation: down 1.2s infinite;  
+      color: #FFD700;  
     }  
 
     @keyframes down {  
@@ -139,10 +145,10 @@
     .content {  
       padding: 26px;  
       border-radius: 24px;  
-      background: rgba(35,0,0,.75);  
+      background: rgba(20, 15, 0, 0.8);  
       backdrop-filter: blur(15px);  
-      border: 1px solid rgba(255,70,70,.25);  
-      box-shadow: 0 0 40px rgba(255,0,0,.18);  
+      border: 1px solid rgba(255, 215, 0, 0.3);  
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.1);  
       margin-bottom: 25px;  
     }  
 
@@ -151,12 +157,14 @@
       font-size: 25px;  
       font-weight: 900;  
       margin-bottom: 10px;  
+      color: #FFE17B;  
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);  
     }  
 
     .desc {  
       text-align: center;  
       font-size: 14px;  
-      color: #ddd;  
+      color: #f5f0da;  
       margin-bottom: 30px;  
     }  
 
@@ -164,27 +172,29 @@
       font-size: 15px;  
       font-weight: 700;  
       margin: 15px 0 7px;  
+      color: #FFD700;  
     }  
 
     .card {  
       padding: 15px 18px;  
       margin-bottom: 14px;  
       border-radius: 18px;  
-      background: rgba(25,8,8,.85);  
-      border: 1px solid rgba(255,255,255,.08);  
+      background: rgba(0, 0, 0, 0.6);  
+      border: 1px solid rgba(255, 215, 0, 0.15);  
       cursor: pointer;  
       transition: .25s;  
     }  
 
     .card:hover {  
       transform: translateY(-3px);  
-      border-color: #ff3333;  
+      border-color: #FFD700;  
+      background: rgba(0, 0, 0, 0.8);  
     }  
 
     .card p {  
       font-size: 13px;  
       line-height: 1.7;  
-      color: #e6d59a;  
+      color: #FFF8DC;  
     }  
 
     /* POPUP */  
@@ -204,9 +214,9 @@
       max-width: 420px;  
       padding: 25px;  
       border-radius: 28px;  
-      background: linear-gradient(145deg, #400000, #120000);  
-      border: 1px solid rgba(255,50,50,.7);  
-      box-shadow: 0 0 35px rgba(255,0,0,.7), 0 0 100px rgba(255,0,0,.25);  
+      background: linear-gradient(145deg, #3a2e00, #0f0a00);  
+      border: 1px solid rgba(255, 215, 0, 0.8);  
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.6), 0 0 100px rgba(255, 215, 0, 0.2);  
       animation: popupShow .35s ease;  
     }  
 
@@ -218,8 +228,9 @@
     .popup-box h2 {  
       text-align: center;  
       font-size: 24px;  
-      color: #ff3333;  
+      color: #FFD700;  
       margin-bottom: 20px;  
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);  
     }  
 
     .popup-box input {  
@@ -227,22 +238,27 @@
       padding: 14px;  
       margin-bottom: 12px;  
       border-radius: 16px;  
-      border: 1px solid rgba(255,50,50,.4);  
-      background: #250000;  
+      border: 1px solid rgba(255, 215, 0, 0.4);  
+      background: #1a1300;  
       color: white;  
       outline: none;  
     }  
 
+    .popup-box input:focus {  
+      border-color: #FFD700;  
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);  
+    }  
+
     .popup-box input::placeholder {  
-      color: #aaa;  
+      color: #bba56e;  
     }  
 
     .qris {  
       width: 100%;  
       margin-top: 15px;  
       border-radius: 18px;  
-      border: 2px solid #ff3333;  
-      box-shadow: 0 0 25px rgba(255,0,0,.6);  
+      border: 2px solid #FFD700;  
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);  
       cursor: pointer;  
       transition: .3s;  
     }  
@@ -262,6 +278,21 @@
       font-size: 15px;  
       font-weight: 900;  
       cursor: pointer;  
+      box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);  
+    }  
+
+    .buy-btn {  
+      width: 100%;  
+      padding: 14px;  
+      margin-top: 12px;  
+      border: none;  
+      border-radius: 18px;  
+      background: linear-gradient(90deg, #FFD700, #B8860B);  
+      color: #1a1200;  
+      font-size: 15px;  
+      font-weight: 900;  
+      cursor: pointer;  
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);  
     }  
 
     .close-btn {  
@@ -270,16 +301,18 @@
       margin-top: 12px;  
       border: none;  
       border-radius: 15px;  
-      background: #444;  
-      color: white;  
+      background: #3a2e00;  
+      color: #e6d59a;  
       cursor: pointer;  
+      border: 1px solid rgba(255, 215, 0, 0.2);  
     }  
 
     .footer {  
       text-align: center;  
       font-size: 14px;  
-      color: #aaa;  
+      color: #D4AF37;  
       margin-top: 20px;  
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);  
     }  
   </style>  
 </head>  
@@ -289,14 +322,16 @@
     <div class="hero">  
       <h1>  
         Welcome to   
-        <span class="gradient-text">BlazeTopia Private Server</span>  
+        <span class="gradient-text">AURIX Private Server</span>  
       </h1>  
       <p>  
         This is a GTPS that you can play for free, with systems and mechanisms that have been designed as best as possible to produce the best gaming experience.  
       </p>  
+      
+      <!-- BUTTONS SEJAJAR -->  
       <div class="buttons">  
         <button class="btn discord" onclick="window.open('https://discord.gg/Y9dbApGRv','_blank')">  
-          ◉ Join Discord  
+          ◉ Discord  
         </button>  
         <button class="btn play" onclick="document.getElementById('howtoplay').scrollIntoView()">  
           ◉ Play Now  
@@ -332,17 +367,17 @@
     </div>  
 
     <!-- FOOTER -->  
-    <div class="footer">Enter the Flames. Rule the World.</div>  
+    <div class="footer">Rise with Gold. Rule the AURIX.</div>  
   </div>  
 
-  <!-- POPUP (tetap ada untuk keperluan lain, tapi tidak digunakan karena Price Roles dihapus) -->  
+  <!-- POPUP -->  
   <div class="popup" id="popup">  
     <div class="popup-box">  
       <h2>Complete Purchase</h2>  
       <input id="selectedRole" placeholder="Selected Role" readonly>  
       <input id="growid" placeholder="GrowID Ingame">  
       <input id="discordUser" placeholder="Discord Username">  
-      <p>QRIS Payment</p>  
+      <p style="color: #FFE17B; margin-top: 5px;">QRIS Payment</p>  
       <img class="qris" src="https://fascinating-olive-pybmy8go.edgeone.dev/">  
       <button class="buy-btn" onclick="sendOrder()">Send Order</button>  
       <button class="order-discord" onclick="orderDiscord()">Order via Discord</button>  
@@ -359,8 +394,8 @@
         left: "50%",  
         bottom: "25px",  
         transform: "translateX(-50%)",  
-        background: "#c00000",  
-        color: "#fff",  
+        background: "#D4AF37",  
+        color: "#1a1200",  
         padding: "12px 28px",  
         borderRadius: "14px",  
         fontWeight: "700",  
@@ -389,7 +424,7 @@
       let role = document.getElementById("selectedRole").value;  
       let growid = document.getElementById("growid").value;  
       let discord = document.getElementById("discordUser").value;  
-      let orderText = "🔥 BlazeTopia Order\n\n" +  
+      let orderText = "🔥 AURIX Order\n\n" +  
                       "Role : " + role +  
                       "\nGrowID : " + growid +  
                       "\nDiscord : " + discord;  
@@ -405,7 +440,7 @@
         alert("Please fill all information!");  
         return;  
       }  
-      let order = "🔥 BlazeTopia Order\n\n" +  
+      let order = "🔥 AURIX Order\n\n" +  
                   "Role : " + role +  
                   "\nGrowID : " + growid +  
                   "\nDiscord : " + discord;  
@@ -413,4 +448,4 @@
     }  
   </script>  
 </body>  
-</html>
+  </html>
