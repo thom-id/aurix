@@ -81,7 +81,10 @@ code{background:#0a0a0a;padding:0.15rem 0.4rem;border-radius:4px;font-size:0.75r
 .mode-badge{display:inline-block;background:#ff0000;color:#fff;font-size:0.65rem;padding:0.15rem 0.6rem;border-radius:30px;font-weight:700;letter-spacing:0.5px;margin-bottom:0.3rem}
 .server-name{display:inline-block;background:linear-gradient(135deg,#ff0000,#cc0000);color:#fff;font-size:0.9rem;padding:0.2rem 1rem;border-radius:30px;font-weight:700;margin:0.3rem 0}
 .notif{background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.3);padding:0.4rem 0.8rem;border-radius:10px;font-size:0.8rem;color:#ff6666;margin:0.3rem 0}
-@media(min-width:768px){.container{max-width:1280px;padding:0 1.5rem}.howto-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:3.5rem}.download-btn{width:auto;display:inline-block;padding:0.5rem 1.5rem}}
+.unduh-btn{background:linear-gradient(135deg,#ff0000,#cc0000);color:#fff;padding:0.6rem 1.5rem;border-radius:40px;font-weight:700;text-decoration:none;display:inline-block;transition:0.3s;animation:glowBtn 2s ease-in-out infinite alternate;font-size:0.85rem;border:none;cursor:pointer;width:100%;text-align:center}
+.unduh-btn:hover{transform:scale(1.02);box-shadow:0 0 40px rgba(255,0,0,0.4)}
+.unduh-btn i{margin-right:6px}
+@media(min-width:768px){.container{max-width:1280px;padding:0 1.5rem}.howto-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:3.5rem}.download-btn{width:auto;display:inline-block;padding:0.5rem 1.5rem}.unduh-btn{width:auto;padding:0.5rem 1.5rem}}
 @media(min-width:1024px){.howto-grid{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
@@ -139,12 +142,12 @@ code{background:#0a0a0a;padding:0.15rem 0.4rem;border-radius:4px;font-size:0.75r
 <ol style="list-style:none;padding-left:0">
 <li><span class="step-number">1</span> Install Virtual Host di perangkat</li>
 <li><span class="step-number">2</span> Buka → <strong>SELECT HOSTS FILE</strong></li>
-<li><span class="step-number">3</span> <span style="color:#ff3333;font-weight:bold;">Klik tombol "Unduh Host" di bawah</span></li>
+<li><span class="step-number">3</span> Klik tombol <strong>"Unduh Host"</strong> di bawah</li>
 <li><span class="step-number">4</span> Pilih file Host yang sudah di download</li>
 <li><span class="step-number">5</span> Buka Growtopia → Play → name server <strong>AURIX</strong></li>
 </ol>
-<a href="https://gtpshosting.web.id/how-to-play/AURIX" target="_blank" class="download-btn"><i class="fas fa-file-download"></i> Unduh Host</a>
-<div class="link-box"><span class="mode-badge">Atau Salin</span><br><a href="#" onclick="copyVirtualHost()" style="cursor:pointer;">https://gtpshosting.web.id/how-to-play/AURIX</a></div>
+<a href="https://www.apkmirror.com/apk/xfalcon/virtual-hosts/virtual-hosts-2-1-0-release/virtual-hosts-2-1-0-android-apk-download/" target="_blank" class="download-btn"><i class="fas fa-download"></i> Download Virtual Host App</a>
+<a href="https://gtpshosting.web.id/how-to-play/AURIX" target="_blank" class="unduh-btn" style="margin-top:0.4rem;"><i class="fas fa-file-download"></i> Unduh Host</a>
 </div>
 
 <!-- Windows -->
@@ -153,11 +156,10 @@ code{background:#0a0a0a;padding:0.15rem 0.4rem;border-radius:4px;font-size:0.75r
 <ol style="list-style:none;padding-left:0">
 <li><span class="step-number">1</span> Tekan <strong>Win+R</strong> → ketik <code>C:\Windows\System32\drivers\etc</code></li>
 <li><span class="step-number">2</span> Edit file <strong>hosts</strong> dengan Notepad (Run as Administrator)</li>
-<li><span class="step-number">3</span> <span style="color:#ff3333;font-weight:bold;">Salin IP di bawah lalu Paste</span></li>
+<li><span class="step-number">3</span> Salin IP di bawah lalu Paste</li>
 <li><span class="step-number">4</span> Save → buka Growtopia → name server <strong>AURIX</strong></li>
 </ol>
-<div class="host-ip"><span class="mode-badge" style="background:#cc0000;">Salin IP</span><br><br>185.117.3.114 www.growtopia1.com<br>185.117.3.114 www.growtopia2.com<br><br><button onclick="copyWindowsIP()" style="background:#ff0000;color:#fff;border:none;padding:0.3rem 1rem;border-radius:20px;cursor:pointer;font-weight:bold;margin-top:0.3rem;"><i class="fas fa-copy"></i> Salin Semua</button></div>
-<div class="link-box" style="border-left-color:#5865F2;margin-top:0.3rem;">🖥️ <a href="https://gtpshosting.web.id/raw/AURIX" target="_blank">https://gtpshosting.web.id/raw/AURIX</a></div>
+<div class="host-ip"><span class="mode-badge" style="background:#cc0000;">Salin IP</span><br><br>149.202.58.185 www.growtopia1.com<br>149.202.58.185 www.growtopia2.com<br><br><button onclick="copyWindowsIP()" style="background:#ff0000;color:#fff;border:none;padding:0.3rem 1rem;border-radius:20px;cursor:pointer;font-weight:bold;margin-top:0.3rem;"><i class="fas fa-copy"></i> Salin Semua</button></div>
 </div>
 
 <!-- iOS / Surge 5 -->
@@ -184,13 +186,6 @@ function copyPowerTunnel() {
     });
 }
 
-function copyVirtualHost() {
-    var text = "https://gtpshosting.web.id/how-to-play/AURIX";
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Link Host Virtual berhasil disalin! Gunakan name server: AURIX");
-    });
-}
-
 function copyIOS() {
     var text = "https://gtpshosting.web.id/ios/AURIX";
     navigator.clipboard.writeText(text).then(() => {
@@ -199,7 +194,7 @@ function copyIOS() {
 }
 
 function copyWindowsIP() {
-    var text = "185.117.3.114 www.growtopia1.com\n185.117.3.114 www.growtopia2.com";
+    var text = "149.202.58.185 www.growtopia1.com\n149.202.58.185 www.growtopia2.com";
     navigator.clipboard.writeText(text).then(() => {
         alert("IP Windows berhasil disalin! Paste di file hosts, lalu gunakan name server: AURIX");
     });
@@ -207,4 +202,4 @@ function copyWindowsIP() {
 </script>
 
 </body>
-  </html>
+</html>
