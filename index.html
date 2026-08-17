@@ -1,411 +1,210 @@
-<!DOCTYPE html>  
-<html lang="id">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>AURIX - Growtopia Private Server</title>  
-  <meta property="og:title" content="AURIX - Growtopia Private Server">  
-  <meta property="og:description" content="Join AURIX and play on Android, iOS & Windows.">  
-  <meta property="og:image" content="https://cdn.phototourl.com/free/2026-08-16-9d9ada9b-8322-4f89-9a0c-84b4fd7af0bc.png">  
-  <meta name="theme-color" content="#F5D76E">  
-  <style>  
-    * {  
-      margin: 0;  
-      padding: 0;  
-      box-sizing: border-box;  
-      font-family: 'Segoe UI', Arial, sans-serif;  
-      scroll-behavior: smooth;  
-    }  
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURIX</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#f0f0f0;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 50%,rgba(255,0,0,0.08) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(255,255,255,0.05) 0%,transparent 60%),radial-gradient(ellipse at 50% 100%,rgba(255,0,0,0.05) 0%,transparent 50%);z-index:-1;animation:bgPulse 8s ease-in-out infinite alternate}
+@keyframes bgPulse{0%{opacity:0.6;transform:scale(1)}100%{opacity:1;transform:scale(1.05)}}
+.particles{position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:-1;overflow:hidden}
+.particle{position:absolute;border-radius:50%;opacity:0.15;animation:floatParticle linear infinite}
+.particle:nth-child(1){width:8px;height:8px;background:#ff0000;left:10%;animation-duration:14s;animation-delay:0s}
+.particle:nth-child(2){width:12px;height:12px;background:#ffffff;left:25%;animation-duration:18s;animation-delay:2s}
+.particle:nth-child(3){width:6px;height:6px;background:#ff0000;left:40%;animation-duration:12s;animation-delay:4s}
+.particle:nth-child(4){width:10px;height:10px;background:#ffffff;left:55%;animation-duration:20s;animation-delay:1s}
+.particle:nth-child(5){width:7px;height:7px;background:#ff0000;left:70%;animation-duration:16s;animation-delay:3s}
+.particle:nth-child(6){width:14px;height:14px;background:#ffffff;left:85%;animation-duration:22s;animation-delay:5s}
+.particle:nth-child(7){width:9px;height:9px;background:#ff0000;left:15%;animation-duration:17s;animation-delay:7s}
+.particle:nth-child(8){width:11px;height:11px;background:#ffffff;left:45%;animation-duration:19s;animation-delay:2s}
+.particle:nth-child(9){width:5px;height:5px;background:#ff0000;left:65%;animation-duration:13s;animation-delay:6s}
+.particle:nth-child(10){width:13px;height:13px;background:#ffffff;left:90%;animation-duration:21s;animation-delay:4s}
+.particle:nth-child(11){width:8px;height:8px;background:#ff0000;left:5%;animation-duration:15s;animation-delay:8s}
+.particle:nth-child(12){width:10px;height:10px;background:#ffffff;left:35%;animation-duration:18s;animation-delay:3s}
+.particle:nth-child(13){width:6px;height:6px;background:#ff0000;left:75%;animation-duration:14s;animation-delay:9s}
+.particle:nth-child(14){width:12px;height:12px;background:#ffffff;left:50%;animation-duration:20s;animation-delay:1s}
+.particle:nth-child(15){width:7px;height:7px;background:#ff0000;left:95%;animation-duration:16s;animation-delay:5s}
+@keyframes floatParticle{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:0.2}90%{opacity:0.2}100%{transform:translateY(-10vh) rotate(720deg);opacity:0}}
+.container{max-width:100%;margin:0 auto;padding:0 0.8rem;position:relative;z-index:1}
+.navbar{display:flex;align-items:center;justify-content:center;padding:0.8rem 0;border-bottom:2px solid rgba(255,0,0,0.3);animation:slideDown 0.8s ease-out}
+@keyframes slideDown{0%{transform:translateY(-30px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.logo{font-size:1.6rem;font-weight:700;letter-spacing:-0.5px;background:linear-gradient(135deg,#ff0000,#ffffff,#ff0000);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerLogo 3s ease-in-out infinite}
+@keyframes shimmerLogo{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.logo i{margin-right:8px;color:#ff0000;animation:pulseIcon 2s ease-in-out infinite}
+@keyframes pulseIcon{0%,100%{transform:scale(1)}50%{transform:scale(1.2);color:#ff3333}}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 0 1rem;animation:fadeInUp 1s ease-out}
+@keyframes fadeInUp{0%{transform:translateY(40px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.hero h1{font-size:2.2rem;font-weight:800;max-width:100%;background:linear-gradient(135deg,#ff0000,#ffffff,#ff0000,#ffffff);background-size:300% 300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerHero 4s ease-in-out infinite;margin-bottom:0.8rem;word-break:keep-all}
+@keyframes shimmerHero{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero p{font-size:1rem;color:#b0b0b0;max-width:100%;margin-bottom:1.2rem;padding:0 0.3rem;word-break:keep-all}
+.hero-buttons{display:flex;align-items:center;justify-content:center;gap:0.8rem;flex-wrap:wrap;margin-bottom:0.8rem;width:100%}
+.btn-hero{padding:0.5rem 1.5rem;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:0.3s;border:2px solid transparent;white-space:nowrap}
+.btn-play{background:linear-gradient(135deg,#ff0000,#cc0000);color:#fff;box-shadow:0 0 30px rgba(255,0,0,0.3);animation:glowBtn 2s ease-in-out infinite alternate}
+.btn-play:hover{transform:scale(1.05);box-shadow:0 0 60px rgba(255,0,0,0.5)}
+.btn-discord{background:transparent;color:#fff;border:2px solid #5865F2}
+.btn-discord:hover{transform:scale(1.05);background:rgba(88,101,242,0.15)}
+@keyframes glowBtn{0%{box-shadow:0 0 15px rgba(255,0,0,0.2)}100%{box-shadow:0 0 40px rgba(255,0,0,0.5)}}
+.btn-hero i{font-size:0.9rem}
+.scroll-indicator{margin:0.3rem 0;color:#888;font-size:0.7rem;letter-spacing:2px;animation:bounceScroll 2s ease-in-out infinite}
+@keyframes bounceScroll{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.scroll-indicator i{display:block;font-size:1.2rem;margin-top:2px;color:#ff0000}
+.section-title{font-size:1.6rem;font-weight:700;margin-bottom:1.2rem;text-align:center}
+.section-title span{background:linear-gradient(135deg,#ff0000,#ffffff);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerTitle 3s ease-in-out infinite;background-size:200% 200%}
+@keyframes shimmerTitle{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.howto-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;margin:1rem 0 2rem}
+.howto-card{background:rgba(20,20,20,0.9);padding:1.2rem 1rem;border-radius:18px;border:1px solid rgba(255,0,0,0.2);transition:0.4s;backdrop-filter:blur(10px);animation:cardFadeIn 0.8s ease-out forwards;opacity:0;width:100%}
+.howto-card:nth-child(1){animation-delay:0.1s}
+.howto-card:nth-child(2){animation-delay:0.2s}
+.howto-card:nth-child(3){animation-delay:0.3s}
+.howto-card:nth-child(4){animation-delay:0.4s}
+.howto-card:nth-child(5){animation-delay:0.5s}
+@keyframes cardFadeIn{0%{transform:translateY(30px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.howto-card:hover{border-color:#ff0000;transform:translateY(-5px);box-shadow:0 10px 30px rgba(255,0,0,0.15)}
+.howto-card h3{font-size:1.2rem;margin-bottom:0.6rem;color:#ff0000;word-break:keep-all}
+.howto-card h3 i{margin-right:8px;animation:pulseIcon 2s ease-in-out infinite}
+.howto-card ul,.howto-card p,.howto-card ol{color:#c8d0dc;font-size:0.9rem;list-style:none;padding-left:0;word-break:keep-all}
+.howto-card li{margin-bottom:0.4rem;word-break:keep-all}
+.howto-card .step-number{display:inline-block;background:linear-gradient(135deg,#ff0000,#cc0000);color:#fff;border-radius:50%;width:20px;height:20px;text-align:center;font-weight:700;font-size:0.7rem;line-height:20px;margin-right:6px;flex-shrink:0}
+.download-btn{display:block;width:100%;background:linear-gradient(135deg,#ff0000,#cc0000);color:#fff;padding:0.6rem 0.8rem;border-radius:40px;font-weight:700;text-decoration:none;margin-top:0.6rem;transition:0.3s;animation:glowBtn 2s ease-in-out infinite alternate;font-size:0.85rem;text-align:center;border:none;cursor:pointer;word-break:keep-all}
+.download-btn:hover{transform:scale(1.02);box-shadow:0 0 40px rgba(255,0,0,0.4)}
+.download-btn i{margin-right:6px}
+.link-box{background:#0a0a0a;padding:0.6rem 0.8rem;border-radius:10px;border-left:4px solid #ff0000;margin:0.5rem 0;width:100%;word-break:break-all;overflow-wrap:break-word;font-size:0.8rem;text-align:center}
+.link-box a{color:#ff3333;text-decoration:none;word-break:break-all;font-family:monospace}
+.link-box a:hover{text-decoration:underline}
+code{background:#0a0a0a;padding:0.15rem 0.4rem;border-radius:4px;font-size:0.75rem;color:#ff6666;word-break:break-word}
+.sub-text{text-align:center;color:#b0b0b0;margin-bottom:0.3rem;font-size:0.85rem;word-break:keep-all}
+.host-ip{background:#0a0a0a;padding:0.5rem 0.8rem;border-radius:8px;border:1px solid rgba(255,0,0,0.3);margin:0.5rem 0;font-family:monospace;font-size:0.8rem;color:#ff6666;text-align:center;word-break:break-all}
+.mode-badge{display:inline-block;background:#ff0000;color:#fff;font-size:0.65rem;padding:0.15rem 0.6rem;border-radius:30px;font-weight:700;letter-spacing:0.5px;margin-bottom:0.3rem}
+.server-name{display:inline-block;background:linear-gradient(135deg,#ff0000,#cc0000);color:#fff;font-size:0.9rem;padding:0.2rem 1rem;border-radius:30px;font-weight:700;margin:0.3rem 0}
+.notif{background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.3);padding:0.4rem 0.8rem;border-radius:10px;font-size:0.8rem;color:#ff6666;margin:0.3rem 0}
+@media(min-width:768px){.container{max-width:1280px;padding:0 1.5rem}.howto-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:3.5rem}.download-btn{width:auto;display:inline-block;padding:0.5rem 1.5rem}}
+@media(min-width:1024px){.howto-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="particles">
+<div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+<div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+<div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+</div>
+<div class="container">
+<nav class="navbar"><div class="logo"><i class="fas fa-crown"></i> AURIX</div></nav>
 
-    body {  
-      background: #1a1200;  
-      color: #fff;  
-      overflow-x: hidden;  
-      min-height: 100vh;  
-    }  
+<section class="hero">
+<h1>Welcome To AURIX</h1>
+<p>Discover exclusive features, meet incredible players from around the world, and dive into a community built for epic journeys and unforgettable experiences.</p>
+<div class="hero-buttons">
+<a href="#how-to-play" class="btn-hero btn-play"><i class="fas fa-play"></i> Play Now</a>
+<a href="https://discord.gg/2mnM5aqxy" target="_blank" class="btn-hero btn-discord"><i class="fab fa-discord"></i> Discord</a>
+</div>
+<div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+</section>
 
-    body::before {  
-      content: "";  
-      position: fixed;  
-      inset: 0;  
-      background:  
-        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.85)),  
-        url("https://cdn.phototourl.com/free/2026-08-16-9d9ada9b-8322-4f89-9a0c-84b4fd7af0bc.png");  
-      background-size: 100% auto;  
-      background-position: top center;  
-      background-repeat: no-repeat;  
-      background-attachment: fixed;  
-      z-index: -2;  
-    }  
+<h2 id="how-to-play" class="section-title"><span>How to Play</span></h2>
+<p class="sub-text">Pilih aplikasi yang ingin digunakan! <span class="server-name">Server: AURIX</span></p>
 
-    body::after {  
-      content: "";  
-      position: fixed;  
-      inset: 0;  
-      background: radial-gradient(circle at top, rgba(255, 215, 0, 0.15), rgba(10, 8, 0, 0.95));  
-      z-index: -1;  
-    }  
+<div class="howto-grid">
 
-    .container {  
-      width: 92%;  
-      max-width: 470px;  
-      margin: 280px auto 40px;  
-    }  
+<!-- Android APK -->
+<div class="howto-card">
+<h3><i class="fas fa-mobile-alt"></i> AURIX APK - Android</h3>
+<div class="notif"><i class="fas fa-exclamation-triangle"></i> Hapus Growtopia asli dulu jika ingin menggunakan aplikasi AURIX.</div>
+<p style="margin-top:0.4rem;color:#ff3333;font-size:0.85rem;">Langsung login tanpa Virtual Host / PowerTunnel.</p>
+<a href="https://www.mediafire.com/file/rsnxi7y94mligm3/AURIX.apk/file" target="_blank" class="download-btn"><i class="fas fa-download"></i> Download AURIX APK</a>
+</div>
 
-    /* HERO */  
-    .hero {  
-      padding: 26px;  
-      border-radius: 24px;  
-      background: rgba(20, 15, 0, 0.8);  
-      backdrop-filter: blur(15px);  
-      border: 1px solid rgba(255, 215, 0, 0.4);  
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);  
-      text-align: center;  
-    }  
+<!-- PowerTunnel -->
+<div class="howto-card">
+<h3><i class="fas fa-wifi"></i> PowerTunnel</h3>
+<ol style="list-style:none;padding-left:0">
+<li><span class="step-number">1</span> Install PowerTunnel di perangkat</li>
+<li><span class="step-number">2</span> Buka → ☰ → Hosts → Host file URL</li>
+<li><span class="step-number">3</span> Copy URL di bawah lalu Paste</li>
+<li><span class="step-number">4</span> Hosts file update period → On start</li>
+<li><span class="step-number">5</span> Kembalikan hingga ketemu connect (merah)</li>
+<li><span class="step-number">6</span> Connect hingga menjadi disconnect (hijau)</li>
+<li><span class="step-number">7</span> Buka Growtopia → Play → name server <strong>AURIX</strong></li>
+</ol>
+<a href="https://powertunnel.id.uptodown.com/android" target="_blank" class="download-btn"><i class="fas fa-download"></i> Download PowerTunnel</a>
+<div class="link-box"><span class="mode-badge">Salin URL</span><br><a href="#" onclick="copyPowerTunnel()" style="cursor:pointer;">https://gtpshosting.web.id/raw/AURIX</a></div>
+</div>
 
-    .hero h1 {  
-      font-size: 18px;  
-      line-height: 1.5;  
-      margin-bottom: 15px;  
-      white-space: nowrap;  
-    }  
+<!-- Virtual Host -->
+<div class="howto-card">
+<h3><i class="fas fa-server"></i> Virtual Host</h3>
+<ol style="list-style:none;padding-left:0">
+<li><span class="step-number">1</span> Install Virtual Host di perangkat</li>
+<li><span class="step-number">2</span> Buka → <strong>SELECT HOSTS FILE</strong></li>
+<li><span class="step-number">3</span> <span style="color:#ff3333;font-weight:bold;">Klik tombol "Unduh Host" di bawah</span></li>
+<li><span class="step-number">4</span> Pilih file Host yang sudah di download</li>
+<li><span class="step-number">5</span> Buka Growtopia → Play → name server <strong>AURIX</strong></li>
+</ol>
+<a href="https://gtpshosting.web.id/how-to-play/AURIX" target="_blank" class="download-btn"><i class="fas fa-file-download"></i> Unduh Host</a>
+<div class="link-box"><span class="mode-badge">Atau Salin</span><br><a href="#" onclick="copyVirtualHost()" style="cursor:pointer;">https://gtpshosting.web.id/how-to-play/AURIX</a></div>
+</div>
 
-    .gradient-text {  
-      background: linear-gradient(90deg, #FFE17B, #FFD700, #B8860B);  
-      -webkit-background-clip: text;  
-      -webkit-text-fill-color: transparent;  
-      font-weight: 900;  
-      text-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);  
-    }  
+<!-- Windows -->
+<div class="howto-card">
+<h3><i class="fab fa-windows"></i> Windows</h3>
+<ol style="list-style:none;padding-left:0">
+<li><span class="step-number">1</span> Tekan <strong>Win+R</strong> → ketik <code>C:\Windows\System32\drivers\etc</code></li>
+<li><span class="step-number">2</span> Edit file <strong>hosts</strong> dengan Notepad (Run as Administrator)</li>
+<li><span class="step-number">3</span> <span style="color:#ff3333;font-weight:bold;">Salin IP di bawah lalu Paste</span></li>
+<li><span class="step-number">4</span> Save → buka Growtopia → name server <strong>AURIX</strong></li>
+</ol>
+<div class="host-ip"><span class="mode-badge" style="background:#cc0000;">Salin IP</span><br><br>185.117.3.114 www.growtopia1.com<br>185.117.3.114 www.growtopia2.com<br><br><button onclick="copyWindowsIP()" style="background:#ff0000;color:#fff;border:none;padding:0.3rem 1rem;border-radius:20px;cursor:pointer;font-weight:bold;margin-top:0.3rem;"><i class="fas fa-copy"></i> Salin Semua</button></div>
+<div class="link-box" style="border-left-color:#5865F2;margin-top:0.3rem;">🖥️ <a href="https://gtpshosting.web.id/raw/AURIX" target="_blank">https://gtpshosting.web.id/raw/AURIX</a></div>
+</div>
 
-    .hero p {  
-      font-size: 14px;  
-      line-height: 1.7;  
-      color: #f5f0da;  
-      margin-bottom: 25px;  
-    }  
+<!-- iOS / Surge 5 -->
+<div class="howto-card">
+<h3><i class="fab fa-apple"></i> iOS / Surge 5</h3>
+<ol style="list-style:none;padding-left:0">
+<li><span class="step-number">1</span> Install Surge 5 di iPhone/iPad</li>
+<li><span class="step-number">2</span> Copy Konfigurasi Surge di bawah</li>
+<li><span class="step-number">3</span> Buka Surge → Import dari clipboard</li>
+<li><span class="step-number">4</span> Aktifkan → buka Growtopia → name server <strong>AURIX</strong></li>
+</ol>
+<a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank" class="download-btn"><i class="fab fa-app-store"></i> Download Surge 5</a>
+<div class="link-box"><span class="mode-badge">Salin Konfigurasi</span><br><a href="#" onclick="copyIOS()" style="cursor:pointer;">https://gtpshosting.web.id/ios/AURIX</a></div>
+</div>
 
-    /* BUTTON - DIUBAH JADI SEJAJAR */  
-    .buttons {  
-      display: flex;  
-      flex-direction: row; /* Membuat tombol sejajar ke samping */  
-      gap: 12px;  
-      width: 100%;  
-    }  
+</div>
+</div>
 
-    .btn {  
-      flex: 1; /* Membagi lebar tombol jadi sama rata (50% : 50%) */  
-      padding: 16px 10px;  
-      border: none;  
-      border-radius: 18px;  
-      color: #1a1200;  
-      font-size: 14px;  
-      font-weight: 800;  
-      cursor: pointer;  
-      transition: .25s;  
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);  
-      white-space: nowrap;  
-    }  
+<script>
+function copyPowerTunnel() {
+    var text = "https://gtpshosting.web.id/raw/AURIX";
+    navigator.clipboard.writeText(text).then(() => {
+        alert("URL PowerTunnel berhasil disalin! Gunakan name server: AURIX");
+    });
+}
 
-    .btn:hover {  
-      transform: translateY(-4px);  
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);  
-    }  
+function copyVirtualHost() {
+    var text = "https://gtpshosting.web.id/how-to-play/AURIX";
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Link Host Virtual berhasil disalin! Gunakan name server: AURIX");
+    });
+}
 
-    .discord {  
-      background: linear-gradient(90deg, #FFD700, #FFF3CD);  
-    }  
+function copyIOS() {
+    var text = "https://gtpshosting.web.id/ios/AURIX";
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Konfigurasi Surge 5 berhasil disalin! Gunakan name server: AURIX");
+    });
+}
 
-    .play {  
-      background: linear-gradient(90deg, #FFF8DC, #D4AF37);  
-    }  
+function copyWindowsIP() {
+    var text = "185.117.3.114 www.growtopia1.com\n185.117.3.114 www.growtopia2.com";
+    navigator.clipboard.writeText(text).then(() => {
+        alert("IP Windows berhasil disalin! Paste di file hosts, lalu gunakan name server: AURIX");
+    });
+}
+</script>
 
-    /* SCROLL */  
-    .scroll {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      justify-content: center;  
-      text-align: center;  
-      margin: 35px 0;  
-      color: #FFE17B;  
-    }  
-
-    .arrow {  
-      font-size: 30px;  
-      animation: down 1.2s infinite;  
-      color: #FFD700;  
-    }  
-
-    @keyframes down {  
-      50% { transform: translateY(8px); }  
-    }  
-
-    /* CONTENT */  
-    .content {  
-      padding: 26px;  
-      border-radius: 24px;  
-      background: rgba(20, 15, 0, 0.8);  
-      backdrop-filter: blur(15px);  
-      border: 1px solid rgba(255, 215, 0, 0.3);  
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.1);  
-      margin-bottom: 25px;  
-    }  
-
-    .title {  
-      text-align: center;  
-      font-size: 25px;  
-      font-weight: 900;  
-      margin-bottom: 10px;  
-      color: #FFE17B;  
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);  
-    }  
-
-    .desc {  
-      text-align: center;  
-      font-size: 14px;  
-      color: #f5f0da;  
-      margin-bottom: 30px;  
-    }  
-
-    .label {  
-      font-size: 15px;  
-      font-weight: 700;  
-      margin: 15px 0 7px;  
-      color: #FFD700;  
-    }  
-
-    .card {  
-      padding: 15px 18px;  
-      margin-bottom: 14px;  
-      border-radius: 18px;  
-      background: rgba(0, 0, 0, 0.6);  
-      border: 1px solid rgba(255, 215, 0, 0.15);  
-      cursor: pointer;  
-      transition: .25s;  
-    }  
-
-    .card:hover {  
-      transform: translateY(-3px);  
-      border-color: #FFD700;  
-      background: rgba(0, 0, 0, 0.8);  
-    }  
-
-    .card p {  
-      font-size: 13px;  
-      line-height: 1.7;  
-      color: #FFF8DC;  
-    }  
-
-    /* POPUP */  
-    .popup {  
-      display: none;  
-      position: fixed;  
-      inset: 0;  
-      background: rgba(0,0,0,.85);  
-      backdrop-filter: blur(10px);  
-      z-index: 9999;  
-      align-items: center;  
-      justify-content: center;  
-    }  
-
-    .popup-box {  
-      width: 90%;  
-      max-width: 420px;  
-      padding: 25px;  
-      border-radius: 28px;  
-      background: linear-gradient(145deg, #3a2e00, #0f0a00);  
-      border: 1px solid rgba(255, 215, 0, 0.8);  
-      box-shadow: 0 0 35px rgba(255, 215, 0, 0.6), 0 0 100px rgba(255, 215, 0, 0.2);  
-      animation: popupShow .35s ease;  
-    }  
-
-    @keyframes popupShow {  
-      from { opacity: 0; transform: scale(.75) translateY(50px); }  
-      to { opacity: 1; transform: scale(1) translateY(0); }  
-    }  
-
-    .popup-box h2 {  
-      text-align: center;  
-      font-size: 24px;  
-      color: #FFD700;  
-      margin-bottom: 20px;  
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);  
-    }  
-
-    .popup-box input {  
-      width: 100%;  
-      padding: 14px;  
-      margin-bottom: 12px;  
-      border-radius: 16px;  
-      border: 1px solid rgba(255, 215, 0, 0.4);  
-      background: #1a1300;  
-      color: white;  
-      outline: none;  
-    }  
-
-    .popup-box input:focus {  
-      border-color: #FFD700;  
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);  
-    }  
-
-    .popup-box input::placeholder {  
-      color: #bba56e;  
-    }  
-
-    .qris {  
-      width: 100%;  
-      margin-top: 15px;  
-      border-radius: 18px;  
-      border: 2px solid #FFD700;  
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);  
-      cursor: pointer;  
-      transition: .3s;  
-    }  
-
-    .qris:hover {  
-      transform: scale(1.05);  
-    }  
-
-    .order-discord {  
-      width: 100%;  
-      padding: 14px;  
-      margin-top: 15px;  
-      border: none;  
-      border-radius: 18px;  
-      background: linear-gradient(90deg, #5865F2, #404EED);  
-      color: white;  
-      font-size: 15px;  
-      font-weight: 900;  
-      cursor: pointer;  
-      box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);  
-    }  
-
-    .buy-btn {  
-      width: 100%;  
-      padding: 14px;  
-      margin-top: 12px;  
-      border: none;  
-      border-radius: 18px;  
-      background: linear-gradient(90deg, #FFD700, #B8860B);  
-      color: #1a1200;  
-      font-size: 15px;  
-      font-weight: 900;  
-      cursor: pointer;  
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);  
-    }  
-
-    .close-btn {  
-      width: 100%;  
-      padding: 12px;  
-      margin-top: 12px;  
-      border: none;  
-      border-radius: 15px;  
-      background: #3a2e00;  
-      color: #e6d59a;  
-      cursor: pointer;  
-      border: 1px solid rgba(255, 215, 0, 0.2);  
-    }  
-
-    .footer {  
-      text-align: center;  
-      font-size: 14px;  
-      color: #D4AF37;  
-      margin-top: 20px;  
-      text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);  
-    }  
-  </style>  
-</head>  
-<body>  
-  <div class="container">  
-    <!-- HERO -->  
-    <div class="hero">  
-      <h1>  
-        Welcome to   
-        <span class="gradient-text">AURIX Private Server</span>  
-      </h1>  
-      <p>  
-        This is a GTPS that you can play for free, with systems and mechanisms that have been designed as best as possible to produce the best gaming experience.  
-      </p>  
-      
-      <!-- BUTTONS SEJAJAR -->  
-      <div class="buttons">  
-        <button class="btn discord hhhhh hhhhh hu hgh
-        <div class="popup" id="popup">  
-    <div class="popup-box">  
-      <h2>Complete Purchase</h2>  
-      <input id="selectedRole" placeholder="Selected Role" readonly>  
-      <input id="growid" placeholder="GrowID Ingame">  
-      <input id="discordUser" placeholder="Discord Username">  
-      <p style="color: #FFE17B; margin-top: 5px;">QRIS Payment</p>  
-      <img class="qris" src="https://fascinating-olive-pybmy8go.edgeone.dev/">  
-      <button class="buy-btn" onclick="sendOrder()">Send Order</button>  
-      <button class="order-discord" onclick="orderDiscord()">Order via Discord</button>  
-      <button class="close-btn" onclick="closeBuy()">Close</button>  
-    </div>  
-  </div>  
-
-  <script>  
-    function showToast() {  
-      const t = document.createElement("div");  
-      t.innerHTML = "Copied!";  
-      Object.assign(t.style, {  
-        position: "fixed",  
-        left: "50%",  
-        bottom: "25px",  
-        transform: "translateX(-50%)",  
-        background: "#D4AF37",  
-        color: "#1a1200",  
-        padding: "12px 28px",  
-        borderRadius: "14px",  
-        fontWeight: "700",  
-        zIndex: "9999"  
-      });  
-      document.body.appendChild(t);  
-      setTimeout(() => t.remove(), 1800);  
-    }  
-
-    function copyText(text) {  
-      navigator.clipboard.writeText(text)  
-        .then(showToast)  
-        .catch(() => alert("Failed to copy"));  
-    }  
-
-    function openBuy(role) {  
-      document.getElementById("popup").style.display = "flex";  
-      document.getElementById("selectedRole").value = role;  
-    }  
-
-    function closeBuy() {  
-      document.getElementById("popup").style.display = "none";  
-    }  
-
-    function orderDiscord() {  
-      let role = document.getElementById("selectedRole").value;  
-      let growid = document.getElementById("growid").value;  
-      let discord = document.getElementById("discordUser").value;  
-      let orderText = "🔥 AURIX Order\n\n" +  
-                      "Role : " + role +  
-                      "\nGrowID : " + growid +  
-                      "\nDiscord : " + discord;  
-      navigator.clipboard.writeText(orderText);  
-      window.open("https://discord.gg/NPn884u2s", "_blank");  
-    }  
-
-    function sendOrder() {  
-      let role = document.getElementById("selectedRole").value;  
-      let growid = document.getElementById("growid").value;  
-      let discord = document.getElementById("discordUser").value;  
-      if (growid === "" || discord === "") {  
-        alert("Please fill all information!");  
-        return;  
-      }  
-      let order = "🔥 AURIX Order\n\n" +  
-                  "Role : " + role +  
-                  "\nGrowID : " + growid +  
-                  "\nDiscord : " + discord;  
-      alert("Order Created!\n\n" + order);  
-    }  
-  </script>  
-</body>  
+</body>
   </html>
